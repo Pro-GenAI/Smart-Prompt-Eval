@@ -7,7 +7,7 @@ from openai.types.chat.chat_completion_message_param import ChatCompletionMessag
 
 import os
 
-load_dotenv(override=True)
+
 backtick = "`"
 backticks = "```"
 
@@ -20,12 +20,63 @@ def log(text, filename="output.txt"):
 def print_progress(chr="."):
     print(chr, end="", flush=True)
 
-def print_error(chr="E "):
+def print_error(chr=" E "):
 	print_progress(chr)
 
 def display_md(md: str | None):
 	if md:
 		display(Markdown(md))
+
+data_format = "csv"
+
+def remove_spaces_after_commas(text):
+    # remove spaces after commas, but not before commas
+    return ",".join([part.strip() for part in text.split(",")])
+
+def extract_data(response):
+    if backticks not in response:  # if still no backticks to extract data from
+        if backtick in response:  # if single backtick is present, it means code is present
+            response = response.replace(backtick, backticks)
+        else:
+            raise Exception("No backticks found in the response")
+
+    last = response.rfind(backticks)
+    last_2 = response.rfind(backticks, 0, last) + len(backticks)
+    response = response[last_2:last].strip()
+
+    response = response.strip().strip(backtick).strip()
+    if response.startswith(data_format):
+        response = response[len(data_format):] if data_format else response
+
+    response = remove_spaces_after_commas(response)
+    # strip every line
+    response = "\n".join([line.strip() for line in response.split("\n")])
+    return response
+
+def get_accuracy(question, correct_answer, seed):
+	total_attempts = 10
+	correct_attempts = 0
+	for i in range(total_attempts):
+		response = get_response(question, seed=seed)
+		response = extract_data(response)
+		print_progress(response)
+		if response == correct_answer:
+			print_progress()
+			correct_attempts += 1
+		else:
+			print_error()
+	accuracy = (100 * correct_attempts) / total_attempts
+	accuracy = f'{accuracy:.2f}%'
+	print()
+	return accuracy
+
+def attempt_question(seed, correct_answer, question):
+	accuracy = get_accuracy(question, correct_answer, seed)
+	log(f'{seed}: {accuracy}')
+
+# ________________________ OpenAI client ________________________
+
+load_dotenv(override=True)
 
 client = openai.OpenAI()
 model = os.getenv("OPENAI_MODEL", "")

@@ -29,3 +29,4 @@ Original: 100.00%
 SpellMistake1: 100.00%
 GrammarMistake1: 10.00%
 model: gpt-5-nano
+model: openai/gpt-oss-20b
