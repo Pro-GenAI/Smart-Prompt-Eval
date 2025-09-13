@@ -13,7 +13,7 @@ backtick = "`"
 backticks = "```"
 
 
-def log(text, filename="output.txt"):
+def log(text="", filename="output.txt"):
     print(text)
     with open(filename, "a") as f:
         print(text, file=f)
