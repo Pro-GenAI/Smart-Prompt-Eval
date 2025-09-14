@@ -4,11 +4,9 @@
 
 from utils import display_md, attempt_question, model, get_response, log
 
-log("Model: " + model)
-
 question_name = "x_power_y"
 correct_answer = str(52**13)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 seeds = [None, 0, 10, 20, 64]
 

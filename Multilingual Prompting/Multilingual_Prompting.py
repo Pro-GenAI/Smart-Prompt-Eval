@@ -4,11 +4,9 @@
 
 from utils import attempt_question, model, log
 
-log("Model: " + model)
-
 question_name = "x_power_y"
 correct_answer = str(52**13)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,
@@ -38,7 +36,7 @@ attempt_question(
 
 question_name = "math"
 correct_answer = str(3 * 3615 - 6723)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,
@@ -68,7 +66,7 @@ attempt_question(
 
 question_name = "reverse_pulchritudinous"
 correct_answer = "pulchritudinous"[::-1]
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,
@@ -99,7 +97,7 @@ attempt_question(
 question_name = "vowels_pulchritudinous"
 count = sum(1 for char in "pulchritudinous" if char in "aeiou")
 correct_answer = str(count)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,
@@ -130,7 +128,7 @@ attempt_question(
 question_name = "vowels_sesquipedalian"
 count = sum(1 for char in "sesquipedalian" if char in "aeiou")
 correct_answer = str(count)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,

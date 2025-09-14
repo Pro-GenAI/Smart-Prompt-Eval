@@ -4,11 +4,9 @@
 
 from utils import attempt_question, get_response, model, log, display_md
 
-log("model: " + model)
-
 question_name = "x_power_y"
 correct_answer = str(52**13)
-log("-" * 50 + "\n\t" + question_name + ": " + correct_answer)
+log("-" * 20 + question_name + ": " + correct_answer)
 
 attempt_question(
     correct_answer,

@@ -11,6 +11,7 @@ import os
 
 backtick = "`"
 backticks = "```"
+data_format = "csv"
 
 
 def log(text="", filename="output.txt"):
@@ -32,19 +33,15 @@ def display_md(md: str | None):
         display(Markdown(md))
 
 
-data_format = "csv"
-
-
 def remove_spaces_after_commas(text):
     # remove spaces after commas, but not before commas
     return ",".join([part.strip() for part in text.split(",")])
 
 
 def extract_data(response):
-    if backticks not in response:  # if still no backticks to extract data from
-        if (
-            backtick in response
-        ):  # if single backtick is present, it means code is present
+    if backticks not in response:
+        # Replace single backtick with triple backticks
+        if backtick in response:
             response = response.replace(backtick, backticks)
         else:
             raise Exception("No backticks found in the response")
@@ -66,10 +63,19 @@ def extract_data(response):
 def get_accuracy(question, correct_answer, params: Optional[dict] = None):
     total_attempts = 10
     correct_attempts = 0
+    with open('response.log', 'a') as f:
+        print("Q:", question, file=f)
     for i in range(total_attempts):
-        response = get_response(question, **(params or {}))
-        response = extract_data(response)
-        print_progress(response)
+        try:
+            response = get_response(question, **(params or {}))
+            with open('response.log', 'a') as f:
+                print("A:", response, file=f)
+            response = extract_data(response)
+            # break
+        except Exception as e:
+            print_error(" SE ")
+            continue
+        print_progress(response) # type: ignore
         if response == correct_answer:
             print_progress()
             correct_attempts += 1
@@ -82,6 +88,7 @@ def get_accuracy(question, correct_answer, params: Optional[dict] = None):
 
 
 def attempt_question(correct_answer, question, key=None, params: Optional[dict] = None):
+    print(f"Attempting for: {key}")
     accuracy = get_accuracy(question, correct_answer, params)
     if key is None:
         key = str(params)
@@ -125,3 +132,7 @@ def get_response(
         **kwargs,  # More arguments like seed, temperature, etc.
     )
     return response.choices[0].message.content
+
+
+log("\n-----------")
+log("Model: " + model)
