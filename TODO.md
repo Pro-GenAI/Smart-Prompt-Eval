@@ -1,4 +1,35 @@
 
+
+
+Red-Teaming project:
+- First experiment using Groq gpt-oss 20B, then 120B, then gpt-5-mini, then gpt-5.
+- Ensure reasoning is disabled
+- Repeat the same on ChatGPT website.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Create a python package & datasets to perform those tests.
 
 - Use standard datasets like GSM8K, MATH, etc.

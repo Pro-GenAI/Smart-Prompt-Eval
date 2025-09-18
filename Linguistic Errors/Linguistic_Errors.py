@@ -2,7 +2,7 @@
 #
 # https://github.com/Pro-GenAI/PromptSpell
 
-from utils import attempt_question, get_response, model, log, display_md
+from utils import attempt_question, get_response, log, display_md
 
 question_name = "x_power_y"
 correct_answer = str(52**13)

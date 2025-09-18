@@ -2,7 +2,7 @@
 #
 # https://github.com/Pro-GenAI/PromptSeed
 
-from utils import display_md, attempt_question, model, get_response, log
+from utils import display_md, attempt_question, get_response, log
 
 question_name = "x_power_y"
 correct_answer = str(52**13)
