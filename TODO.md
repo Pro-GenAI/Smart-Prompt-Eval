@@ -2,8 +2,7 @@
 
 
 Red-Teaming project:
-- First experiment using Groq gpt-oss 20B, then 120B, then gpt-5-mini, then gpt-5.
-- Ensure reasoning is disabled
+- Create repo for experiment notebook - submit in the form.
 - Repeat the same on ChatGPT website.
 
 
