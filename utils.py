@@ -101,6 +101,7 @@ load_dotenv(override=True)
 
 client = openai.OpenAI()
 model = os.getenv("OPENAI_MODEL", "")
+model_large = os.getenv("OPENAI_MODEL_LARGE")
 if not model:
     raise ValueError("OPENAI_MODEL environment variable not set")
 
@@ -122,12 +123,16 @@ def bot_message(content: str) -> ChatCompletionMessageParam:
 
 
 def get_response(
-    messages: str | list[ChatCompletionMessageParam], **kwargs
+    messages: str | list[ChatCompletionMessageParam],
+    use_large_model = False,
+    **kwargs
 ) -> str | None:
     if isinstance(messages, str):
         messages = [user_message(messages)]
+    if use_large_model and not model_large:
+        raise ValueError("OPENAI_MODEL_LARGE environment variable not set")
     response = client.chat.completions.create(
-        model=model,
+        model=model_large if use_large_model and model_large else model,
         messages=messages,
         **kwargs,  # More arguments like seed, temperature, etc.
     )

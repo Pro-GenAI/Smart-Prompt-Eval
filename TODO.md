@@ -1,33 +1,6 @@
 
 
 
-Red-Teaming project:
-- Create repo for experiment notebook - submit in the form.
-- Repeat the same on ChatGPT website.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Create a python package & datasets to perform those tests.
 
