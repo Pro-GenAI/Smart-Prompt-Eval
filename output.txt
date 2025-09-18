@@ -44,3 +44,9 @@ Model: openai/gpt-oss-120b
 
 -----------
 Model: gpt-5-mini
+
+-----------
+Model: openai/gpt-oss-120b
+
+-----------
+Model: gpt-5-mini
