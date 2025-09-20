@@ -4,123 +4,68 @@ GSM8K Evaluation Script
 Tests model performance on grade school math problems.
 """
 
-from pathlib import Path
-from typing import List, Dict, Any
-
-# Add project root to path
-project_root = Path(__file__).parent.parent
-import sys
-sys.path.insert(0, str(project_root))
-
 from utils.eval_utils import (
     load_gsm8k_questions,
-    save_evaluation_results,
-    log_evaluation_start,
-    log_evaluation_end,
-    run_evaluation_main
+    create_base_prompt,
+    initialize_evaluation_results,
+    run_evaluation_main,
+    log_test_case_info
 )
-from utils.utils import get_response, log
+from utils.utils import attempt, log
 
 
-def evaluate_gsm8k(problems: List[Dict[str, Any]], num_trials: int = 5) -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
-    """Evaluate model on GSM8K problems."""
-    results = {
-        "total_problems": len(problems),
-        "correct_answers": 0,
-        "total_attempts": 0,
-        "accuracy": 0.0,
-        "problem_results": []
-    }
+def evaluate_gsm8k():
+    """Evaluate model performance on GSM8K problems."""
+
+    # Load GSM8K test questions
+    test_questions = load_gsm8k_questions(num_questions=5)
+
+    results = initialize_evaluation_results(
+        "gsm8k",
+        "Testing model performance on grade school math problems"
+    )
 
     responses = []  # Collect all individual responses
 
-    for problem in problems:
-        question = problem["question"]
-        correct_answer = problem["answer"]
+    for i, test_case in enumerate(test_questions):
+        question = test_case["question"]
+        correct_answer = test_case["answer"]
+        case_id = test_case["id"]
 
-        log(f"\nEvaluating: {question}")
-        log(f"Correct answer: {correct_answer}")
+        log_test_case_info(i, case_id, question, correct_answer)
 
-        correct_count = 0
-        for trial in range(num_trials):
-            try:
-                prompt = f"{question}\n\nSolve this step by step and provide the final answer as a number in backticks like `42`."
-                response = get_response(prompt)
-
-                if response is None:
-                    log(f"Trial {trial + 1}: No response")
-                    responses.append({
-                        "question_id": problem["id"],
-                        "question": question,
-                        "correct_answer": correct_answer,
-                        "trial": trial + 1,
-                        "response": None,
-                        "extracted_answer": None,
-                        "is_correct": False,
-                        "error": "No response"
-                    })
-                    continue
-
-                # Extract answer from response (simple extraction)
-                if "`" in response:
-                    extracted = response.split("`")[1].split("`")[0].strip()
-                else:
-                    extracted = response.strip()
-
-                log(f"Trial {trial + 1}: {extracted}")
-
-                is_correct = extracted == correct_answer
-                if is_correct:
-                    correct_count += 1
-
-                responses.append({
-                    "question_id": problem["id"],
-                    "question": question,
-                    "correct_answer": correct_answer,
-                    "trial": trial + 1,
-                    "response": response,
-                    "extracted_answer": extracted,
-                    "is_correct": is_correct,
-                    "prompt": prompt
-                })
-
-            except Exception as e:
-                log(f"Trial {trial + 1} failed: {e}")
-                responses.append({
-                    "question_id": problem["id"],
-                    "question": question,
-                    "correct_answer": correct_answer,
-                    "trial": trial + 1,
-                    "response": None,
-                    "extracted_answer": None,
-                    "is_correct": False,
-                    "error": str(e)
-                })
-
-        accuracy = correct_count / num_trials
-        results["correct_answers"] += correct_count
-        results["total_attempts"] += num_trials
-
-        problem_result = {
+        case_results = {
+            "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "correct_count": correct_count,
-            "accuracy": accuracy
+            "is_correct": False
         }
-        results["problem_results"].append(problem_result)
 
-        log(f"Problem accuracy: {accuracy:.2f}")
+        # Create the prompt
+        query = create_base_prompt(question)
 
-    results["accuracy"] = results["correct_answers"] / results["total_attempts"] if results["total_attempts"] > 0 else 0
+        # Test the model
+        log(f"\nTesting GSM8K problem")
+        is_correct = attempt(query, correct_answer)
+        case_results["is_correct"] = is_correct
+
+        # Collect response data
+        responses.append({
+            "question_id": case_id,
+            "question": question,
+            "correct_answer": correct_answer,
+            "is_correct": is_correct,
+            "prompt": query
+        })
+
+        results["test_cases"].append(case_results)
+
     return results, responses
 
-def main():
-    """Main evaluation function."""
-    def run_gsm8k_eval():
-        problems = load_gsm8k_questions(10)
-        return evaluate_gsm8k(problems)
-
-    return run_evaluation_main(run_gsm8k_eval, "GSM8K", "Evaluate model performance on grade school math problems")
 
 if __name__ == "__main__":
-    main()
+    run_evaluation_main(
+        evaluate_gsm8k,
+        "GSM8K",
+        "Testing model performance on grade school math problems"
+    )

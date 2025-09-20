@@ -9,6 +9,7 @@ import sys
 import subprocess
 from pathlib import Path
 
+
 def run_evaluation(eval_script: str):
     """Run a single evaluation script."""
     try:
@@ -17,8 +18,12 @@ def run_evaluation(eval_script: str):
         print(f"{'='*60}")
 
         # Run the script
-        result = subprocess.run([sys.executable, eval_script],
-                              capture_output=True, text=True, cwd=Path(__file__).parent)
+        result = subprocess.run(
+            [sys.executable, eval_script],
+            capture_output=True,
+            text=True,
+            cwd=Path(__file__).parent,
+        )
 
         print(result.stdout)
         if result.stderr:
@@ -29,6 +34,7 @@ def run_evaluation(eval_script: str):
     except Exception as e:
         print(f"Error running {eval_script}: {e}")
         return False
+
 
 def main():
     """Main function to run all evaluations."""
@@ -57,6 +63,7 @@ def main():
     print(f"{'='*60}")
     print(f"Successfully ran {successful_runs}/{total_runs} evaluations.")
     print("Check individual result files for detailed outputs.")
+
 
 if __name__ == "__main__":
     main()

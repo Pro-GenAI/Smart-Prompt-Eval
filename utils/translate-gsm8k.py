@@ -47,9 +47,11 @@ import argparse
 # Add project root to path
 project_root = Path(__file__).parent
 import sys
+
 sys.path.insert(0, str(project_root))
 
 from utils.utils import log
+
 
 def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optional[str]:
     """
@@ -78,6 +80,7 @@ def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optiona
 
     return None
 
+
 def load_gsm8k_questions(filepath: str, limit: Optional[int] = None) -> List[Dict]:
     """
     Load GSM8K questions from JSONL file.
@@ -90,22 +93,25 @@ def load_gsm8k_questions(filepath: str, limit: Optional[int] = None) -> List[Dic
         List of question dictionaries
     """
     questions = []
-    with open(filepath, 'r', encoding='utf-8') as f:
+    with open(filepath, "r", encoding="utf-8") as f:
         for i, line in enumerate(f):
             if limit and i >= limit:
                 break
             try:
                 data = json.loads(line.strip())
-                questions.append({
-                    'id': f'gsm8k_{i+1}',
-                    'question': data['question'],
-                    'answer': data['answer']
-                })
+                questions.append(
+                    {
+                        "id": f"gsm8k_{i+1}",
+                        "question": data["question"],
+                        "answer": data["answer"],
+                    }
+                )
             except json.JSONDecodeError as e:
                 log(f"Error parsing line {i+1}: {e}")
                 continue
 
     return questions
+
 
 def translate_question(question: str, target_lang: str) -> Optional[str]:
     """
@@ -120,11 +126,9 @@ def translate_question(question: str, target_lang: str) -> Optional[str]:
     """
     return translate_text(question, target_lang)
 
+
 def create_translated_dataset(
-    original_questions: List[Dict],
-    target_lang: str,
-    lang_name: str,
-    output_file: str
+    original_questions: List[Dict], target_lang: str, lang_name: str, output_file: str
 ) -> int:
     """
     Create a translated dataset for a specific language.
@@ -148,9 +152,9 @@ def create_translated_dataset(
         if (i + 1) % 50 == 0:
             log(f"Processed {i + 1}/{len(original_questions)} questions...")
 
-        question_id = question_data['id']
-        original_question = question_data['question']
-        answer = question_data['answer']
+        question_id = question_data["id"]
+        original_question = question_data["question"]
+        answer = question_data["answer"]
 
         # Translate the question
         translated_question = translate_question(original_question, target_lang)
@@ -158,13 +162,13 @@ def create_translated_dataset(
         if translated_question:
             # Create translated entry
             translated_entry = {
-                'id': f"{question_id}_{target_lang}",
-                'original_id': question_id,
-                'question': translated_question,
-                'original_question': original_question,
-                'answer': answer,
-                'language': target_lang,
-                'language_name': lang_name
+                "id": f"{question_id}_{target_lang}",
+                "original_id": question_id,
+                "question": translated_question,
+                "original_question": original_question,
+                "answer": answer,
+                "language": target_lang,
+                "language_name": lang_name,
             }
             translated_questions.append(translated_entry)
             successful_translations += 1
@@ -172,51 +176,71 @@ def create_translated_dataset(
             log(f"Failed to translate question {question_id}")
             # Add original question as fallback
             translated_entry = {
-                'id': f"{question_id}_{target_lang}",
-                'original_id': question_id,
-                'question': original_question,  # Fallback to original
-                'original_question': original_question,
-                'answer': answer,
-                'language': target_lang,
-                'language_name': lang_name,
-                'translation_failed': True
+                "id": f"{question_id}_{target_lang}",
+                "original_id": question_id,
+                "question": original_question,  # Fallback to original
+                "original_question": original_question,
+                "answer": answer,
+                "language": target_lang,
+                "language_name": lang_name,
+                "translation_failed": True,
             }
             translated_questions.append(translated_entry)
 
     # Save to JSONL file
     log(f"Saving {len(translated_questions)} questions to {output_file}")
-    with open(output_file, 'w', encoding='utf-8') as f:
+    with open(output_file, "w", encoding="utf-8") as f:
         for entry in translated_questions:
-            f.write(json.dumps(entry, ensure_ascii=False) + '\n')
+            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
 
-    log(f"✓ Successfully created {output_file} with {successful_translations}/{len(original_questions)} translated questions")
+    log(
+        f"✓ Successfully created {output_file} with {successful_translations}/{len(original_questions)} translated questions"
+    )
     return successful_translations
+
 
 def main():
     """Main function to translate GSM8K dataset."""
-    parser = argparse.ArgumentParser(description='Translate GSM8K dataset to multiple languages')
-    parser.add_argument('--input', '-i', default='./evals/gsm8k_test.jsonl',
-                       help='Input GSM8K JSONL file path')
-    parser.add_argument('--output-dir', '-o', default='./evals',
-                       help='Output directory for translated files')
-    parser.add_argument('--languages', '-l', nargs='+',
-                       default=['es', 'fr', 'de', 'it', 'pt'],
-                       help='Target languages (default: es fr de it pt)')
-    parser.add_argument('--limit', type=int, default=None,
-                       help='Limit number of questions to translate (default: all)')
-    parser.add_argument('--force', action='store_true',
-                       help='Overwrite existing files')
+    parser = argparse.ArgumentParser(
+        description="Translate GSM8K dataset to multiple languages"
+    )
+    parser.add_argument(
+        "--input",
+        "-i",
+        default="./evals/gsm8k_test.jsonl",
+        help="Input GSM8K JSONL file path",
+    )
+    parser.add_argument(
+        "--output-dir",
+        "-o",
+        default="./evals",
+        help="Output directory for translated files",
+    )
+    parser.add_argument(
+        "--languages",
+        "-l",
+        nargs="+",
+        default=["es", "fr", "de", "it", "pt"],
+        help="Target languages (default: es fr de it pt)",
+    )
+    parser.add_argument(
+        "--limit",
+        type=int,
+        default=None,
+        help="Limit number of questions to translate (default: all)",
+    )
+    parser.add_argument("--force", action="store_true", help="Overwrite existing files")
 
     args = parser.parse_args()
 
     # Language configurations
     language_config = {
-        'es': 'Spanish',
-        'fr': 'French',
-        'de': 'German',
-        'it': 'Italian',
-        'pt': 'Portuguese',
-        'ru': 'Russian'
+        "es": "Spanish",
+        "fr": "French",
+        "de": "German",
+        "it": "Italian",
+        "pt": "Portuguese",
+        "ru": "Russian",
     }
 
     # Validate input file
@@ -252,16 +276,15 @@ def main():
 
         # Check if file exists
         if output_file.exists() and not args.force:
-            log(f"Skipping {lang_name} ({lang_code}) - file already exists: {output_file}")
+            log(
+                f"Skipping {lang_name} ({lang_code}) - file already exists: {output_file}"
+            )
             log("Use --force to overwrite existing files")
             continue
 
         try:
             successful = create_translated_dataset(
-                original_questions,
-                lang_code,
-                lang_name,
-                str(output_file)
+                original_questions, lang_code, lang_name, str(output_file)
             )
             total_successful += successful
             total_processed += len(original_questions)
@@ -271,15 +294,16 @@ def main():
             continue
 
     # Summary
-    log("\n" + "="*60)
+    log("\n" + "=" * 60)
     log("TRANSLATION SUMMARY")
-    log("="*60)
+    log("=" * 60)
     log(f"Total questions processed: {total_processed}")
     log(f"Successful translations: {total_successful}")
     log(".1f")
     log(f"Output directory: {output_dir}")
 
     return 0
+
 
 if __name__ == "__main__":
     exit(main())

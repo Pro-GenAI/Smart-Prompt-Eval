@@ -15,7 +15,10 @@ sys.path.insert(0, str(project_root))
 
 from utils.utils import log, model
 
-def load_gsm8k_questions(num_questions: int = 5, start_idx: int = 0) -> List[Dict[str, Any]]:
+
+def load_gsm8k_questions(
+    num_questions: int = 5, start_idx: int = 0
+) -> List[Dict[str, Any]]:
     """
     Load GSM8K questions from the test file.
 
@@ -44,12 +47,15 @@ def load_gsm8k_questions(num_questions: int = 5, start_idx: int = 0) -> List[Dic
             else:
                 final_answer = answer_text.strip()
 
-            questions.append({
-                "id": f"gsm8k_{i+1}",
-                "question": data["question"],
-                "answer": final_answer
-            })
+            questions.append(
+                {
+                    "id": f"gsm8k_{i+1}",
+                    "question": data["question"],
+                    "answer": final_answer,
+                }
+            )
     return questions
+
 
 def extract_final_answer(answer_text: str) -> str:
     """
@@ -66,7 +72,12 @@ def extract_final_answer(answer_text: str) -> str:
     else:
         return answer_text.strip()
 
-def save_evaluation_results(results: Dict[str, Any], filename: str, responses: Optional[List[Dict[str, Any]]] = None) -> Path:
+
+def save_evaluation_results(
+    results: Dict[str, Any],
+    filename: str,
+    responses: Optional[List[Dict[str, Any]]] = None,
+) -> Path:
     """
     Save evaluation results to a JSON file in a model-based folder structure.
 
@@ -79,22 +90,25 @@ def save_evaluation_results(results: Dict[str, Any], filename: str, responses: O
         Path to the saved results file
     """
     # Create model-based directory structure
-    model_name = model.replace("/", "_").replace("-", "_")  # Sanitize model name for folder
+    model_name = model.replace("/", "_").replace(
+        "-", "_"
+    )  # Sanitize model name for folder
     results_dir = project_root / "results" / model_name
     results_dir.mkdir(parents=True, exist_ok=True)
 
     # Save main results
     results_file = results_dir / f"{filename}_results.json"
-    with open(results_file, 'w') as f:
+    with open(results_file, "w") as f:
         json.dump(results, f, indent=2)
 
     # Save individual responses if provided
     if responses:
         responses_file = results_dir / f"{filename}_responses.json"
-        with open(responses_file, 'w') as f:
+        with open(responses_file, "w") as f:
             json.dump(responses, f, indent=2)
 
     return results_file
+
 
 def log_evaluation_start(title: str):
     """Log the start of an evaluation."""
@@ -102,12 +116,14 @@ def log_evaluation_start(title: str):
     log(f"{title}")
     log("=" * 60)
 
+
 def log_evaluation_end(title: str, output_file: Path):
     """Log the end of an evaluation."""
     log(f"\n{'='*60}")
     log(f"{title} COMPLETE")
     log(f"Results saved to: {output_file}")
     log(f"{'='*60}")
+
 
 def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str):
     """Log standardized test case information."""
@@ -117,7 +133,11 @@ def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str)
     log(f"Correct answer: {correct_answer}")
     log(f"{'-'*40}")
 
-def create_base_prompt(question: str, instruction: str = "Solve this problem and provide the final answer as a number in backticks like `42`.") -> str:
+
+instruction: str = "Provide final answer as a number in a new line like #### 4"
+
+
+def create_base_prompt(question: str) -> str:
     """
     Create a base prompt with question and instruction.
 
@@ -130,7 +150,10 @@ def create_base_prompt(question: str, instruction: str = "Solve this problem and
     """
     return f"{question}\n\n{instruction}"
 
-def initialize_evaluation_results(experiment_name: str, description: str) -> Dict[str, Any]:
+
+def initialize_evaluation_results(
+    experiment_name: str, description: str
+) -> Dict[str, Any]:
     """
     Initialize a standard evaluation results dictionary.
 
@@ -141,13 +164,12 @@ def initialize_evaluation_results(experiment_name: str, description: str) -> Dic
     Returns:
         Initialized results dictionary
     """
-    return {
-        "experiment": experiment_name,
-        "description": description,
-        "test_cases": []
-    }
+    return {"experiment": experiment_name, "description": description, "test_cases": []}
 
-def run_evaluation_main(eval_function, eval_name: str, eval_description: str, *args, **kwargs):
+
+def run_evaluation_main(
+    eval_function, eval_name: str, eval_description: str, *args, **kwargs
+):
     """
     Centralized main function for running evaluations.
 

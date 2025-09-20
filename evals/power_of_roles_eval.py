@@ -7,40 +7,41 @@ Based on the Power_of_Roles experiment.
 
 from utils.eval_utils import (
     load_gsm8k_questions,
-    save_evaluation_results,
-    log_evaluation_start,
-    log_evaluation_end,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
-    log_test_case_info
+    log_test_case_info,
 )
-from utils.utils import get_accuracy, log, user_message, system_message, bot_message
+from utils.utils import attempt, log, user_message, system_message, bot_message
 from typing import Dict, List
 from utils.utils import ChatCompletionMessageParam
 
+
 def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageParam]]:
     """Create different role-based prompt configurations."""
-    base_prompt = create_base_prompt(question)
+    prompt = create_base_prompt(question)
 
     return {
-        "user_only": [user_message(base_prompt)],
+        # "user_only": [user_message(prompt)],
         "with_system": [
-            system_message("You are a helpful math assistant. Always provide accurate calculations."),
-            user_message(base_prompt)
+            system_message(
+                "You are a helpful math assistant. Always provide accurate calculations."
+            ),
+            user_message(prompt),
         ],
-        "with_assistant_history": [
-            user_message("What is 2 + 2?"),
-            bot_message("2 + 2 = 4"),
-            user_message(base_prompt)
+        "with_assistant_sample_response": [
+            user_message("What is 2 kgs + 2 kgs?"),
+            bot_message("When we add 2 with 2, we calculate the sum is 2 kgs + 2 kgs = 4 kgs  \n#### 4"),
+            user_message(prompt),
         ],
-        "multiple_roles": [
+        "with_bot_promise": [
             system_message("You are a math expert."),
             user_message("Please help me with this math problem."),
             bot_message("I'll be happy to help you solve this math problem."),
-            user_message(base_prompt)
-        ]
+            user_message(prompt),
+        ],
     }
+
 
 def evaluate_power_of_roles():
     """Evaluate the impact of different role configurations on GSM8K questions."""
@@ -50,7 +51,7 @@ def evaluate_power_of_roles():
 
     results = initialize_evaluation_results(
         "power_of_roles",
-        "Testing the impact of different role configurations on model performance with GSM8K problems"
+        "Testing the impact of different role configurations on model performance with GSM8K problems",
     )
 
     responses = []  # Collect all individual responses
@@ -66,7 +67,7 @@ def evaluate_power_of_roles():
             "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "role_results": {}
+            "role_results": {},
         }
 
         # Create role variants
@@ -75,7 +76,7 @@ def evaluate_power_of_roles():
         for role_name, messages in role_variants.items():
             log(f"\nTesting role configuration: {role_name}")
 
-            # For role-based tests, we need to modify get_accuracy to handle messages
+            # For role-based tests, we need to modify attempt to handle messages
             # For now, we'll extract the user message content
             if isinstance(messages, list) and len(messages) > 0:
                 # Find the last user message
@@ -86,27 +87,34 @@ def evaluate_power_of_roles():
                         break
 
                 if user_content:
-                    accuracy = get_accuracy(user_content, correct_answer)
+                    is_correct = attempt(user_content, correct_answer)
                 else:
-                    accuracy = "0.00%"
+                    is_correct = False  # Default to False if no user content found
             else:
-                accuracy = get_accuracy(str(messages), correct_answer)
+                is_correct = attempt(str(messages), correct_answer)
 
-            case_results["role_results"][role_name] = accuracy
+            case_results["role_results"][role_name] = is_correct
 
             # Collect response data for this role configuration
-            responses.append({
-                "question_id": case_id,
-                "question": question,
-                "correct_answer": correct_answer,
-                "role_config": role_name,
-                "accuracy": accuracy,
-                "messages": messages
-            })
+            responses.append(
+                {
+                    "question_id": case_id,
+                    "question": question,
+                    "correct_answer": correct_answer,
+                    "role_config": role_name,
+                    "accuracy": is_correct,
+                    "messages": messages,
+                }
+            )
 
         results["test_cases"].append(case_results)
 
     return results, responses
 
+
 if __name__ == "__main__":
-    run_evaluation_main(evaluate_power_of_roles, "Power of Roles", "Testing the impact of different role configurations on model performance with GSM8K problems")
+    run_evaluation_main(
+        evaluate_power_of_roles,
+        "Power of Roles",
+        "Testing the impact of different role configurations on model performance with GSM8K problems",
+    )

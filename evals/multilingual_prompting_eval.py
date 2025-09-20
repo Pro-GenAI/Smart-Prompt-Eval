@@ -7,20 +7,20 @@ Based on the Multilingual_Prompting experiment.
 
 from utils.eval_utils import (
     load_gsm8k_questions,
-    save_evaluation_results,
-    log_evaluation_start,
-    log_evaluation_end,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
-    log_test_case_info
+    log_test_case_info,
 )
-from utils.utils import get_accuracy, log
+from utils.utils import attempt, log
 from typing import Dict, Optional, List
 import json
 from pathlib import Path
 
-def load_translated_questions(language_code: str, num_questions: Optional[int] = None) -> List[Dict]:
+
+def load_translated_questions(
+    language_code: str, num_questions: Optional[int] = None
+) -> List[Dict]:
     """
     Load translated questions from JSONL file for a specific language.
 
@@ -39,7 +39,7 @@ def load_translated_questions(language_code: str, num_questions: Optional[int] =
 
     translated_questions = []
     try:
-        with open(file_path, 'r', encoding='utf-8') as f:
+        with open(file_path, "r", encoding="utf-8") as f:
             for line_num, line in enumerate(f):
                 if line.strip():
                     try:
@@ -57,27 +57,26 @@ def load_translated_questions(language_code: str, num_questions: Optional[int] =
     log(f"Loaded {len(translated_questions)} translated questions for {language_code}")
     return translated_questions
 
+
 def create_instruction_prompt(target_lang: str) -> str:
     """Create language-specific instruction prompts."""
     instructions = {
-        'es': "Resuelve este problema y proporciona la respuesta final como un número entre comillas invertidas como `42`.",
-        'fr': "Résous ce problème et fournis la réponse finale sous forme de nombre entre guillemets inversés comme `42`.",
-        'de': "Löse dieses Problem und gib die endgültige Antwort als Zahl in Backticks wie `42` an.",
-        'en': "Solve this problem and provide the final answer as a number in backticks like `42`."
+        "es": "Resuelve este problema y proporciona la respuesta final como un número entre comillas invertidas como `42`.",
+        "fr": "Résous ce problème et fournis la réponse finale sous forme de nombre entre guillemets inversés comme `42`.",
+        "de": "Löse dieses Problem und gib die endgültige Antwort als Zahl in Backticks wie `42` an.",
+        "en": "Solve this problem and provide the final answer as a number in backticks like `42`.",
     }
-    return instructions.get(target_lang, instructions['en'])
+    return instructions.get(target_lang, instructions["en"])
 
-def create_language_variants_from_translated(original_question_id: str) -> Dict[str, str]:
+
+def create_language_variants_from_translated(
+    original_question_id: str,
+) -> Dict[str, str]:
     """Create language variants using pre-translated questions from JSONL files."""
     variants = {}
 
     # Language configurations
-    languages = {
-        "English": "en",
-        "Spanish": "es",
-        "French": "fr",
-        "German": "de"
-    }
+    languages = {"Spanish": "es", "French": "fr", "German": "de"} # "English": "en", 
 
     for lang_name, lang_code in languages.items():
         try:
@@ -89,7 +88,9 @@ def create_language_variants_from_translated(original_question_id: str) -> Dict[
                     continue
             else:
                 # Load translated question from JSONL file
-                translated_questions = load_translated_questions(lang_code, num_questions=1)
+                translated_questions = load_translated_questions(
+                    lang_code, num_questions=1
+                )
                 translated_question = None
 
                 # Find the question with matching original_id
@@ -99,7 +100,9 @@ def create_language_variants_from_translated(original_question_id: str) -> Dict[
                         break
 
                 if translated_question is None:
-                    log(f"Translated question not found for {lang_name} ({original_question_id})")
+                    log(
+                        f"Translated question not found for {lang_name} ({original_question_id})"
+                    )
                     continue
 
             # Create the full prompt with translated question and language-specific instructions
@@ -113,15 +116,20 @@ def create_language_variants_from_translated(original_question_id: str) -> Dict[
             log(f"Error loading {lang_name} variant: {e}")
             # Fallback to original question with English instructions
             if lang_code == "en":
-                variants[lang_name] = create_base_prompt(get_original_question_by_id(original_question_id) or "")
+                variants[lang_name] = create_base_prompt(
+                    get_original_question_by_id(original_question_id) or ""
+                )
 
     return variants
+
 
 def get_original_question_by_id(question_id: str) -> Optional[str]:
     """Get original English question by ID from GSM8K test file."""
     try:
         # Load from the original GSM8K file (load a large number to ensure we get the one we want)
-        original_questions = load_gsm8k_questions(num_questions=1000)  # Load many questions
+        original_questions = load_gsm8k_questions(
+            num_questions=1000
+        )  # Load many questions
         for q in original_questions:
             if q["id"] == question_id:
                 return q["question"]
@@ -129,6 +137,7 @@ def get_original_question_by_id(question_id: str) -> Optional[str]:
         log(f"Error loading original question {question_id}: {e}")
 
     return None
+
 
 def evaluate_multilingual_prompting():
     """Evaluate model performance across different languages on GSM8K questions."""
@@ -138,7 +147,7 @@ def evaluate_multilingual_prompting():
 
     results = initialize_evaluation_results(
         "multilingual_prompting",
-        "Testing model performance across different languages on GSM8K problems"
+        "Testing model performance across different languages on GSM8K problems",
     )
 
     responses = []  # Collect all individual responses
@@ -154,7 +163,7 @@ def evaluate_multilingual_prompting():
             "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "language_results": {}
+            "language_results": {},
         }
 
         # Create language variants using pre-translated files
@@ -162,22 +171,29 @@ def evaluate_multilingual_prompting():
 
         for language, query in variants.items():
             log(f"\nTesting language: {language}")
-            accuracy = get_accuracy(query, correct_answer)
-            case_results["language_results"][language] = accuracy
+            is_correct = attempt(query, correct_answer)
+            case_results["language_results"][language] = is_correct
 
             # Collect response data for this language
-            responses.append({
-                "question_id": case_id,
-                "question": question,
-                "correct_answer": correct_answer,
-                "language": language,
-                "accuracy": accuracy,
-                "prompt": query
-            })
+            responses.append(
+                {
+                    "question_id": case_id,
+                    "question": question,
+                    "correct_answer": correct_answer,
+                    "language": language,
+                    "accuracy": is_correct,
+                    "prompt": query,
+                }
+            )
 
         results["test_cases"].append(case_results)
 
     return results, responses
 
+
 if __name__ == "__main__":
-    run_evaluation_main(evaluate_multilingual_prompting, "Multilingual Prompting", "Testing model performance across different languages on GSM8K problems")
+    run_evaluation_main(
+        evaluate_multilingual_prompting,
+        "Multilingual Prompting",
+        "Testing model performance across different languages on GSM8K problems",
+    )
