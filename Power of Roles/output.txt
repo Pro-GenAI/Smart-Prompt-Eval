@@ -1,6 +1,0 @@
------------
-Model: gpt-5-nano
-
-14)  Biased responses %: 20
-
-14.1)  Biased responses %: 0

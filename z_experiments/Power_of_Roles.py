@@ -1,14 +1,14 @@
 # Power of Roles
-#
 # https://github.com/Pro-GenAI/Power-of-Roles
 
 # Experiment A. 	Experimenting the Impact of Role
 # - **Removed for now** as it is related to structured data processing.
+# It works by adding messages of various roles: user, assistant, system
 
 # Experiment B. 	Using the Power of Roles to Generate Harmful Text
 
 # Iterative generation of harmful responses using Bot role
-from utils import print_progress, get_response, user_message, bot_message, log
+from ..utils.utils import print_progress, get_response, user_message, bot_message, log
 
 
 total_trials = 10

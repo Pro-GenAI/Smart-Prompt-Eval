@@ -1,8 +1,7 @@
 # Multilingual Prompting
-#
 # https://github.com/Pro-GenAI/PromptLang
 
-from utils import attempt_question, log
+from ..utils.utils import attempt_question, log
 
 question_name = "x_power_y"
 correct_answer = str(52**13)
