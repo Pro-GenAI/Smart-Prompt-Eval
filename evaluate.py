@@ -13,7 +13,7 @@ from pathlib import Path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
-from utils.utils import log
+from utils.common_utils import log
 
 def run_experiment(experiment_name: str):
     """Run a single experiment by importing and executing its module."""

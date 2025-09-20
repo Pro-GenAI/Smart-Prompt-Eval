@@ -12,7 +12,7 @@ from utils.eval_utils import (
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.utils import attempt, log
+from utils.common_utils import attempt, log
 
 
 def evaluate_seed_consistency():

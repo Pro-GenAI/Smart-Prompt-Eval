@@ -12,9 +12,9 @@ from utils.eval_utils import (
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.utils import attempt, log, user_message, system_message, bot_message
+from utils.common_utils import attempt, log, user_message, system_message, bot_message
 from typing import Dict, List
-from utils.utils import ChatCompletionMessageParam
+from utils.common_utils import ChatCompletionMessageParam
 
 
 def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageParam]]:

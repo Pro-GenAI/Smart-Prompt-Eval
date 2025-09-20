@@ -15,7 +15,7 @@ from utils.eval_utils import (
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.utils import attempt, log
+from utils.common_utils import attempt, log
 
 # Set random seed for reproducibility
 random.seed(42)

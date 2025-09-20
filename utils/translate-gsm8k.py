@@ -50,7 +50,7 @@ import sys
 
 sys.path.insert(0, str(project_root))
 
-from utils.utils import log
+from utils.common_utils import log
 
 
 def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optional[str]:

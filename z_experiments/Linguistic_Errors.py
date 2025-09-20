@@ -1,7 +1,7 @@
 # Linguistic Errors
 # https://github.com/Pro-GenAI/PromptSpell
 
-from ..utils.utils import attempt_question, get_response, log
+from ..utils.common_utils import attempt_question, get_response, log
 
 question_name = "x_power_y"
 correct_answer = str(52**13)

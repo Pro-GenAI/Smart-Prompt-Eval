@@ -4,11 +4,9 @@ from typing import Optional
 from dotenv import load_dotenv
 import openai
 from openai.types.chat.chat_completion_message_param import ChatCompletionMessageParam
-import vcr
 
-# Simple VCR setup for automatic recording/replaying
-vcr_config = vcr.VCR(cassette_library_dir="cassettes")
-os.makedirs("cassettes", exist_ok=True)
+from response_cacher import get_cache_key, get_cached_response, save_cached_response
+
 
 
 def log(text="", filename="output.txt"):
@@ -160,34 +158,25 @@ def bot_message(content: str) -> ChatCompletionMessageParam:
 def get_response(
     messages: str | list[ChatCompletionMessageParam], **kwargs
 ) -> str | None:
-    """Get response from OpenAI API with automatic VCR recording/replaying."""
-    # Use VCR with automatic cassette naming
-    with vcr_config.use_cassette("openai_requests.yaml"):
-        if isinstance(messages, str):
-            messages = [user_message(messages)]
-        response = client.chat.completions.create(
-            model=model,
-            messages=messages,
-            **kwargs,  # More arguments like seed, temperature, etc.
-        )
-        return response.choices[0].message.content
+    """Get response from OpenAI API with automatic caching."""
 
+    # Generate cache key
+    kwargs["model"] = model  # Ensure model is part of the cache key
+    cache_key = get_cache_key(messages, **kwargs)
+    cached_response = get_cached_response(cache_key)
+    if cached_response is not None:
+        return cached_response
 
-if __name__ == "__main__":
-    import time
-    start = time.time()
-    print(get_response("Hello, how are you?"))
-    end = time.time()
-    print(f"Took {end - start} seconds")
+    # Make API call if not cached
+    if isinstance(messages, str):
+        messages = [user_message(messages)]
+    response = client.chat.completions.create(
+        messages=messages,
+        **kwargs,  # More arguments like seed, temperature, etc.
+    )
+    response_text = response.choices[0].message.content
+    if not response_text:
+        return None
+    save_cached_response(cache_key, response_text, **kwargs)
+    return response_text
 
-    # May be using recorded request.
-    start = time.time()
-    print(get_response("Hello, how are you?"))
-    end = time.time()
-    print(f"2nd attempt: Took {end - start} seconds")
-
-    # Another question
-    start = time.time()
-    print(get_response("What is 2+2?"))
-    end = time.time()
-    print(f"Next question: Took {end - start} seconds")

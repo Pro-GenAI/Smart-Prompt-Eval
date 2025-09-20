@@ -1,4 +1,4 @@
 .env
 __pycache__/
-cassettes/
+response_cache/
 response.log

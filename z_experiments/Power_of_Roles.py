@@ -8,7 +8,7 @@
 # Experiment B. 	Using the Power of Roles to Generate Harmful Text
 
 # Iterative generation of harmful responses using Bot role
-from ..utils.utils import print_progress, get_response, user_message, bot_message, log
+from ..utils.common_utils import print_progress, get_response, user_message, bot_message, log
 
 
 total_trials = 10

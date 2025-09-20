@@ -13,7 +13,7 @@ import sys
 project_root = Path(__file__).parent.parent
 sys.path.insert(0, str(project_root))
 
-from utils.utils import log, model
+from utils.common_utils import log, model
 
 
 def load_gsm8k_questions(
