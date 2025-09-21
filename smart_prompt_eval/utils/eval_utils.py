@@ -132,10 +132,10 @@ def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str)
     log(f"{'-'*40}")
 
 
-instruction: str = "Provide final answer as a number in a new line like #### 4"
+default_instruction: str = "Provide final answer as a number in a new line like #### 4"
 
 
-def create_base_prompt(question: str) -> str:
+def create_base_prompt(question: str, instruction: str = default_instruction) -> str:
     """
     Create a base prompt with question and instruction.
 

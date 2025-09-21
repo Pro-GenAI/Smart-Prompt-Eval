@@ -3,6 +3,9 @@
 
 
 Run and check all evals.
+	- mulilingual
+	- power of roles
+	- seed consistency
 
 
 Also add evaluating harmful/biased responses in all evals.

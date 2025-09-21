@@ -32,7 +32,7 @@ def load_translated_questions(
     Returns:
         List of translated question dictionaries
     """
-    file_path = Path(__file__).parent / f"gsm8k_test_{language_code}.jsonl"
+    file_path = Path(__file__).parent.parent / "datasets" / f"gsm8k_test_{language_code}.jsonl"
 
     if not file_path.exists():
         log(f"Translated file not found: {file_path}")
@@ -59,88 +59,42 @@ def load_translated_questions(
     return translated_questions
 
 
-def create_instruction_prompt(target_lang: str) -> str:
-    """Create language-specific instruction prompts."""
-    instructions = {
-        "es": "Resuelve este problema y proporciona la respuesta final como un número entre comillas invertidas como `42`.",
-        "fr": "Résous ce problème et fournis la réponse finale sous forme de nombre entre guillemets inversés comme `42`.",
-        "de": "Löse dieses Problem und gib die endgültige Antwort als Zahl in Backticks wie `42` an.",
-        "en": "Solve this problem and provide the final answer as a number in backticks like `42`.",
-    }
-    instruction = instructions.get(target_lang)
-    if not instruction:
-        raise ValueError(f"Unsupported language code: {target_lang}")
-    return instruction
-
-
 def create_language_variants_from_translated(
     original_question_id: str,
 ) -> Dict[str, str]:
     """Create language variants using pre-translated questions from JSONL files."""
     variants = {}
-
-    # Language configurations
-    languages = {"Spanish": "es", "French": "fr", "German": "de"} # "English": "en", 
+    languages = {"German": "de", "Spanish": "es", "French": "fr",
+                 "Italian": "it", "Portuguese": "pt"}
 
     for lang_name, lang_code in languages.items():
         try:
-            if lang_code == "en":
-                # For English, load from original GSM8K file
-                translated_question = get_original_question_by_id(original_question_id)
-                if translated_question is None:
-                    log(f"Could not find original question {original_question_id}")
-                    continue
-            else:
-                # Load translated question from JSONL file
-                translated_questions = load_translated_questions(
-                    lang_code, num_questions=1
+            # Load translated question from JSONL file
+            translated_questions = load_translated_questions(lang_code)
+            translated_question = None
+
+            # Find the question with matching original_id
+            for q in translated_questions:
+                if q.get("original_id") == original_question_id:
+                    translated_question = q["question"]
+                    break
+
+            if translated_question is None:
+                log(
+                    f"Translated question not found for {lang_name} ({original_question_id})"
                 )
-                translated_question = None
-
-                # Find the question with matching original_id
-                for q in translated_questions:
-                    if q.get("original_id") == original_question_id:
-                        translated_question = q["question"]
-                        break
-
-                if translated_question is None:
-                    log(
-                        f"Translated question not found for {lang_name} ({original_question_id})"
-                    )
-                    continue
+                continue
 
             # Create the full prompt with translated question and language-specific instructions
-            instruction = create_instruction_prompt(lang_code)
-            full_prompt = create_base_prompt(translated_question, instruction)
+            full_prompt = create_base_prompt(translated_question)
 
             variants[lang_name] = full_prompt
             log(f"✓ Loaded {lang_name} variant from translated file")
 
         except Exception as e:
             log(f"Error loading {lang_name} variant: {e}")
-            # Fallback to original question with English instructions
-            # if lang_code == "en":
-            #     variants[lang_name] = create_base_prompt(
-            #         get_original_question_by_id(original_question_id) or ""
-            #     )
 
     return variants
-
-
-# def get_original_question_by_id(question_id: str) -> Optional[str]:
-#     """Get original English question by ID from GSM8K test file."""
-#     try:
-#         # Load from the original GSM8K file (load a large number to ensure we get the one we want)
-#         original_questions = load_gsm8k_questions(
-#             num_questions=1000
-#         )  # Load many questions
-#         for q in original_questions:
-#             if q["id"] == question_id:
-#                 return q["question"]
-#     except Exception as e:
-#         log(f"Error loading original question {question_id}: {e}")
-
-#     return None
 
 
 def evaluate_multilingual_prompting():

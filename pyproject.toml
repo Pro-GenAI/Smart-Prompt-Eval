@@ -3,8 +3,13 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "hack-prompting"
-version = "0.0.0"
+name = "smart_prompt_eval"
+version = "0.0.1"
 description = "Tools for smart prompt evaluation"
 authors = [ { name = "Praneeth Vadlapati (@prane-eth)" } ]
 requires-python = ">=3.8"
+dependencies = [
+    "python-dotenv",
+    "openai",
+    "translate"
+]

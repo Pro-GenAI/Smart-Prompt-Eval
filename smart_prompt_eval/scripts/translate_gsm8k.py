@@ -156,8 +156,8 @@ def create_translated_dataset(
     log(f"Processing {len(original_questions)} questions...")
 
     # Open file for writing (append if resuming, write if new)
-    mode = "a" if existing_ids else "w"
-    with open(output_file, mode, encoding="utf-8") as f:
+    # mode = "a" if existing_ids else "w"
+    with open(output_file, "a", encoding="utf-8") as f:
         for i, question_data in enumerate(original_questions):
             if (i + 1) % 5 == 0:
                 log(f"Processed {i + 1}/{len(original_questions)} questions...")
