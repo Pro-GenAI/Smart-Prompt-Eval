@@ -4,21 +4,21 @@ GSM8K Evaluation Script
 Tests model performance on grade school math problems.
 """
 
-from utils.eval_utils import (
+from hack_prompt_eval.utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info
 )
-from utils.common_utils import attempt, log
+from hack_prompt_eval.utils.common_utils import attempt, log
 
 
 def evaluate_gsm8k():
     """Evaluate model performance on GSM8K problems."""
 
     # Load GSM8K test questions
-    test_questions = load_gsm8k_questions(num_questions=5)
+    test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
         "gsm8k",

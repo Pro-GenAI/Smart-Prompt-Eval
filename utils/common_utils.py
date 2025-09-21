@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import openai
 from openai.types.chat.chat_completion_message_param import ChatCompletionMessageParam
 
-from response_cacher import get_cache_key, get_cached_response, save_cached_response
+from .response_cacher import get_cache_key, get_cached_response, save_cached_response
 
 
 

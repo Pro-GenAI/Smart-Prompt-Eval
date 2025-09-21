@@ -7,13 +7,8 @@ Shared functions for evaluation scripts to reduce code duplication.
 import json
 from pathlib import Path
 from typing import List, Dict, Any, Optional
-import sys
 
-# Add project root to path
-project_root = Path(__file__).parent.parent
-sys.path.insert(0, str(project_root))
-
-from utils.common_utils import log, model
+from hack_prompt_eval.utils.common_utils import log, model
 
 
 def load_gsm8k_questions(
@@ -31,7 +26,7 @@ def load_gsm8k_questions(
     """
     questions = []
     # Use path relative to this file's directory
-    gsm8k_path = Path(__file__).parent / "gsm8k_test.jsonl"
+    gsm8k_path = Path(__file__).parent.parent / "datasets" / "gsm8k_test.jsonl"
     with open(gsm8k_path, "r") as f:
         for i, line in enumerate(f):
             if i < start_idx:
@@ -194,6 +189,16 @@ def run_evaluation_main(
     else:
         results = eval_result
         responses = None
+
+    # Compute summary statistics
+    total_problems = len(results["test_cases"])
+    correct_answers = sum(1 for case in results["test_cases"] if case["is_correct"])
+    accuracy = correct_answers / total_problems if total_problems > 0 else 0
+
+    results["total_problems"] = total_problems
+    results["total_attempts"] = total_problems  # Assuming one attempt per problem
+    results["correct_answers"] = correct_answers
+    results["accuracy"] = accuracy
 
     # Log results summary
     log("\n" + "=" * 60)

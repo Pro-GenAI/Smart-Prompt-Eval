@@ -4,7 +4,6 @@ General Evaluation Runner
 Runs all evaluation scripts in the evals directory.
 """
 
-import os
 import sys
 import subprocess
 from pathlib import Path

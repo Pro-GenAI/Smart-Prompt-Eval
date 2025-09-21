@@ -1,4 +1,4 @@
 .env
 __pycache__/
-response_cache/
+# response_cache/
 response.log

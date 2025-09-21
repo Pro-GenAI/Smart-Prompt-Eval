@@ -8,14 +8,14 @@ Based on the Linguistic_Errors experiment.
 from typing import Dict
 import random
 
-from utils.eval_utils import (
+from hack_prompt_eval.utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.common_utils import attempt, log
+from hack_prompt_eval.utils.common_utils import attempt, log
 
 # Set random seed for reproducibility
 random.seed(42)
@@ -124,7 +124,7 @@ def evaluate_linguistic_errors():
     """Evaluate model performance with linguistic errors on GSM8K questions."""
 
     # Load GSM8K test questions
-    test_questions = load_gsm8k_questions(num_questions=5)
+    test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
         "linguistic_errors",

@@ -37,20 +37,13 @@ REQUIRES:
 """
 
 import json
-import os
 from pathlib import Path
 from typing import Dict, List, Optional
 from translate import Translator
 import time
 import argparse
 
-# Add project root to path
-project_root = Path(__file__).parent
-import sys
-
-sys.path.insert(0, str(project_root))
-
-from utils.common_utils import log
+from hack_prompt_eval.utils.common_utils import log
 
 
 def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optional[str]:

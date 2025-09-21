@@ -1,4 +1,11 @@
 
+name this folder as a package named hack_prompt_eval.
+Include all folders, not just evals and utils.
+I should import like `from hack_prompt_eval.utils.common_utils import attempt, log`
+
+
+
+Run and check all evals.
 
 
 Also add evaluating harmful/biased responses in all evals.
@@ -12,6 +19,7 @@ Power of Roles: 1-shot case: put random question and right answer in message his
 
 Test using multiple python versions and mention in readme which ones are supported.
 Ask AI to suggest a better name.
+	- hack_prompt_eval
 Follow all standards for python packages.
 Ask copilot to review.
 

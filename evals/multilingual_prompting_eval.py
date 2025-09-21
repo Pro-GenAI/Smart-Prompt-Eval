@@ -5,17 +5,18 @@ Tests model performance across different languages.
 Based on the Multilingual_Prompting experiment.
 """
 
-from utils.eval_utils import (
+from typing import Dict, Optional, List
+import json
+from pathlib import Path
+
+from hack_prompt_eval.utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.common_utils import attempt, log
-from typing import Dict, Optional, List
-import json
-from pathlib import Path
+from hack_prompt_eval.utils.common_utils import attempt, log
 
 
 def load_translated_questions(
@@ -66,7 +67,10 @@ def create_instruction_prompt(target_lang: str) -> str:
         "de": "Löse dieses Problem und gib die endgültige Antwort als Zahl in Backticks wie `42` an.",
         "en": "Solve this problem and provide the final answer as a number in backticks like `42`.",
     }
-    return instructions.get(target_lang, instructions["en"])
+    instruction = instructions.get(target_lang)
+    if not instruction:
+        raise ValueError(f"Unsupported language code: {target_lang}")
+    return instruction
 
 
 def create_language_variants_from_translated(
@@ -107,7 +111,7 @@ def create_language_variants_from_translated(
 
             # Create the full prompt with translated question and language-specific instructions
             instruction = create_instruction_prompt(lang_code)
-            full_prompt = f"{translated_question}\n\n{instruction}"
+            full_prompt = create_base_prompt(translated_question, instruction)
 
             variants[lang_name] = full_prompt
             log(f"✓ Loaded {lang_name} variant from translated file")
@@ -115,35 +119,35 @@ def create_language_variants_from_translated(
         except Exception as e:
             log(f"Error loading {lang_name} variant: {e}")
             # Fallback to original question with English instructions
-            if lang_code == "en":
-                variants[lang_name] = create_base_prompt(
-                    get_original_question_by_id(original_question_id) or ""
-                )
+            # if lang_code == "en":
+            #     variants[lang_name] = create_base_prompt(
+            #         get_original_question_by_id(original_question_id) or ""
+            #     )
 
     return variants
 
 
-def get_original_question_by_id(question_id: str) -> Optional[str]:
-    """Get original English question by ID from GSM8K test file."""
-    try:
-        # Load from the original GSM8K file (load a large number to ensure we get the one we want)
-        original_questions = load_gsm8k_questions(
-            num_questions=1000
-        )  # Load many questions
-        for q in original_questions:
-            if q["id"] == question_id:
-                return q["question"]
-    except Exception as e:
-        log(f"Error loading original question {question_id}: {e}")
+# def get_original_question_by_id(question_id: str) -> Optional[str]:
+#     """Get original English question by ID from GSM8K test file."""
+#     try:
+#         # Load from the original GSM8K file (load a large number to ensure we get the one we want)
+#         original_questions = load_gsm8k_questions(
+#             num_questions=1000
+#         )  # Load many questions
+#         for q in original_questions:
+#             if q["id"] == question_id:
+#                 return q["question"]
+#     except Exception as e:
+#         log(f"Error loading original question {question_id}: {e}")
 
-    return None
+#     return None
 
 
 def evaluate_multilingual_prompting():
     """Evaluate model performance across different languages on GSM8K questions."""
 
     # Load GSM8K test questions
-    test_questions = load_gsm8k_questions(num_questions=3)
+    test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
         "multilingual_prompting",

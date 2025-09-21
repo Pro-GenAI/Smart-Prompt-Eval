@@ -1,0 +1,7 @@
+{
+  "response": "Hello! I'm doing great—thanks for asking. How are you doing today?",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}
