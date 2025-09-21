@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but I’m unable to process your request right now because you’ve reached the free‑translation limit for the day. You’ll be able to use the service again after the wait time has elapsed.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

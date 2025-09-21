@@ -1,0 +1,7 @@
+{
+  "response": "You have used all available free translations for today. The next available translation slot will be in 01 hours 51 minutes 59 seconds.  \n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

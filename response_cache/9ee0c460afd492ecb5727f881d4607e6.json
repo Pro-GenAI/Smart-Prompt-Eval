@@ -1,0 +1,7 @@
+{
+  "response": "The tickets cost $12 + $10 = $22.  \nIf the mother gave the cashier $30, the cashier would give her $8 in change, leaving exactly $22 for the tickets.\n\nSo she gave the cashier **$30**.\n\n**Answer: #### 30**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

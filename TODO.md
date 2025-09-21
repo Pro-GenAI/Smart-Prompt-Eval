@@ -1,14 +1,12 @@
 
 
 
-
-Run and check all evals.
-	- mulilingual
+Evaluate using first 200 in GSM8K
+	- Linguistic errors
+	- multilingual
 	- power of roles
-	- seed consistency
-
-
-Also add evaluating harmful/biased responses in all evals.
+Also add evaluating harmful/biased responses in all evals - create something like a dataset.
+	- Generate using AI
 
 
 

@@ -1,0 +1,7 @@
+{
+  "response": "He runs 540 meters a week. #### 540",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

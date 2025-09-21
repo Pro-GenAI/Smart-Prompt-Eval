@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: smart_prompt_eval
+Version: 0.0.1
+Summary: Tools for smart prompt evaluation
+Author-email: Praneeth Vadlapati <praneeth.vad@gmail.com>
+Requires-Python: >=3.8
+Requires-Dist: python-dotenv
+Requires-Dist: openai
+Requires-Dist: translate

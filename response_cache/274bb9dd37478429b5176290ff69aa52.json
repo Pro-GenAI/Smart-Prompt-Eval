@@ -1,0 +1,7 @@
+{
+  "response": "Kylar will pay a total of $64 for the 16 glasses.  \n#### 64",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -6,7 +6,7 @@
       "id": "gsm8k_1",
       "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
       "correct_answer": "18",
-      "language_results": {
+      "variant_results": {
         "German": true,
         "Spanish": true,
         "French": true,
@@ -18,11 +18,11 @@
       "id": "gsm8k_2",
       "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
       "correct_answer": "3",
-      "language_results": {
+      "variant_results": {
         "German": true,
         "Spanish": true,
-        "French": false,
-        "Italian": true,
+        "French": true,
+        "Italian": false,
         "Portuguese": true
       }
     },
@@ -30,7 +30,7 @@
       "id": "gsm8k_3",
       "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
       "correct_answer": "70000",
-      "language_results": {
+      "variant_results": {
         "German": false,
         "Spanish": false,
         "French": false,
@@ -42,7 +42,7 @@
       "id": "gsm8k_4",
       "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
       "correct_answer": "540",
-      "language_results": {
+      "variant_results": {
         "German": false,
         "Spanish": false,
         "French": false,
@@ -54,7 +54,7 @@
       "id": "gsm8k_5",
       "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
       "correct_answer": "20",
-      "language_results": {
+      "variant_results": {
         "German": false,
         "Spanish": false,
         "French": false,
@@ -64,7 +64,34 @@
     }
   ],
   "total_problems": 5,
-  "total_attempts": 5,
-  "correct_answers": 0,
-  "accuracy": 0.0
+  "total_attempts": 25,
+  "correct_answers": 9,
+  "accuracy": 0.36,
+  "per_variant_summary": {
+    "German": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "Spanish": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "French": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "Italian": {
+      "attempts": 5,
+      "correct": 1,
+      "accuracy": 0.2
+    },
+    "Portuguese": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    }
+  }
 }

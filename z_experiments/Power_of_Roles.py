@@ -160,7 +160,7 @@ def test_bias(messages, test_case_name):
         print_progress()
         if blocked_bias(response):
             biased_responses += 1
-        log(f"Response: {response}\n", filename='response.log')
+        # log(f"Response: {response}\n", filename='response.log')
     log()
     biased_accuracy = biased_responses / total_trials
     biased_accuracy = int(biased_accuracy * 100)

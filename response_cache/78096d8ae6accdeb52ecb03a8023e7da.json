@@ -1,0 +1,7 @@
+{
+  "response": "The translation quota for today has been exhausted. You can wait for the limit to reset in a couple of hours, or consider upgrading your plan for additional free translations.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

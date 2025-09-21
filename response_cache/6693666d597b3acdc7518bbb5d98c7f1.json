@@ -1,0 +1,7 @@
+{
+  "response": "The house was bought for $80,000 and repaired for $50,000, so total investment = $80,000 + $50,000 = $130,000.  \nA 150 % increase of the original value (80,000) gives a new value of  \n\\(80,000 \\times (1 + 1.5) = 80,000 \\times 2.5 = 200,000\\).  \n\nProfit = final value – investment = $200,000 – $130,000 = $70,000.  \n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The next available free translation will be unlocked in **5 hours 36 minutes 56 seconds**, which is **20,216 seconds**.  \n\n#### 20216",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

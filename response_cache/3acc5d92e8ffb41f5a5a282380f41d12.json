@@ -1,0 +1,7 @@
+{
+  "response": "The next free translation will be available in 2 hours. #### 2",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

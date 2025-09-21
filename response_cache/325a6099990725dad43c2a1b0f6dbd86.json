@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but you’ve reached the free‑translation quota for today.  Please check back after the wait period or consider a paid plan to continue translating.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

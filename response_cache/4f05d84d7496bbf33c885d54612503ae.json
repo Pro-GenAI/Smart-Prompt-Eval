@@ -1,0 +1,7 @@
+{
+  "response": "Para 20 estudiantes:  \n- 20 % de 20 = 4 estudiantes en danza contemporánea.  \n- Restan 16 estudiantes, de los cuales 25 % = 4 en danza jazz.  \n- Quedan 12 estudiantes, que son 12 de 20 = 60 % de todo el alumnado en danza hip‑hop.  \n\nEl resultado es 60 %.  \n\n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

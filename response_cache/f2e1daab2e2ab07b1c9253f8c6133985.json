@@ -1,0 +1,7 @@
+{
+  "response": "I’m happy to help, but I’m not sure what you’d like translated or what number you’re looking for. Could you let me know what text you want translated (or what specific number you need) so I can give you a precise answer?",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

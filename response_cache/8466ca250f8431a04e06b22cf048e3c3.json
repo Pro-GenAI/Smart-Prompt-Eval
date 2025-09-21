@@ -1,0 +1,7 @@
+{
+  "response": "Meredith wrote 5 articles on Monday.  \nTuesday: 2/5 more than Monday → 5 + (2/5 × 5) = 5 + 2 = 7 articles.  \nWednesday: double Tuesday → 7 × 2 = 14 articles.  \n\nTotal articles = 5 + 7 + 14 = 26.  \nEach article takes 4 hours → 26 × 4 = 104 hours.\n\n**Answer:** #### 104",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

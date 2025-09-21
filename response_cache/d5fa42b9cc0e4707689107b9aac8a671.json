@@ -1,0 +1,7 @@
+{
+  "response": "The total investment is $80{,}000 + $50{,}000 = $130{,}000.  \nAfter the repairs the value increased by 150 %, i.e. it became 2.5 × the original price:\n\n\\[\n\\text{New value} = 80{,}000 \\times 2.5 = 200{,}000.\n\\]\n\nSelling at that price gives a profit of\n\n\\[\n200{,}000 - 130{,}000 = 70{,}000.\n\\]\n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

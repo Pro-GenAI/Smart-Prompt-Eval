@@ -1,0 +1,7 @@
+{
+  "response": "In the hive we have three kinds of bees:\n\n- **Queens**: let their number be \\(Q\\).\n- **Baby bees**: there are twice as many as queens, so \\(B = 2Q\\).\n- **Worker bees**: there are twice as many as baby bees, so \\(W = 2B = 4Q\\).\n\nThe total number of bees is given as 700:\n\n\\[\nQ + B + W = Q + 2Q + 4Q = 7Q = 700\n\\]\n\nSolving for \\(Q\\):\n\n\\[\nQ = \\frac{700}{7} = 100\n\\]\n\nThen\n\n\\[\nB = 2Q = 200,\\qquad W = 4Q = 400\n\\]\n\nSo there are **400 worker bees** in the hive.\n\n#### 400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

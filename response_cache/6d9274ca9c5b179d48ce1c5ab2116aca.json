@@ -1,0 +1,7 @@
+{
+  "response": "Gene ha estado de vacaciones durante 11 años (de 23 a 34 años).  \nCada año viaja 4 veces, por lo que:\n\n\\(11 \\text{ años} \\times 4 \\text{ vacaciones/año} = 44 \\text{ vacaciones}\\).\n\nCada camiseta corresponde a un bloque de edredón, así que tiene 44 bloques en total.  \n\n#### 44",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

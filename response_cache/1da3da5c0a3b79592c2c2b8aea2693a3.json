@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but it looks like you’ve reached the free‑translation limit for today.  \nIf you still need a translation or have another question, please let me know what you’d like help with and I’ll do my best to assist.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

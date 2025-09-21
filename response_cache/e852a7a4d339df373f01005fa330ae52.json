@@ -1,0 +1,7 @@
+{
+  "response": "The number of seconds until the next available translation is 7,968. #### 7968",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

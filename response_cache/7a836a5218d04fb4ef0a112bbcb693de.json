@@ -1,0 +1,7 @@
+{
+  "response": "Para determinar cuántas chicas no están en la Girl Scout:\n\n1. Calculamos el número de niños y niñas.  \n   \\[\n   \\text{Niños}=200 \\times \\frac{2}{5}=80\n   \\]\n   \\[\n   \\text{Niñas}=200-80=120\n   \\]\n\n2. Sabemos que \\( \\frac{2}{3}\\) de las niñas están en la Girl Scout.  \n   \\[\n   \\text{Chicas en la Girl Scout}=120 \\times \\frac{2}{3}=80\n   \\]\n\n3. Restamos para obtener el número de niñas que no están en la Girl Scout.  \n   \\[\n   \\text{Chicas no en la Girl Scout}=120-80=40\n   \\]\n\n#### 40",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

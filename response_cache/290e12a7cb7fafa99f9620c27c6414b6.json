@@ -1,0 +1,7 @@
+{
+  "response": "Peter puede ir al cine 3 veces a la semana. #### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

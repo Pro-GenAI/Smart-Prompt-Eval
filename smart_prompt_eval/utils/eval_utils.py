@@ -15,7 +15,7 @@ project_root = Path(__file__).parent.parent
 
 
 def load_gsm8k_questions(
-    num_questions: int = 5, start_idx: int = 0
+    num_questions: Optional[int] = None, start_idx: int = 0
 ) -> List[Dict[str, Any]]:
     """
     Load GSM8K questions from the test file.
@@ -34,7 +34,7 @@ def load_gsm8k_questions(
         for i, line in enumerate(f):
             if i < start_idx:
                 continue
-            if i >= start_idx + num_questions:
+            if num_questions and i >= start_idx + num_questions:
                 break
 
             data = json.loads(line.strip())
@@ -105,7 +105,7 @@ def save_evaluation_results(
         with open(responses_file, "w") as f:
             json.dump(responses, f, indent=2)
 
-    return results_file
+    return results_file, responses_file # type: ignore
 
 
 def log_evaluation_start(title: str):
@@ -115,11 +115,13 @@ def log_evaluation_start(title: str):
     log("=" * 60)
 
 
-def log_evaluation_end(title: str, output_file: Path):
+def log_evaluation_end(title: str, result_file: Path, responses_file: Path):
     """Log the end of an evaluation."""
     log(f"\n{'='*60}")
     log(f"{title} COMPLETE")
-    log(f"Results saved to: {output_file}")
+    log(f"Responses saved to: {responses_file}")
+    log()
+    log(f"Results saved to: {result_file}")
     log(f"{'='*60}")
 
 
@@ -127,12 +129,13 @@ def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str)
     """Log standardized test case information."""
     log(f"\n{'-'*40}")
     log(f"Testing case {i+1}: {case_id}")
-    log(f"Question: {question}")
-    log(f"Correct answer: {correct_answer}")
+    # log(f"Question: {question}")
+    # log(f"Correct answer: {correct_answer}")
     log(f"{'-'*40}")
 
 
-default_instruction: str = "Provide final answer as a number in a new line like #### 4"
+default_instruction: str = "Provide the final answer as a number at the end like #### 4"
+# default_instruction: str = "Solve this step by step and provide final answer as a number at the end like #### 4"
 
 
 def create_base_prompt(question: str, instruction: str = default_instruction) -> str:
@@ -283,9 +286,9 @@ def run_evaluation_main(
 
     # Save results (responses will be handled by individual evaluation functions)
     filename_base = eval_name.lower().replace(" ", "_")
-    output_file = save_evaluation_results(results, filename_base, responses)
+    result_file, responses_file = save_evaluation_results(results, filename_base, responses) # type: ignore
 
-    log_evaluation_end(f"{eval_name.upper()} EVALUATION", output_file)
+    log_evaluation_end(f"{eval_name.upper()} EVALUATION", result_file, responses_file)
 
-    return output_file
+    return result_file, responses_file
 

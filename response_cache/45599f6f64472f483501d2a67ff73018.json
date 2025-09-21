@@ -1,0 +1,7 @@
+{
+  "response": "Terry spends $75.00 on yogurt in 30 days. #### 75",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -5,39 +5,8 @@
     "correct_answer": "18",
     "language": "German",
     "accuracy": true,
-    "prompt": "Janets Enten legen 16 Eier pro Tag. Sie isst jeden Morgen drei zum Fr\u00fchst\u00fcck und backt jeden Tag mit vier Muffins f\u00fcr ihre Freunde. Den Rest verkauft sie t\u00e4glich auf dem Bauernmarkt f\u00fcr $ 2 pro frischem Entenei. Wie viel in Dollar verdient sie jeden Tag auf dem Bauernmarkt?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_1",
-    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
-    "correct_answer": "18",
-    "language": "Spanish",
-    "accuracy": true,
-    "prompt": "Los patos de Janet ponen 16 huevos por d\u00eda. Desayuna tres cada ma\u00f1ana y hornea magdalenas para sus amigos todos los d\u00edas con cuatro. Ella vende el resto en el mercado de agricultores a diario por $ 2 por huevo de pato fresco. \u00bfCu\u00e1nto gana en d\u00f3lares todos los d\u00edas en el mercado de agricultores?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_1",
-    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
-    "correct_answer": "18",
-    "language": "French",
-    "accuracy": true,
-    "prompt": "Les canards de Janet pondent 16 \u0153ufs par jour. Elle en mange trois au petit-d\u00e9jeuner tous les matins et fait cuire des muffins pour ses amies tous les jours avec quatre. Elle vend le reste au march\u00e9 fermier tous les jours pour 2\u00a0$ par \u0153uf de canard frais. Combien gagne-t-elle en dollars chaque jour au march\u00e9 fermier\u00a0?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_1",
-    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
-    "correct_answer": "18",
-    "language": "Italian",
-    "accuracy": true,
-    "prompt": "Le anatre di Janet depongono 16 uova al giorno. Ne mangia tre a colazione ogni mattina e prepara muffin per i suoi amici ogni giorno con quattro. Vende il resto al mercato degli agricoltori ogni giorno per $2 per ogni uovo di anatra fresco. Quanto guadagna in dollari ogni giorno al mercato degli agricoltori?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_1",
-    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
-    "correct_answer": "18",
-    "language": "Portuguese",
-    "accuracy": true,
-    "prompt": "Os patos de Janet p\u00f5em 16 ovos por dia. Ela come tr\u00eas no caf\u00e9 da manh\u00e3 todas as manh\u00e3s e assa muffins para as amigas todos os dias com quatro. Ela vende o restante no mercado dos agricultores diariamente por $ 2 por ovo de pato fresco. Quanto em d\u00f3lares ela ganha todos os dias no mercado dos agricultores?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Janets Enten legen 16 Eier pro Tag. Sie isst jeden Morgen drei zum Fr\u00fchst\u00fcck und backt jeden Tag mit vier Muffins f\u00fcr ihre Freunde. Den Rest verkauft sie t\u00e4glich auf dem Bauernmarkt f\u00fcr $ 2 pro frischem Entenei. Wie viel in Dollar verdient sie jeden Tag auf dem Bauernmarkt?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 18"
   },
   {
     "question_id": "gsm8k_2",
@@ -45,39 +14,8 @@
     "correct_answer": "3",
     "language": "German",
     "accuracy": true,
-    "prompt": "Ein Bademantel nimmt 2 Schrauben blaue Faser und halb so viel wei\u00dfe Faser.  Wie viele Schrauben braucht es insgesamt?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_2",
-    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
-    "correct_answer": "3",
-    "language": "Spanish",
-    "accuracy": true,
-    "prompt": "Una bata requiere 2 pernos de fibra azul y la mitad de esa fibra blanca.  \u00bfCu\u00e1ntos tornillos en total se necesitan?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_2",
-    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
-    "correct_answer": "3",
-    "language": "French",
-    "accuracy": false,
-    "prompt": "Une robe prend 2 boulons de fibre bleue et la moiti\u00e9 de la fibre blanche.  Combien de boulons au total faut-il\u00a0?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_2",
-    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
-    "correct_answer": "3",
-    "language": "Italian",
-    "accuracy": true,
-    "prompt": "Una vestaglia richiede 2 bulloni di fibra blu e met\u00e0 di quella fibra bianca.  Quanti bulloni servono in totale?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_2",
-    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
-    "correct_answer": "3",
-    "language": "Portuguese",
-    "accuracy": true,
-    "prompt": "Um roup\u00e3o leva 2 parafusos de fibra azul e metade dessa fibra branca.  Quantos parafusos no total s\u00e3o necess\u00e1rios?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Ein Bademantel nimmt 2 Schrauben blaue Faser und halb so viel wei\u00dfe Faser.  Wie viele Schrauben braucht es insgesamt?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "Um die Gesamtzahl der Schrauben zu bestimmen, addiert man die Schrauben der blauen Faser und die der wei\u00dfen Faser.  \n- Blaue Schrauben: 2  \n- Wei\u00dfe Schrauben: halbe Menge der blauen Schrauben = 2\u202f/\u202f2 = 1  \n\nGesamt: 2\u202f+\u202f1 = **3** Schrauben.\n\n#### 3"
   },
   {
     "question_id": "gsm8k_3",
@@ -85,39 +23,8 @@
     "correct_answer": "70000",
     "language": "German",
     "accuracy": false,
-    "prompt": "Josh beschlie\u00dft, ein Haus umzudrehen.  Er kauft ein Haus f\u00fcr $ 80.000 und investiert dann $ 50.000 in Reparaturen.  Dies erh\u00f6hte den Wert des Hauses um 150 %.  Wie viel Gewinn hat er gemacht?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_3",
-    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
-    "correct_answer": "70000",
-    "language": "Spanish",
-    "accuracy": false,
-    "prompt": "Josh decide intentar revender una casa.  Compra una casa por $ 80.000 y luego pone $ 50.000 en reparaciones.  Esto aument\u00f3 el valor de la casa en un 150%.  \u00bfCu\u00e1nto beneficio obtuvo?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_3",
-    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
-    "correct_answer": "70000",
-    "language": "French",
-    "accuracy": false,
-    "prompt": "Josh d\u00e9cide d'essayer de retourner une maison.  Il ach\u00e8te une maison pour 80 000\u00a0$ et met ensuite 50 000\u00a0$ en r\u00e9parations.  Cela a augment\u00e9 la valeur de la maison de 150\u00a0%.  Combien de profit a-t-il fait\u00a0?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_3",
-    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
-    "correct_answer": "70000",
-    "language": "Italian",
-    "accuracy": false,
-    "prompt": "Josh decide di provare a capovolgere una casa.  Compra una casa per $80.000 e poi ci mette $50.000 in riparazioni.  Ci\u00f2 ha aumentato il valore della casa del 150%.  Quanti profitti ha fatto?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_3",
-    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
-    "correct_answer": "70000",
-    "language": "Portuguese",
-    "accuracy": false,
-    "prompt": "Josh decide tentar virar uma casa.  Ele compra uma casa por $ 80.000 e depois coloca $ 50.000 em reparos.  Isso aumentou o valor da casa em 150%.  Quanto ele lucrou?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Josh beschlie\u00dft, ein Haus umzudrehen.  Er kauft ein Haus f\u00fcr $ 80.000 und investiert dann $ 50.000 in Reparaturen.  Dies erh\u00f6hte den Wert des Hauses um 150 %.  Wie viel Gewinn hat er gemacht?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "The house was bought for\u202f$80,000\u202fand repaired for\u202f$50,000, so total investment\u202f=\u202f$80,000\u202f+\u202f$50,000\u202f=\u202f$130,000.  \nA 150\u202f% increase of the original value (80,000) gives a new value of  \n\\(80,000 \\times (1 + 1.5) = 80,000 \\times 2.5 = 200,000\\).  \n\nProfit = final value \u2013 investment =\u202f$200,000\u202f\u2013\u202f$130,000\u202f=\u202f$70,000.  \n\n#### 70000"
   },
   {
     "question_id": "gsm8k_4",
@@ -125,39 +32,8 @@
     "correct_answer": "540",
     "language": "German",
     "accuracy": false,
-    "prompt": "James beschlie\u00dft, 3 Sprints 3 Mal pro Woche zu laufen.  Er l\u00e4uft 60 Meter pro Sprint.  Wie viele Gesamtmeter l\u00e4uft er pro Woche?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_4",
-    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
-    "correct_answer": "540",
-    "language": "Spanish",
-    "accuracy": false,
-    "prompt": "James decide correr 3 sprints 3 veces a la semana.  Corre 60 metros cada sprint.  \u00bfCu\u00e1ntos metros en total corre a la semana?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_4",
-    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
-    "correct_answer": "540",
-    "language": "French",
-    "accuracy": false,
-    "prompt": "James d\u00e9cide de courir 3 sprints 3 fois par semaine.  Il court 60 m\u00e8tres \u00e0 chaque sprint.  Combien de m\u00e8tres au total parcourt-il par semaine\u00a0?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_4",
-    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
-    "correct_answer": "540",
-    "language": "Italian",
-    "accuracy": false,
-    "prompt": "James decide di fare 3 sprint 3 volte a settimana.  Corre 60 metri ogni sprint.  Quanti metri totali corre alla settimana?\n\nProvide final answer as a number in a new line like #### 4"
-  },
-  {
-    "question_id": "gsm8k_4",
-    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
-    "correct_answer": "540",
-    "language": "Portuguese",
-    "accuracy": false,
-    "prompt": "James decide correr 3 sprints 3 vezes por semana.  Ele corre 60 metros a cada sprint.  Quantos metros ele corre no total por semana?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "James beschlie\u00dft, 3 Sprints 3 Mal pro Woche zu laufen.  Er l\u00e4uft 60 Meter pro Sprint.  Wie viele Gesamtmeter l\u00e4uft er pro Woche?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 540"
   },
   {
     "question_id": "gsm8k_5",
@@ -165,7 +41,44 @@
     "correct_answer": "20",
     "language": "German",
     "accuracy": false,
-    "prompt": "Jeden Tag f\u00fcttert Wendi jedes ihrer H\u00fchner mit drei Tassen gemischtem H\u00fchnerfutter, das Samen, Mehlw\u00fcrmer und Gem\u00fcse enth\u00e4lt, um sie gesund zu halten.  Sie gibt den H\u00fchnern ihr Futter in drei getrennten Mahlzeiten. Am Morgen gibt sie ihrer H\u00fchnerherde 15 Tassen Futter.  Am Nachmittag gibt sie ihren H\u00fchnern weitere 25 Tassen Futter.  Wie viele Tassen Futter braucht sie, um ihren H\u00fchnern in der letzten Mahlzeit des Tages zu geben, wenn die Gr\u00f6\u00dfe von Wendis Herde 20 H\u00fchner betr\u00e4gt?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Jeden Tag f\u00fcttert Wendi jedes ihrer H\u00fchner mit drei Tassen gemischtem H\u00fchnerfutter, das Samen, Mehlw\u00fcrmer und Gem\u00fcse enth\u00e4lt, um sie gesund zu halten.  Sie gibt den H\u00fchnern ihr Futter in drei getrennten Mahlzeiten. Am Morgen gibt sie ihrer H\u00fchnerherde 15 Tassen Futter.  Am Nachmittag gibt sie ihren H\u00fchnern weitere 25 Tassen Futter.  Wie viele Tassen Futter braucht sie, um ihren H\u00fchnern in der letzten Mahlzeit des Tages zu geben, wenn die Gr\u00f6\u00dfe von Wendis Herde 20 H\u00fchner betr\u00e4gt?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 20"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "language": "Spanish",
+    "accuracy": true,
+    "prompt": "Los patos de Janet ponen 16 huevos por d\u00eda. Desayuna tres cada ma\u00f1ana y hornea magdalenas para sus amigos todos los d\u00edas con cuatro. Ella vende el resto en el mercado de agricultores a diario por $ 2 por huevo de pato fresco. \u00bfCu\u00e1nto gana en d\u00f3lares todos los d\u00edas en el mercado de agricultores?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 18"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "language": "Spanish",
+    "accuracy": true,
+    "prompt": "Una bata requiere 2 pernos de fibra azul y la mitad de esa fibra blanca.  \u00bfCu\u00e1ntos tornillos en total se necesitan?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "Para la bata se necesitan 2 pernos de fibra azul y la mitad de esa cantidad en fibra blanca, es decir, 1 perno blanco.  \nTotal de tornillos: 2\u202f+\u202f1\u202f=\u202f3.  \n\n#### 3"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "language": "Spanish",
+    "accuracy": false,
+    "prompt": "Josh decide intentar revender una casa.  Compra una casa por $ 80.000 y luego pone $ 50.000 en reparaciones.  Esto aument\u00f3 el valor de la casa en un 150%.  \u00bfCu\u00e1nto beneficio obtuvo?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "Josh\u2019s total investment was \\$80,000 (purchase) + \\$50,000 (repairs) = \\$130,000.  \nAfter the repairs the house\u2019s value increased by 150\u202f% of the purchase price, so the new value is:  \n\n\\[\n80,000 \\times (1 + 1.5) = 80,000 \\times 2.5 = \\$200,000.\n\\]\n\nProfit = selling price \u2013 investment = \\$200,000 \u2013 \\$130,000 = \\$70,000.  \n\n#### 70000"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "language": "Spanish",
+    "accuracy": false,
+    "prompt": "James decide correr 3 sprints 3 veces a la semana.  Corre 60 metros cada sprint.  \u00bfCu\u00e1ntos metros en total corre a la semana?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 540"
   },
   {
     "question_id": "gsm8k_5",
@@ -173,7 +86,44 @@
     "correct_answer": "20",
     "language": "Spanish",
     "accuracy": false,
-    "prompt": "Todos los d\u00edas, Wendi alimenta a cada uno de sus pollos con tres tazas de alimento mixto para pollos, que contiene semillas, gusanos de la harina y verduras para ayudar a mantenerlos sanos.  Les da a los pollos su alimento en tres comidas separadas. Por la ma\u00f1ana, le da a su bandada de pollos 15 tazas de alimento.  Por la tarde, les da a sus pollos otras 25 tazas de alimento.  \u00bfCu\u00e1ntas tazas de pienso necesita para dar a sus pollos en la \u00faltima comida del d\u00eda si el tama\u00f1o del reba\u00f1o de Wendi es de 20 pollos?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Todos los d\u00edas, Wendi alimenta a cada uno de sus pollos con tres tazas de alimento mixto para pollos, que contiene semillas, gusanos de la harina y verduras para ayudar a mantenerlos sanos.  Les da a los pollos su alimento en tres comidas separadas. Por la ma\u00f1ana, le da a su bandada de pollos 15 tazas de alimento.  Por la tarde, les da a sus pollos otras 25 tazas de alimento.  \u00bfCu\u00e1ntas tazas de pienso necesita para dar a sus pollos en la \u00faltima comida del d\u00eda si el tama\u00f1o del reba\u00f1o de Wendi es de 20 pollos?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 20"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "language": "French",
+    "accuracy": true,
+    "prompt": "Les canards de Janet pondent 16 \u0153ufs par jour. Elle en mange trois au petit-d\u00e9jeuner tous les matins et fait cuire des muffins pour ses amies tous les jours avec quatre. Elle vend le reste au march\u00e9 fermier tous les jours pour 2\u00a0$ par \u0153uf de canard frais. Combien gagne-t-elle en dollars chaque jour au march\u00e9 fermier\u00a0?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "Janet's ducks lay 16 eggs each day.  \nShe eats 3 eggs for breakfast and uses 4 eggs to bake muffins, so she uses:\n\n\\(3 + 4 = 7\\) eggs.\n\nThe remaining eggs are sold at the farmer\u2019s market:\n\n\\(16 - 7 = 9\\) eggs.\n\nAt \\$2 per egg, her daily earnings are:\n\n\\(9 \\times 2 = \\$18\\).\n\nHence she earns \\(\\$18\\) each day from the market.\n\n#### 18"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "language": "French",
+    "accuracy": true,
+    "prompt": "Une robe prend 2 boulons de fibre bleue et la moiti\u00e9 de la fibre blanche.  Combien de boulons au total faut-il\u00a0?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "Une robe prend 2 boulons de fibre bleue et la moiti\u00e9 de la fibre blanche\u202f\u2192\u202f2\u202fbolons bleus\u202f+\u202f1\u202fbolon blanc\u202f=\u202f3\u202fbolons au total.  \n#### 3"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "language": "French",
+    "accuracy": false,
+    "prompt": "Josh d\u00e9cide d'essayer de retourner une maison.  Il ach\u00e8te une maison pour 80 000\u00a0$ et met ensuite 50 000\u00a0$ en r\u00e9parations.  Cela a augment\u00e9 la valeur de la maison de 150\u00a0%.  Combien de profit a-t-il fait\u00a0?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "The total investment is $80{,}000 + $50{,}000 = $130{,}000.  \nAfter the repairs the value increased by 150\u202f%, i.e. it became 2.5\u202f\u00d7 the original price:\n\n\\[\n\\text{New value} = 80{,}000 \\times 2.5 = 200{,}000.\n\\]\n\nSelling at that price gives a profit of\n\n\\[\n200{,}000 - 130{,}000 = 70{,}000.\n\\]\n\n#### 70000"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "language": "French",
+    "accuracy": false,
+    "prompt": "James d\u00e9cide de courir 3 sprints 3 fois par semaine.  Il court 60 m\u00e8tres \u00e0 chaque sprint.  Combien de m\u00e8tres au total parcourt-il par semaine\u00a0?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "540 #### 540"
   },
   {
     "question_id": "gsm8k_5",
@@ -181,7 +131,44 @@
     "correct_answer": "20",
     "language": "French",
     "accuracy": false,
-    "prompt": "Chaque jour, Wendi nourrit chacun de ses poulets avec trois tasses d'aliments m\u00e9lang\u00e9s pour poulets, contenant des graines, des vers de farine et des l\u00e9gumes pour les aider \u00e0 rester en bonne sant\u00e9.  Elle donne aux poulets leur nourriture en trois repas s\u00e9par\u00e9s. Le matin, elle donne \u00e0 son troupeau de poulets 15 tasses de nourriture.  Dans l'apr\u00e8s-midi, elle donne \u00e0 ses poulets 25 tasses de nourriture suppl\u00e9mentaires.  Combien de tasses de nourriture doit-elle donner \u00e0 ses poulets dans le dernier repas de la journ\u00e9e si la taille du troupeau de Wendi est de 20 poulets\u00a0?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Chaque jour, Wendi nourrit chacun de ses poulets avec trois tasses d'aliments m\u00e9lang\u00e9s pour poulets, contenant des graines, des vers de farine et des l\u00e9gumes pour les aider \u00e0 rester en bonne sant\u00e9.  Elle donne aux poulets leur nourriture en trois repas s\u00e9par\u00e9s. Le matin, elle donne \u00e0 son troupeau de poulets 15 tasses de nourriture.  Dans l'apr\u00e8s-midi, elle donne \u00e0 ses poulets 25 tasses de nourriture suppl\u00e9mentaires.  Combien de tasses de nourriture doit-elle donner \u00e0 ses poulets dans le dernier repas de la journ\u00e9e si la taille du troupeau de Wendi est de 20 poulets\u00a0?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 20"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "language": "Italian",
+    "accuracy": true,
+    "prompt": "Le anatre di Janet depongono 16 uova al giorno. Ne mangia tre a colazione ogni mattina e prepara muffin per i suoi amici ogni giorno con quattro. Vende il resto al mercato degli agricoltori ogni giorno per $2 per ogni uovo di anatra fresco. Quanto guadagna in dollari ogni giorno al mercato degli agricoltori?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 18"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "language": "Italian",
+    "accuracy": false,
+    "prompt": "Una vestaglia richiede 2 bulloni di fibra blu e met\u00e0 di quella fibra bianca.  Quanti bulloni servono in totale?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 2.5"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "language": "Italian",
+    "accuracy": false,
+    "prompt": "Josh decide di provare a capovolgere una casa.  Compra una casa per $80.000 e poi ci mette $50.000 in riparazioni.  Ci\u00f2 ha aumentato il valore della casa del 150%.  Quanti profitti ha fatto?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 70000"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "language": "Italian",
+    "accuracy": false,
+    "prompt": "James decide di fare 3 sprint 3 volte a settimana.  Corre 60 metri ogni sprint.  Quanti metri totali corre alla settimana?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 540"
   },
   {
     "question_id": "gsm8k_5",
@@ -189,7 +176,44 @@
     "correct_answer": "20",
     "language": "Italian",
     "accuracy": false,
-    "prompt": "Ogni giorno, Wendi nutre ciascuno dei suoi polli con tre tazze di mangime misto per polli, contenente semi, vermi della farina e verdure per aiutarli a mantenersi in salute.  D\u00e0 da mangiare ai polli in tre pasti separati. Al mattino, d\u00e0 alle sue galline 15 tazze di mangime.  Nel pomeriggio, d\u00e0 ai suoi polli altre 25 tazze di mangime.  Quante tazze di mangime deve dare ai suoi polli nell'ultimo pasto della giornata se il gregge di Wendi \u00e8 di 20 polli?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Ogni giorno, Wendi nutre ciascuno dei suoi polli con tre tazze di mangime misto per polli, contenente semi, vermi della farina e verdure per aiutarli a mantenersi in salute.  D\u00e0 da mangiare ai polli in tre pasti separati. Al mattino, d\u00e0 alle sue galline 15 tazze di mangime.  Nel pomeriggio, d\u00e0 ai suoi polli altre 25 tazze di mangime.  Quante tazze di mangime deve dare ai suoi polli nell'ultimo pasto della giornata se il gregge di Wendi \u00e8 di 20 polli?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 20"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "language": "Portuguese",
+    "accuracy": true,
+    "prompt": "Os patos de Janet p\u00f5em 16 ovos por dia. Ela come tr\u00eas no caf\u00e9 da manh\u00e3 todas as manh\u00e3s e assa muffins para as amigas todos os dias com quatro. Ela vende o restante no mercado dos agricultores diariamente por $ 2 por ovo de pato fresco. Quanto em d\u00f3lares ela ganha todos os dias no mercado dos agricultores?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 18"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "language": "Portuguese",
+    "accuracy": true,
+    "prompt": "Um roup\u00e3o leva 2 parafusos de fibra azul e metade dessa fibra branca.  Quantos parafusos no total s\u00e3o necess\u00e1rios?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 3"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "language": "Portuguese",
+    "accuracy": false,
+    "prompt": "Josh decide tentar virar uma casa.  Ele compra uma casa por $ 80.000 e depois coloca $ 50.000 em reparos.  Isso aumentou o valor da casa em 150%.  Quanto ele lucrou?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "70000"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "language": "Portuguese",
+    "accuracy": false,
+    "prompt": "James decide correr 3 sprints 3 vezes por semana.  Ele corre 60 metros a cada sprint.  Quantos metros ele corre no total por semana?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "540   #### 540"
   },
   {
     "question_id": "gsm8k_5",
@@ -197,6 +221,7 @@
     "correct_answer": "20",
     "language": "Portuguese",
     "accuracy": false,
-    "prompt": "Todos os dias, a Wendi alimenta cada uma das suas galinhas com tr\u00eas x\u00edcaras de ra\u00e7\u00e3o mista de frango, contendo sementes, larvas de farinha e vegetais para ajudar a mant\u00ea-las saud\u00e1veis.  Ela alimenta as galinhas em tr\u00eas refei\u00e7\u00f5es separadas. De manh\u00e3, ela d\u00e1 ao seu rebanho de galinhas 15 x\u00edcaras de ra\u00e7\u00e3o.  \u00c0 tarde, ela d\u00e1 aos frangos mais 25 x\u00edcaras de ra\u00e7\u00e3o.  Quantas x\u00edcaras de ra\u00e7\u00e3o ela precisa dar \u00e0s galinhas na refei\u00e7\u00e3o final do dia se o tamanho do rebanho da Wendi for de 20 galinhas?\n\nProvide final answer as a number in a new line like #### 4"
+    "prompt": "Todos os dias, a Wendi alimenta cada uma das suas galinhas com tr\u00eas x\u00edcaras de ra\u00e7\u00e3o mista de frango, contendo sementes, larvas de farinha e vegetais para ajudar a mant\u00ea-las saud\u00e1veis.  Ela alimenta as galinhas em tr\u00eas refei\u00e7\u00f5es separadas. De manh\u00e3, ela d\u00e1 ao seu rebanho de galinhas 15 x\u00edcaras de ra\u00e7\u00e3o.  \u00c0 tarde, ela d\u00e1 aos frangos mais 25 x\u00edcaras de ra\u00e7\u00e3o.  Quantas x\u00edcaras de ra\u00e7\u00e3o ela precisa dar \u00e0s galinhas na refei\u00e7\u00e3o final do dia se o tamanho do rebanho da Wendi for de 20 galinhas?\n\nProvide the final answer as a number at the end like #### 4",
+    "response": "#### 20"
   }
 ]

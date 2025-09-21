@@ -1,0 +1,7 @@
+{
+  "response": "Claire uses 3 eggs per day.  \n4 weeks = 28 days → 28 × 3 = 84 eggs.  \nSince 1 dozen = 12 eggs, 84 ÷ 12 = 7 dozen.  \n\n#### 7",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

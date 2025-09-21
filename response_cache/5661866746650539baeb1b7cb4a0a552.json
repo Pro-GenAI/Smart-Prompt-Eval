@@ -1,0 +1,7 @@
+{
+  "response": "It looks like there isn’t a question in your message. Could you let me know what you’d like help with?",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

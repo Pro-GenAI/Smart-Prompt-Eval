@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but I need a specific question or problem statement before I can provide an answer. Could you please let me know what you would like to have calculated or solved?",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

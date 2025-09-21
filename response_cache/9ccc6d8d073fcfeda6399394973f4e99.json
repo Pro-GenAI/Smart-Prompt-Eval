@@ -1,0 +1,7 @@
+{
+  "response": "The boat covers \\(10 \\text{ mph} \\times 3 \\text{ h} = 30\\) miles outbound.  \nReturning at \\(6 \\text{ mph}\\) takes \\(\\frac{30}{6} = 5\\) hours.\n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

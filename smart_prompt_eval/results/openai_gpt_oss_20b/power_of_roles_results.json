@@ -1,0 +1,77 @@
+{
+  "experiment": "power_of_roles",
+  "description": "Testing the impact of different role configurations on model performance with GSM8K problems",
+  "test_cases": [
+    {
+      "id": "gsm8k_1",
+      "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+      "correct_answer": "18",
+      "variant_results": {
+        "with_system": true,
+        "with_assistant_sample_response": true,
+        "with_bot_promise": true
+      }
+    },
+    {
+      "id": "gsm8k_2",
+      "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+      "correct_answer": "3",
+      "variant_results": {
+        "with_system": true,
+        "with_assistant_sample_response": true,
+        "with_bot_promise": true
+      }
+    },
+    {
+      "id": "gsm8k_3",
+      "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+      "correct_answer": "70000",
+      "variant_results": {
+        "with_system": false,
+        "with_assistant_sample_response": false,
+        "with_bot_promise": false
+      }
+    },
+    {
+      "id": "gsm8k_4",
+      "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+      "correct_answer": "540",
+      "variant_results": {
+        "with_system": false,
+        "with_assistant_sample_response": false,
+        "with_bot_promise": false
+      }
+    },
+    {
+      "id": "gsm8k_5",
+      "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+      "correct_answer": "20",
+      "variant_results": {
+        "with_system": false,
+        "with_assistant_sample_response": false,
+        "with_bot_promise": false
+      }
+    }
+  ],
+  "total_problems": 5,
+  "total_attempts": 15,
+  "correct_answers": 6,
+  "accuracy": 0.4,
+  "per_variant_summary": {
+    "with_system": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "with_assistant_sample_response": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    },
+    "with_bot_promise": {
+      "attempts": 5,
+      "correct": 2,
+      "accuracy": 0.4
+    }
+  }
+}

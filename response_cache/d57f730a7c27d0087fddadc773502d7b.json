@@ -1,0 +1,7 @@
+{
+  "response": "Para maximizar las ganancias, el comerciante debe elegir el plan de joyas, ya que el aumento esperado es mayor.\n\n- Ganancia en joyas: \\(5\\,000 \\times 2.5\\% = 125\\)\n- Ganancia en gadgets electrónicos: \\(8\\,000 \\times 1.2\\% = 96\\)\n\nPor lo tanto, la ganancia máxima esperada al final del mes sería de **125** unidades monetarias.  \n\n#### 125",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -57,6 +57,8 @@ def remove_spaces_after_commas(text):
 def extract_answer(answer):
     if not answer:
         return ""
+    # Create a copy to avoid modifying the original
+    answer = str(answer)
     # In GSM8K, answer exists after the last #### in the last part.
     # The same function is used for both old-RAT and iRAT.
     answer = answer.split("####")[-1].split("\n")[0].strip()
@@ -72,23 +74,27 @@ def extract_answer(answer):
     return answer.strip()
 
 
-def attempt(question, correct_answer, params: Optional[dict] = None) -> bool:
-    with open("response.log", "a") as f:
-        print("Q:", question, file=f)
+def attempt(question, correct_answer, params: Optional[dict] = None) -> tuple[bool, str]:
+    # with open("response.log", "a") as f:
+    #     print("Q:", question, file=f)
     try:
         response = get_response(question, **(params or {}))
-        with open("response.log", "a") as f:
-            print("A:", response, file=f)
-        response = extract_answer(response)
+        # with open("response.log", "a") as f:
+        #     print("A:", response, file=f)
+        if response is None:
+            print_error(" NR ")
+            return False, ""
+        extracted_answer = extract_answer(response)
         # print_progress(response)  # type: ignore
-        if response == correct_answer:
+        is_correct = extracted_answer == correct_answer
+        if is_correct:
             print_progress()
-            return True
         else:
             print_error()
-    except Exception:
+        return is_correct, response
+    except Exception as e:
         print_error(" SE ")
-    return False
+        return False, ""
 
 
 # def get_accuracy(question, correct_answer, params: Optional[dict] = None) -> bool:
@@ -133,10 +139,11 @@ def attempt(question, correct_answer, params: Optional[dict] = None) -> bool:
 
 load_dotenv(override=True)
 
+def env(varname: str, default: Optional[str] = None) -> str | None:
+    return os.getenv(varname, default)
+
 client = openai.OpenAI()
-model = os.getenv("OPENAI_MODEL", "")
-if not model:
-    raise ValueError("OPENAI_MODEL environment variable not set")
+model = env("OPENAI_MODEL")
 
 
 def message(content: str, role: str) -> ChatCompletionMessageParam:
@@ -163,9 +170,10 @@ def get_response(
     # Generate cache key
     kwargs["model"] = model  # Ensure model is part of the cache key
     cache_key = get_cache_key(messages, **kwargs)
-    cached_response = get_cached_response(cache_key)
-    if cached_response is not None:
-        return cached_response
+    if not os.getenv("IGNORE_CACHE"):
+        cached_response = get_cached_response(cache_key)
+        if cached_response is not None:
+            return cached_response
 
     # Make API call if not cached
     if isinstance(messages, str):
@@ -179,4 +187,3 @@ def get_response(
         return None
     save_cached_response(cache_key, response_text, **kwargs)
     return response_text
-

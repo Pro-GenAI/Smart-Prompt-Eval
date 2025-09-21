@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but it looks like you’ve reached the free‑translation limit for today. The next available slot will open in 02 hours 28 minutes 37 seconds. If you need more translations, you can upgrade or try again later.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

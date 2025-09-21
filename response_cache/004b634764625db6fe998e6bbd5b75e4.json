@@ -1,0 +1,7 @@
+{
+  "response": "You’ve reached the limit of free translations for today. No more translations are available until the next window opens in about 2 hours, 2 minutes, 38 seconds. #### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The robe requires 2 bolts of blue fiber and half that amount of white fiber, which is 1 bolt. Adding them together gives:\n\n2 bolts (blue) + 1 bolt (white) = 3 bolts total.\n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

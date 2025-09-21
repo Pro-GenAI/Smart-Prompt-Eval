@@ -1,0 +1,7 @@
+{
+  "response": "The free translation quota has been exhausted for the day.  \n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but you’ve reached the daily limit for free translations on MyMemory. Your next free translation will become available in **02 hours 09 minutes 07 seconds**.  \nSince all free slots are used, the number of remaining free translations today is **0**.\n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

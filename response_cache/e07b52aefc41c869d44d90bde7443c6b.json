@@ -1,0 +1,7 @@
+{
+  "response": "Para 18 flores se pueden usar 9 paquetes de 2, lo que cuesta 9 × $1 = $9.  \nSi se compraran 18 flores con los paquetes de 3, se necesitarían 6 paquetes, costando 6 × $2.50 = $15.  \n\nLa diferencia es $15 – $9 = $6.  \n\n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

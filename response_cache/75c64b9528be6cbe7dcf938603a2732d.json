@@ -1,0 +1,7 @@
+{
+  "response": "Your free translation quota for today has been exhausted. The next available translations will open in 02 hours 29 minutes 04 seconds. If you need more translations sooner, consider upgrading to a paid plan or visiting the MyMemory usage limits page for details.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

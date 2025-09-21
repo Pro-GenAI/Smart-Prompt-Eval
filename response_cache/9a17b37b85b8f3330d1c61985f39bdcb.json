@@ -1,0 +1,7 @@
+{
+  "response": "Hay el doble de niños que de niñas, por lo que hay 120 niños. Con 60 niñas y 120 niños, el total de estudiantes es 180. Si cada maestro atiende a 5 estudiantes, entonces el número de maestros es:\n\n\\[\n\\frac{180}{5} = 36\n\\]\n\n#### 36",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The warning means you’ve reached the daily limit for free translations.  \nYou’ll be able to translate again in **2 hours 11 minutes 55 seconds**—that’s a total of **7 915 seconds** until the limit resets.  \n\n#### 7915",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

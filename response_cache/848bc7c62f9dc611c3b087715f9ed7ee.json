@@ -1,0 +1,7 @@
+{
+  "response": "The warning indicates that you have exhausted the free translation quota for today.  \nThe number of free translations remaining is **0**.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

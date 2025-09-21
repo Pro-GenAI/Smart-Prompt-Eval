@@ -1,0 +1,7 @@
+{
+  "response": "Cada tren recorrió un total de 230 millas en los dos días. #### 230",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

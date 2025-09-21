@@ -1,0 +1,7 @@
+{
+  "response": "I’ve reached the free‑translation quota for today. You’ll be able to try again in 02 hours 08 minutes 32 seconds. Until then you can visit the MyMemory usage page for more details. #### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

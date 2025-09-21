@@ -1,0 +1,7 @@
+{
+  "response": "The next free translation slot will open in 1 hour, 57 minutes, and 4 seconds.  \nThat equates to **7024 seconds** until the next available translation.  \n\n#### 7024",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

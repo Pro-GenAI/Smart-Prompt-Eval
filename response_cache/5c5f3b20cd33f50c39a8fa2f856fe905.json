@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but you’ve reached the free‑translation limit for today.  \nNo additional translations can be processed until **02 hours 00 minutes 22 seconds** have elapsed. If you need more translations, please visit the MyMemory site to explore paid plans or use a different service in the meantime.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Harry slept 3 hours more than James.  \n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

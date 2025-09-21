@@ -6,10 +6,9 @@ build-backend = "setuptools.build_meta"
 name = "smart_prompt_eval"
 version = "0.0.1"
 description = "Tools for smart prompt evaluation"
-authors = [ { name = "Praneeth Vadlapati (@prane-eth)" } ]
+authors = [{ name = "Praneeth Vadlapati", email = "praneeth.vad@gmail.com" }]
 requires-python = ">=3.8"
-dependencies = [
-    "python-dotenv",
-    "openai",
-    "translate"
-]
+dependencies = ["python-dotenv", "openai", "translate"]
+
+[tool.setuptools.packages.find]
+include = ["smart_prompt_eval*"]

@@ -9,7 +9,7 @@ from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
-    log_test_case_info
+    log_test_case_info,
 )
 from smart_prompt_eval.utils.common_utils import attempt, log
 
@@ -17,12 +17,10 @@ from smart_prompt_eval.utils.common_utils import attempt, log
 def evaluate_gsm8k():
     """Evaluate model performance on GSM8K problems."""
 
-    # Load GSM8K test questions
     test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
-        "gsm8k",
-        "Testing model performance on grade school math problems"
+        "gsm8k", "Testing model performance on grade school math problems"
     )
 
     responses = []  # Collect all individual responses
@@ -38,7 +36,7 @@ def evaluate_gsm8k():
             "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "is_correct": False
+            "is_correct": False,
         }
 
         # Create the prompt
@@ -46,17 +44,20 @@ def evaluate_gsm8k():
 
         # Test the model
         log(f"\nTesting GSM8K problem")
-        is_correct = attempt(query, correct_answer)
+        is_correct, response_text = attempt(query, correct_answer)
         case_results["is_correct"] = is_correct
 
         # Collect response data
-        responses.append({
-            "question_id": case_id,
-            "question": question,
-            "correct_answer": correct_answer,
-            "is_correct": is_correct,
-            "prompt": query
-        })
+        responses.append(
+            {
+                "question_id": case_id,
+                "question": question,
+                "correct_answer": correct_answer,
+                "is_correct": is_correct,
+                "prompt": query,
+                "response": response_text,
+            }
+        )
 
         results["test_cases"].append(case_results)
 
@@ -67,5 +68,5 @@ if __name__ == "__main__":
     run_evaluation_main(
         evaluate_gsm8k,
         "GSM8K",
-        "Testing model performance on grade school math problems"
+        "Testing model performance on grade school math problems",
     )

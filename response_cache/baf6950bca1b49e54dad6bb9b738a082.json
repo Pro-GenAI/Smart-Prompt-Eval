@@ -1,0 +1,7 @@
+{
+  "response": "Une robe prend 2 boulons de fibre bleue et la moitié de la fibre blanche → 2 bolons bleus + 1 bolon blanc = 3 bolons au total.  \n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

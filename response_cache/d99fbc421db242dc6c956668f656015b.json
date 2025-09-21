@@ -1,0 +1,7 @@
+{
+  "response": "Sure! Here’s your result.  \n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

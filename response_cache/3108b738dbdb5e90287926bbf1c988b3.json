@@ -1,0 +1,7 @@
+{
+  "response": "I’m not sure what you’d like me to calculate or answer. Could you let me know the specific question or problem you need solved? Once I have that, I’ll give you the result and format it as “#### [number]”.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Cecilia usará 5 bolsas de comida para perros en el primer año. #### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

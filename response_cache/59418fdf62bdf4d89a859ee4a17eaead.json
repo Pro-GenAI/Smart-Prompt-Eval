@@ -1,0 +1,7 @@
+{
+  "response": "The number of available translations you can perform today is **0**.  \n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

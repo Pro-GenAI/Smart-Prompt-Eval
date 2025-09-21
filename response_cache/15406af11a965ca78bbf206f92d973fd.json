@@ -1,0 +1,7 @@
+{
+  "response": "Carla primero descarga 80 GB (40 % de 200 GB).  \n- Tiempo de descarga: 80 GB ÷ 2 GB/min = 40 min.  \n- Windows la reinicia: 20 min.  \nLuego vuelve a descargar los 200 GB completos.  \n- Tiempo de descarga: 200 GB ÷ 2 GB/min = 100 min.  \n\nTiempo total = 40 + 20 + 100 = 160 min.  \n\n#### 160",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

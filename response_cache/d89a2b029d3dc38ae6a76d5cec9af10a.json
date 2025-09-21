@@ -1,0 +1,7 @@
+{
+  "response": "El programa tuvo 60 descargas en el primer mes, 180 en el segundo mes (tres veces el primero) y 126 en el tercer mes (30 % menos que el segundo mes).  \n\nTotal de descargas en los tres meses: 60 + 180 + 126 = 366.  \n\n#### 366",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

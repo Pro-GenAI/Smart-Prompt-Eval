@@ -56,7 +56,7 @@ def apply_character_missing(text: str) -> str:
         if len(word) > 5:
             # Remove a random character
             pos_to_remove = random.randint(0, len(word) - 1)
-            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1:]
+            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1 :]
             modified_words.append(modified_word)
         else:
             modified_words.append(word)
@@ -152,7 +152,7 @@ def evaluate_linguistic_errors():
 
         for variant_name, query in variants.items():
             log(f"\nTesting variant: {variant_name}")
-            is_correct = attempt(query, correct_answer)
+            is_correct, response_text = attempt(query, correct_answer)
             case_results["variant_results"][variant_name] = is_correct
 
             # Collect response data for this variant
@@ -164,6 +164,7 @@ def evaluate_linguistic_errors():
                     "variant": variant_name,
                     "accuracy": is_correct,
                     "prompt": query,
+                    "response": response_text,
                 }
             )
 

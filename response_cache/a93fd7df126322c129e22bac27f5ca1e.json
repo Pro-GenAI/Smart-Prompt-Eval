@@ -1,0 +1,7 @@
+{
+  "response": "El 20 % de 25 es 5, así que tenemos 1 mala + 5 no maduras + 2 ácidas = 8 que no son buenas.  \n25 – 8 = 17 buenas.  \n\n#### 17",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

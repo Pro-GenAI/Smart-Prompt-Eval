@@ -1,0 +1,7 @@
+{
+  "response": "The time remaining for free translations is 01 : 56 : 34 (1 hour 56 minutes 34 seconds).  \nTotal seconds left: 6,994.  \n\n#### 6994",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

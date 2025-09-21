@@ -18,7 +18,6 @@ from smart_prompt_eval.utils.common_utils import attempt, log
 def evaluate_seed_consistency():
     """Evaluate seed consistency across different GSM8K problems."""
 
-    # Load GSM8K test questions
     test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
@@ -27,7 +26,7 @@ def evaluate_seed_consistency():
     )
 
     responses = []  # Collect all individual responses
-    seeds = [0, 10, 20, 64]  # None, 
+    seeds = [0, 10, 20, 64]  # None,
 
     for i, test_case in enumerate(test_questions):
         question = test_case["question"]
@@ -40,7 +39,7 @@ def evaluate_seed_consistency():
             "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "seed_results": {},
+            "variant_results": {},
         }
 
         # Format question for the model
@@ -48,13 +47,12 @@ def evaluate_seed_consistency():
 
         for seed in seeds:
             log(f"\nTesting with seed: {seed}")
-            is_correct = attempt(
+            is_correct, response_text = attempt(
                 prompt, correct_answer, {"seed": seed} if seed is not None else {}
             )
-            case_results["seed_results"][str(seed)] = is_correct
+            case_results["variant_results"][str(seed)] = is_correct
 
-            # Collect individual responses for this seed (this is a simplified version)
-                        # In a real implementation, we'd need to modify attempt to return responses
+            # Collect individual responses for this seed
             responses.append(
                 {
                     "question_id": case_id,
@@ -63,6 +61,7 @@ def evaluate_seed_consistency():
                     "seed": seed,
                     "accuracy": is_correct,
                     "prompt": prompt,
+                    "response": response_text,
                 }
             )
 

@@ -1,0 +1,7 @@
+{
+  "response": "El edificio tiene \\(15 \\times 8 = 120\\) unidades.  \nEl \\( \\frac34 \\) del edificio está ocupado, es decir \\( \\frac34 \\times 120 = 90\\) unidades ocupadas.  \n\nUnidades desocupadas: \\(120 - 90 = 30\\).\n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

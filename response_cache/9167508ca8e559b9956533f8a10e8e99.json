@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but you have reached your free translation limit for today. Please visit the provided link to learn about usage limits or consider upgrading to a paid plan.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

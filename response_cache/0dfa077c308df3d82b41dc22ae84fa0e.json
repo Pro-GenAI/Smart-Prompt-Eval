@@ -1,0 +1,7 @@
+{
+  "response": "Time until next available: 01 hours 54 minutes 58 seconds (total 6 898 seconds).  \n#### 6898",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

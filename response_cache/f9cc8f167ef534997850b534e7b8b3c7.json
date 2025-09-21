@@ -1,0 +1,7 @@
+{
+  "response": "Dos niñas obtuvieron 1/6 de los 24 litros de agua, es decir 1/6 × 24 = 4 litros. Un niño consiguió 6 litros. En total se usaron 4 + 6 = 10 litros, por lo que quedaron 24 – 10 = 14 litros.  \n\n#### 14",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

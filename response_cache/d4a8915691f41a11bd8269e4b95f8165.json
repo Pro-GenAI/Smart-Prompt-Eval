@@ -1,0 +1,7 @@
+{
+  "response": "Um die Gesamtzahl der Schrauben zu bestimmen, addiert man die Schrauben der blauen Faser und die der weißen Faser.  \n- Blaue Schrauben: 2  \n- Weiße Schrauben: halbe Menge der blauen Schrauben = 2 / 2 = 1  \n\nGesamt: 2 + 1 = **3** Schrauben.\n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

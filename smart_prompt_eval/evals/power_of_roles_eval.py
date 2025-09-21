@@ -12,7 +12,13 @@ from smart_prompt_eval.utils.eval_utils import (
     run_evaluation_main,
     log_test_case_info,
 )
-from smart_prompt_eval.utils.common_utils import attempt, log, user_message, system_message, bot_message
+from smart_prompt_eval.utils.common_utils import (
+    attempt,
+    log,
+    user_message,
+    system_message,
+    bot_message,
+)
 from typing import Dict, List
 from smart_prompt_eval.utils.common_utils import ChatCompletionMessageParam
 
@@ -31,7 +37,9 @@ def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageP
         ],
         "with_assistant_sample_response": [
             user_message("What is 2 kgs + 2 kgs?"),
-            bot_message("When we add 2 with 2, we calculate the sum is 2 kgs + 2 kgs = 4 kgs  \n#### 4"),
+            bot_message(
+                "When we add 2 with 2, we calculate the sum is 2 kgs + 2 kgs = 4 kgs  \n#### 4"
+            ),
             user_message(prompt),
         ],
         "with_bot_promise": [
@@ -46,7 +54,6 @@ def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageP
 def evaluate_power_of_roles():
     """Evaluate the impact of different role configurations on GSM8K questions."""
 
-    # Load GSM8K test questions
     test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
@@ -67,7 +74,7 @@ def evaluate_power_of_roles():
             "id": case_id,
             "question": question,
             "correct_answer": correct_answer,
-            "role_results": {},
+            "variant_results": {},
         }
 
         # Create role variants
@@ -87,13 +94,16 @@ def evaluate_power_of_roles():
                         break
 
                 if user_content:
-                    is_correct = attempt(user_content, correct_answer)
+                    is_correct, response_text = attempt(user_content, correct_answer)
                 else:
-                    is_correct = False  # Default to False if no user content found
+                    is_correct, response_text = (
+                        False,
+                        "",
+                    )  # Default to False if no user content found
             else:
-                is_correct = attempt(str(messages), correct_answer)
+                is_correct, response_text = attempt(str(messages), correct_answer)
 
-            case_results["role_results"][role_name] = is_correct
+            case_results["variant_results"][role_name] = is_correct
 
             # Collect response data for this role configuration
             responses.append(
@@ -104,6 +114,7 @@ def evaluate_power_of_roles():
                     "role_config": role_name,
                     "accuracy": is_correct,
                     "messages": messages,
+                    "response": response_text,
                 }
             )
 

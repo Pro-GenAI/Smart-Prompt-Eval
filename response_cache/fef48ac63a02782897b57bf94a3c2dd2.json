@@ -1,0 +1,7 @@
+{
+  "response": "I’m happy to help, but I need the question or the problem you’d like me to solve. Please let me know what you need a numeric answer for, and I’ll provide it in the requested “#### <number>” format.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

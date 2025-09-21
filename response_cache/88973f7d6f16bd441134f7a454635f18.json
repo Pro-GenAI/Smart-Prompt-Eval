@@ -1,0 +1,7 @@
+{
+  "response": "G = S + 30  \nG + S = 110  \n\nSustituyendo:  \n(S + 30) + S = 110  \n2S + 30 = 110  \n2S = 80  \nS = 40  \n\nEntonces:  \nG = 40 + 30 = 70  \n\nGretchen tiene **70** monedas de oro.  \n#### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

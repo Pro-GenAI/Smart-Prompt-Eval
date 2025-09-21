@@ -1,0 +1,7 @@
+{
+  "response": "I’m not sure what question you’re asking—could you clarify what number you need? #### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

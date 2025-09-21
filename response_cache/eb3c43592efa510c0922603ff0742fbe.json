@@ -1,0 +1,7 @@
+{
+  "response": "Harald vendió 8 000 copias. #### 8000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Janet's ducks lay 16 eggs each day.  \nShe eats 3 eggs for breakfast and uses 4 eggs to bake muffins, so she uses:\n\n\\(3 + 4 = 7\\) eggs.\n\nThe remaining eggs are sold at the farmer’s market:\n\n\\(16 - 7 = 9\\) eggs.\n\nAt \\$2 per egg, her daily earnings are:\n\n\\(9 \\times 2 = \\$18\\).\n\nHence she earns \\(\\$18\\) each day from the market.\n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

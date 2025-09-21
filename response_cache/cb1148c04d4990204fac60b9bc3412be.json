@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd gana 252 huevos / día × 7 días = 1764 huevos / semana.  \n1764 huevos ÷ 12 huevos / docena = 147 docenas.  \n147 docenas × $2 / docena = $294.\n\n#### 294",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

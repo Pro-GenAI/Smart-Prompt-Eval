@@ -1,0 +1,7 @@
+{
+  "response": "Substitute cost: 2 × 7,50 $ = 15,00 $  \nChips cost: 2 × 1,50 $ = 3,00 $  \nCookies cost: 2 × 1,00 $ = 2,00 $  \n\nSubtotal = 15,00 $ + 3,00 $ + 2,00 $ = **20,00 $**  \n\nDelivery fee (20 % of subtotal) = 0,20 × 20,00 $ = **4,00 $**  \n\nOrder total after delivery fee = 20,00 $ + 4,00 $ = **24,00 $**  \n\nTip = 5,00 $  \n\nFinal delivery cost = 24,00 $ + 5,00 $ = **29,00 $**  \n\n#### 29.00",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

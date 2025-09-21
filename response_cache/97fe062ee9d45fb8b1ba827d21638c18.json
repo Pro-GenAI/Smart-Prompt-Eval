@@ -1,0 +1,7 @@
+{
+  "response": "You have exceeded the daily free translation limit. Please wait 02 hours 03 minutes 51 seconds before using again. #### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

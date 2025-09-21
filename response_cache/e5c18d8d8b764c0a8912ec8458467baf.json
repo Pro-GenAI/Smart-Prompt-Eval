@@ -1,0 +1,7 @@
+{
+  "response": "Sophia’s car uses 4 gal to travel 100 mi, so its fuel economy is  \n\n\\[\n\\text{MPG} = \\frac{100\\text{ mi}}{4\\text{ gal}} = 25\\text{ mi/gal}.\n\\]\n\nWith a full 12‑gal tank, the maximum distance is  \n\n\\[\n25\\text{ mi/gal} \\times 12\\text{ gal} = 300\\text{ mi}.\n\\]\n\nThus, Sophia can drive **300 miles** on one full tank.  \n\n#### 300",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

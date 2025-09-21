@@ -1,0 +1,7 @@
+{
+  "response": "Mike obtuvo un total de #### 9 puntos.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

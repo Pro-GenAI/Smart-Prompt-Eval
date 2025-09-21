@@ -1,0 +1,7 @@
+{
+  "response": "Mark hat beim ersten Test 8 h × 5 Fragen/h = 40 Fragen beantwortet und damit 75 – 40 = 35 Fragen unvollständig gelassen.  \nBeim zweiten Test 6 h × 5 Fragen/h = 30 Fragen beantwortet und damit 100 – 30 = 70 Fragen unvollständig gelassen.  \n\nInsgesamt hat er also 35 + 70 = 105 Fragen unvollständig gelassen.  \n\n#### 105",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

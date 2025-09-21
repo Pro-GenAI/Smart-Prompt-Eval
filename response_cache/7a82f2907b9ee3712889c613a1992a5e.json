@@ -1,0 +1,7 @@
+{
+  "response": "Debra saw **75** bees return during the last 6 hours. #### 75",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

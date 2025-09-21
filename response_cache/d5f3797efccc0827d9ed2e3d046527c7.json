@@ -1,0 +1,7 @@
+{
+  "response": "The maximum allowed query length is 500 characters. #### 500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

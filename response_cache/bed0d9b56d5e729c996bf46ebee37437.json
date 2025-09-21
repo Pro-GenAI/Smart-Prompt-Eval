@@ -1,0 +1,7 @@
+{
+  "response": "Para los adultos: 20 × 10 lb = 200 lb  \nPara los niños: 5 × (10 lb / 2) = 25 lb  \nTotal = 200 lb + 25 lb = 225 lb  \n\nConvertir a kilos: 225 lb × 0.453592 kg/lb ≈ 102.07 kg.  \n\nTed necesita aproximadamente **102 kg** de ensalada de patatas.  \n\n#### 102",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

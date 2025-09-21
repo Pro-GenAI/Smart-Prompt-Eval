@@ -32,7 +32,9 @@ def load_translated_questions(
     Returns:
         List of translated question dictionaries
     """
-    file_path = Path(__file__).parent.parent / "datasets" / f"gsm8k_test_{language_code}.jsonl"
+    file_path = (
+        Path(__file__).parent.parent / "datasets" / f"gsm8k_test_{language_code}.jsonl"
+    )
 
     if not file_path.exists():
         log(f"Translated file not found: {file_path}")
@@ -40,7 +42,7 @@ def load_translated_questions(
 
     translated_questions = []
     try:
-        with open(file_path, "r", encoding="utf-8") as f:
+        with open(file_path, encoding="utf-8") as f:
             for line_num, line in enumerate(f):
                 if line.strip():
                     try:
@@ -59,49 +61,45 @@ def load_translated_questions(
     return translated_questions
 
 
-def create_language_variants_from_translated(
-    original_question_id: str,
-) -> Dict[str, str]:
-    """Create language variants using pre-translated questions from JSONL files."""
-    variants = {}
-    languages = {"German": "de", "Spanish": "es", "French": "fr",
-                 "Italian": "it", "Portuguese": "pt"}
+def load_all_translated_questions() -> Dict[str, Dict[str, str]]:
+    """
+    Load all translated questions for all languages into a lookup dictionary.
 
-    for lang_name, lang_code in languages.items():
-        try:
-            # Load translated question from JSONL file
-            translated_questions = load_translated_questions(lang_code)
-            translated_question = None
+    Returns:
+        Dictionary mapping language_code -> {original_id -> translated_question}
+    """
+    languages = {
+        "de": "German",
+        "es": "Spanish",
+        "fr": "French",
+        "it": "Italian",
+        "pt": "Portuguese",
+    }
 
-            # Find the question with matching original_id
-            for q in translated_questions:
-                if q.get("original_id") == original_question_id:
-                    translated_question = q["question"]
-                    break
+    translated_lookup = {}
 
-            if translated_question is None:
-                log(
-                    f"Translated question not found for {lang_name} ({original_question_id})"
-                )
-                continue
+    for lang_code, lang_name in languages.items():
+        translated_questions = load_translated_questions(lang_code)
+        lang_lookup = {}
 
-            # Create the full prompt with translated question and language-specific instructions
-            full_prompt = create_base_prompt(translated_question)
+        for q in translated_questions:
+            original_id = q.get("original_id")
+            if original_id:
+                lang_lookup[original_id] = q["question"]
 
-            variants[lang_name] = full_prompt
-            log(f"✓ Loaded {lang_name} variant from translated file")
+        translated_lookup[lang_code] = lang_lookup
+        log(f"Loaded {len(lang_lookup)} translated questions for {lang_name}")
 
-        except Exception as e:
-            log(f"Error loading {lang_name} variant: {e}")
-
-    return variants
+    return translated_lookup
 
 
 def evaluate_multilingual_prompting():
     """Evaluate model performance across different languages on GSM8K questions."""
 
-    # Load GSM8K test questions
     test_questions = load_gsm8k_questions()
+
+    # Load all translated questions once for efficient lookup
+    translated_lookup = load_all_translated_questions()
 
     results = initialize_evaluation_results(
         "multilingual_prompting",
@@ -110,29 +108,60 @@ def evaluate_multilingual_prompting():
 
     responses = []  # Collect all individual responses
 
-    for i, test_case in enumerate(test_questions):
-        question = test_case["question"]
-        correct_answer = test_case["answer"]
-        case_id = test_case["id"]
+    # Process by language instead of by question
+    languages = ["German", "Spanish", "French", "Italian", "Portuguese"]
+    lang_codes = {
+        "German": "de",
+        "Spanish": "es",
+        "French": "fr",
+        "Italian": "it",
+        "Portuguese": "pt",
+    }
 
-        log_test_case_info(i, case_id, question, correct_answer)
+    for language in languages:
+        lang_code = lang_codes[language]
 
-        case_results = {
-            "id": case_id,
-            "question": question,
-            "correct_answer": correct_answer,
-            "language_results": {},
-        }
+        log(f"\n{'='*60}")
+        log(f"Processing {language} ({lang_code})")
+        log(f"{'='*60}")
 
-        # Create language variants using pre-translated files
-        variants = create_language_variants_from_translated(case_id)
+        # Get the lookup for this language
+        lang_lookup = translated_lookup.get(lang_code, {})
 
-        for language, query in variants.items():
-            log(f"\nTesting language: {language}")
-            is_correct = attempt(query, correct_answer)
-            case_results["language_results"][language] = is_correct
+        for i, test_case in enumerate(test_questions):
+            question = test_case["question"]
+            correct_answer = test_case["answer"]
+            case_id = test_case["id"]
 
-            # Collect response data for this language
+            # Find translated question
+            translated_question = lang_lookup.get(case_id)
+            if translated_question is None:
+                log(f"Translated question not found for {language} ({case_id})")
+                continue
+
+            query = create_base_prompt(translated_question)
+            is_correct, response_text = attempt(query, correct_answer)
+
+            # Find or create the test case result
+            case_result = None
+            for cr in results["test_cases"]:
+                if cr["id"] == case_id:
+                    case_result = cr
+                    break
+
+            if case_result is None:
+                case_result = {
+                    "id": case_id,
+                    "question": question,
+                    "correct_answer": correct_answer,
+                    "variant_results": {},
+                }
+                results["test_cases"].append(case_result)
+
+            # Add language result
+            case_result["variant_results"][language] = is_correct
+
+            # Collect response data
             responses.append(
                 {
                     "question_id": case_id,
@@ -141,10 +170,9 @@ def evaluate_multilingual_prompting():
                     "language": language,
                     "accuracy": is_correct,
                     "prompt": query,
+                    "response": response_text,
                 }
             )
-
-        results["test_cases"].append(case_results)
 
     return results, responses
 

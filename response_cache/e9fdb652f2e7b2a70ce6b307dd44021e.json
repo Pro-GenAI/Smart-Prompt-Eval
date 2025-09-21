@@ -1,0 +1,7 @@
+{
+  "response": "I’m sorry, but you’ve reached the limit for free translations today. There are **0** free translations remaining.  \n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

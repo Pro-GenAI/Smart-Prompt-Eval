@@ -1,0 +1,7 @@
+{
+  "response": "Josh’s total investment was \\$80,000 (purchase) + \\$50,000 (repairs) = \\$130,000.  \nAfter the repairs the house’s value increased by 150 % of the purchase price, so the new value is:  \n\n\\[\n80,000 \\times (1 + 1.5) = 80,000 \\times 2.5 = \\$200,000.\n\\]\n\nProfit = selling price – investment = \\$200,000 – \\$130,000 = \\$70,000.  \n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

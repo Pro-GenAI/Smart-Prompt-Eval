@@ -1,0 +1,7 @@
+{
+  "response": "I’m ready to translate your text, but I didn’t receive the content you’d like translated. Could you please provide the sentence(s) or passage you want to be translated? Once you send it, I’ll give you the translation and include the requested “#### 4”‑style ending.  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}
