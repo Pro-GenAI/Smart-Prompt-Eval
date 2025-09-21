@@ -9,14 +9,14 @@ from typing import Dict, Optional, List
 import json
 from pathlib import Path
 
-from utils.eval_utils import (
+from smart_prompt_eval.utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info,
 )
-from utils.common_utils import attempt, log
+from smart_prompt_eval.utils.common_utils import attempt, log
 
 
 def load_translated_questions(

@@ -8,7 +8,7 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
-from utils.common_utils import log, model
+from smart_prompt_eval.utils.common_utils import log, model
 
 # Project root (two levels up from this file: /<project_root>/utils)
 project_root = Path(__file__).parent.parent

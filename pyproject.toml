@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hack-prompting"
+version = "0.0.0"
+description = "Tools for smart prompt evaluation"
+authors = [ { name = "Praneeth Vadlapati (@prane-eth)" } ]
+requires-python = ">=3.8"

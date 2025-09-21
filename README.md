@@ -65,6 +65,23 @@ python evals/seed_consistency_eval.py
 python evals/run_evaluations.py
 ```
 
+## Quick run notes
+
+- If you run scripts directly (for example `python smart_prompt_eval/scripts/translate_gsm8k.py`) you may see import errors because Python doesn't treat the repository root as an installed package. Two easy options:
+  1. Install the project in editable mode so the `smart_prompt_eval` package is importable:
+
+     ```bash
+     python -m pip install -e .
+     ```
+
+  2. Run scripts as modules which preserves package imports:
+
+     ```bash
+     python -m smart_prompt_eval.scripts.translate_gsm8k --help
+     ```
+
+Both approaches allow `from smart_prompt_eval...` imports to work from the repository root.
+
 ## Base projects with published papers
 
 - Does Seed Matter - https://github.com/Pro-GenAI/PromptSeed

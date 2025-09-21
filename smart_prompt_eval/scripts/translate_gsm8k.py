@@ -32,28 +32,31 @@ SUPPORTED LANGUAGES:
 - hi: Hindi
 
 REQUIRES:
-- GSM8K dataset: evals/gsm8k_test.jsonl
+- GSM8K dataset: datasets/gsm8k_test.jsonl
 """
 import json
-import sys
 from pathlib import Path
-
-# Ensure project root is on sys.path so top-level imports like `utils` resolve
-# when running this script directly (e.g. `python scripts/translate_gsm8k.py`).
-# Project root is the parent of this script's directory.
-_THIS_DIR = Path(__file__).resolve().parent
-_PROJECT_ROOT = str(_THIS_DIR.parent)
-if _PROJECT_ROOT not in sys.path:
-    sys.path.insert(0, _PROJECT_ROOT)
 
 from typing import Dict, List, Optional
 import time
 import argparse
 
-from utils.common_utils import log
+# Safe import: if the package isn't installed, add repo root to sys.path so
+# local imports like `from smart_prompt_eval.utils.common_utils import log`
+# still work when running the script directly.
+try:
+    from smart_prompt_eval.utils.common_utils import log
+except ModuleNotFoundError:
+    import sys
+
+    repo_root = Path(__file__).resolve().parents[1]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+    # Retry import
+    from smart_prompt_eval.utils.common_utils import log
 
 
-def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optional[str]:
+def translate_text(text: str, target_lang: str, max_retries: int = 5) -> Optional[str]:
     """
     Translate text to target language using translation service.
 
@@ -131,7 +134,7 @@ def translate_question(question: str, target_lang: str) -> Optional[str]:
 
 
 def create_translated_dataset(
-    original_questions: List[Dict], target_lang: str, lang_name: str, output_file: str
+    original_questions: List[Dict], target_lang: str, lang_name: str, output_file: str, existing_ids: set
 ) -> int:
     """
     Create a translated dataset for a specific language.
@@ -141,6 +144,7 @@ def create_translated_dataset(
         target_lang: Target language code
         lang_name: Human-readable language name
         output_file: Output file path
+        existing_ids: Set of original IDs that have already been translated
 
     Returns:
         Number of successfully translated questions
@@ -151,53 +155,59 @@ def create_translated_dataset(
     log(f"Starting translation to {lang_name} ({target_lang})")
     log(f"Processing {len(original_questions)} questions...")
 
-    for i, question_data in enumerate(original_questions):
-        if (i + 1) % 50 == 0:
-            log(f"Processed {i + 1}/{len(original_questions)} questions...")
+    # Open file for writing (append if resuming, write if new)
+    mode = "a" if existing_ids else "w"
+    with open(output_file, mode, encoding="utf-8") as f:
+        for i, question_data in enumerate(original_questions):
+            if (i + 1) % 5 == 0:
+                log(f"Processed {i + 1}/{len(original_questions)} questions...")
 
-        question_id = question_data["id"]
-        original_question = question_data["question"]
-        answer = question_data["answer"]
+            question_id = question_data["id"]
+            original_question = question_data["question"]
+            answer = question_data["answer"]
 
-        # Translate the question
-        translated_question = translate_question(original_question, target_lang)
+            # Skip if already translated
+            if question_id in existing_ids:
+                continue
 
-        if translated_question:
-            # Create translated entry
-            translated_entry = {
-                "id": f"{question_id}_{target_lang}",
-                "original_id": question_id,
-                "question": translated_question,
-                "original_question": original_question,
-                "answer": answer,
-                "language": target_lang,
-                "language_name": lang_name,
-            }
-            translated_questions.append(translated_entry)
-            successful_translations += 1
-        else:
-            log(f"Failed to translate question {question_id}")
-            # Add original question as fallback
-            translated_entry = {
-                "id": f"{question_id}_{target_lang}",
-                "original_id": question_id,
-                "question": original_question,  # Fallback to original
-                "original_question": original_question,
-                "answer": answer,
-                "language": target_lang,
-                "language_name": lang_name,
-                "translation_failed": True,
-            }
-            translated_questions.append(translated_entry)
+            # Translate the question
+            translated_question = translate_question(original_question, target_lang)
 
-    # Save to JSONL file
-    log(f"Saving {len(translated_questions)} questions to {output_file}")
-    with open(output_file, "w", encoding="utf-8") as f:
-        for entry in translated_questions:
-            f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+            if translated_question:
+                # Create translated entry
+                translated_entry = {
+                    "id": f"{question_id}_{target_lang}",
+                    "original_id": question_id,
+                    "question": translated_question,
+                    "original_question": original_question,
+                    "answer": answer,
+                    "language": target_lang,
+                    "language_name": lang_name,
+                }
+                f.write(json.dumps(translated_entry, ensure_ascii=False) + "\n")
+                successful_translations += 1
+            else:
+                log(f"Failed to translate question {question_id}")
+                # Add original question as fallback
+                translated_entry = {
+                    "id": f"{question_id}_{target_lang}",
+                    "original_id": question_id,
+                    "question": original_question,  # Fallback to original
+                    "original_question": original_question,
+                    "answer": answer,
+                    "language": target_lang,
+                    "language_name": lang_name,
+                    "translation_failed": True,
+                }
+                f.write(json.dumps(translated_entry, ensure_ascii=False) + "\n")
+
+    if successful_translations > 0:
+        log(f"Saved {successful_translations} new questions to {output_file}")
+    else:
+        log(f"No new questions to save for {lang_name}")
 
     log(
-        f"✓ Successfully created {output_file} with {successful_translations}/{len(original_questions)} translated questions"
+        f"✓ Successfully processed {output_file} with {successful_translations} new translated questions"
     )
     return successful_translations
 
@@ -207,17 +217,24 @@ def main():
     parser = argparse.ArgumentParser(
         description="Translate GSM8K dataset to multiple languages"
     )
+
+    # Compute defaults relative to the package directory so the script can be
+    # executed from the repo root and still find `smart_prompt_eval/datasets`.
+    package_root = Path(__file__).resolve().parents[1]
+    default_datasets_dir = package_root / "datasets"
+    default_input = default_datasets_dir / "gsm8k_test.jsonl"
+
     parser.add_argument(
         "--input",
         "-i",
-        default="./evals/gsm8k_test.jsonl",
-        help="Input GSM8K JSONL file path",
+        default=str(default_input),
+        help=f"Input GSM8K JSONL file path (default: {default_input})",
     )
     parser.add_argument(
         "--output-dir",
         "-o",
-        default="./evals",
-        help="Output directory for translated files",
+        default=str(default_datasets_dir),
+        help=f"Output directory for translated files (default: {default_datasets_dir})",
     )
     parser.add_argument(
         "--languages",
@@ -277,17 +294,24 @@ def main():
         lang_name = language_config[lang_code]
         output_file = output_dir / f"gsm8k_test_{lang_code}.jsonl"
 
-        # Check if file exists
-        if output_file.exists() and not args.force:
-            log(
-                f"Skipping {lang_name} ({lang_code}) - file already exists: {output_file}"
-            )
-            log("Use --force to overwrite existing files")
-            continue
+        # Load existing translated IDs to resume from where left off
+        existing_ids = set()
+        if output_file.exists():
+            log(f"Loading existing translations for {lang_name} ({lang_code}) from {output_file}")
+            with open(output_file, "r", encoding="utf-8") as f:
+                for line in f:
+                    if line.strip():
+                        try:
+                            data = json.loads(line.strip())
+                            original_id = data["id"].rsplit("_", 1)[0]  # Extract original ID, e.g., "gsm8k_1" from "gsm8k_1_es"
+                            existing_ids.add(original_id)
+                        except json.JSONDecodeError:
+                            continue
+            log(f"Found {len(existing_ids)} existing translations for {lang_name}")
 
         try:
             successful = create_translated_dataset(
-                original_questions, lang_code, lang_name, str(output_file)
+                original_questions, lang_code, lang_name, str(output_file), existing_ids
             )
             total_successful += successful
             total_processed += len(original_questions)
