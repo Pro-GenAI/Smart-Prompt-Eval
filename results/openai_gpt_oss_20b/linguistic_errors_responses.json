@@ -1,0 +1,162 @@
+[
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "variant": "character_repeated",
+    "accuracy": true,
+    "prompt": "JJannet\u2019ss ddducckss lay 16 egggs per dddayy... She eeeatttsss thhhree for brrreakfast eveeery mmorrrnning and bakkeess mmuuffffins for her frieeendds evvveery day wwiiittth fooour.. She sssells the reemaiiinder at the farmers''' maarrkkket daiiilllyy for $2 per freshhh dduck egggg. How mmmuuucch in dddollaaarrs dddoess she mmakkkee eveery day at the fffarrmeers' marrket??\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "variant": "character_missing",
+    "accuracy": true,
+    "prompt": "Jnet\u2019s ducks lay 16 eggs per day. She eats three for beakfast every orning and bakes muffis for her frinds every day with four. She sells the rmainder at the famers' mrket daily for $2 per fresh duck egg. How much in dollas does she make every day at the farmers markt?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "variant": "character_swapping",
+    "accuracy": true,
+    "prompt": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffsni for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_1",
+    "question": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every morning and bakes muffins for her friends every day with four. She sells the remainder at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?",
+    "correct_answer": "18",
+    "variant": "word_swapping",
+    "accuracy": true,
+    "prompt": "Janet\u2019s ducks lay 16 eggs per day. She eats three for breakfast every remainder and bakes muffins for her friends every day with four. She sells the morning at the farmers' market daily for $2 per fresh duck egg. How much in dollars does she make every day at the farmers' market?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "variant": "character_repeated",
+    "accuracy": false,
+    "prompt": "A rooobbbeee ttakeesss 2 boltss of bblluue fibber and haallfff thattt mmuch whhhiiitte fffiberrr.. How maany booltttsss in tttotal ddoeess it takee???\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "variant": "character_missing",
+    "accuracy": true,
+    "prompt": "A robe takes 2 bolts of blue fiber and half that much white iber. How many bolts in total does it take?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "variant": "character_swapping",
+    "accuracy": true,
+    "prompt": "A robe takes 2 bolts of blue fiber and half that much whtie fiber. How many bolts in total does it take?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_2",
+    "question": "A robe takes 2 bolts of blue fiber and half that much white fiber.  How many bolts in total does it take?",
+    "correct_answer": "3",
+    "variant": "word_swapping",
+    "accuracy": false,
+    "prompt": "A robe takes 2 bolts of blue fiber and How that much white fiber. half many bolts in total does it take?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "variant": "character_repeated",
+    "accuracy": false,
+    "prompt": "JJoshhh ddecides to try ffflippiinng a hhoouse... He buuys a hhhouuusse for $888000,0000 and thheennn ppputtsss in $5550,000 in repppaairs. TThiiiss increasedd the vaaallue of the hoouussse by 11150%.. How mmmuucch profitt did he mmakkkee?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "variant": "character_missing",
+    "accuracy": false,
+    "prompt": "Josh ecides to try fliping a hose. He buys a house for $80,00 and then puts in $50,00 in epairs. This incresed the value of the house by 150%. How much pofit did he make?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "variant": "character_swapping",
+    "accuracy": false,
+    "prompt": "Josh decides to try flipping a h.useo He buys a house for $80,000 and then pust in $50,000 in repairs. This increased the value of the house by 150%. How much profit did he make?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_3",
+    "question": "Josh decides to try flipping a house.  He buys a house for $80,000 and then puts in $50,000 in repairs.  This increased the value of the house by 150%.  How much profit did he make?",
+    "correct_answer": "70000",
+    "variant": "word_swapping",
+    "accuracy": false,
+    "prompt": "Josh decides to try flipping a house. He buys a puts for $80,000 and then house in $50,000 in repairs. This increased the value of the house by 150%. How much profit did he make?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "variant": "character_repeated",
+    "accuracy": false,
+    "prompt": "Jamees decideees to run 3 sprinttsss 3 tttimes a weekk. He runsss 60 meeterss eaaccch sprinnnttt. How mmmany totalll mmmeters dooeees he run a wwweeeek?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "variant": "character_missing",
+    "accuracy": false,
+    "prompt": "James deides to run 3 sprnts 3 times a week. He runs 60 eters each sprin. How many total meers does he run a week?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "variant": "character_swapping",
+    "accuracy": false,
+    "prompt": "James decides to run 3 sprints 3 times a week. He runs 60 meters each sprint. How many total temers does he run a week?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_4",
+    "question": "James decides to run 3 sprints 3 times a week.  He runs 60 meters each sprint.  How many total meters does he run a week?",
+    "correct_answer": "540",
+    "variant": "word_swapping",
+    "accuracy": false,
+    "prompt": "James decides to run 3 sprints 3 times a How He runs 60 meters each sprint. week. many total meters does he run a week?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_5",
+    "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+    "correct_answer": "20",
+    "variant": "character_repeated",
+    "accuracy": false,
+    "prompt": "Evvveerry dayy,,, WWWendiii feeddds eaachhh of her ccchiiickeens thrree cuups of miiixed ccchicckennn feeedd, containning seeds,,, mealwormss and vegetablles to heeelllp keeppp thhheeem heaalllthy.. She givvess the chiccckens ttthhheirrr ffeeeeddd in tthhhreeee separrattte meaaals. In the mmmornnning, she ggiiivees her flocck of ccchiiickens 15 cuuupsss of feeeedd. In the aafternoonnn, she ggives her chicckens anothher 25 cuuups of fffeeeedd. How mmaanyyy ccuupss of ffeeeeddd ddoooeees she needdd to gggivveee her chiccckennnss in the finnnal mealll of the day if the sssiize of Weeennndi's floockk is 20 chiccckens?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_5",
+    "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+    "correct_answer": "20",
+    "variant": "character_missing",
+    "accuracy": false,
+    "prompt": "Every day, Wendi feeds each of her chicken three cups of mixed chicen feed, conaining seeds mealwors and vegetabes to help keep them healthy She gives the hickens their feed in three sparate mels. In the moring, she gives her flock of chickes 15 cups of feed. In the aftrnoon, she gives her chicens anothr 25 cups of feed. How many cups of feed does she need to give her chickns in the final meal of the day if the size of Weni's flock is 20 chickens\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_5",
+    "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+    "correct_answer": "20",
+    "variant": "character_swapping",
+    "accuracy": false,
+    "prompt": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy. She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cpus of feed. In the afternoon, she gives her chickens anoehtr 25 cups of feed. How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?\n\nProvide final answer as a number in a new line like #### 4"
+  },
+  {
+    "question_id": "gsm8k_5",
+    "question": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy.  She gives the chickens their feed in three separate meals. In the morning, she gives her flock of chickens 15 cups of feed.  In the afternoon, she gives her chickens another 25 cups of feed.  How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?",
+    "correct_answer": "20",
+    "variant": "word_swapping",
+    "accuracy": false,
+    "prompt": "Every day, Wendi feeds each of her chickens three cups of mixed chicken feed, containing seeds, mealworms and vegetables to help keep them healthy. She gives the chickens their feed in three separate meals. her the morning, she gives In flock of chickens 15 cups of feed. In the afternoon, she gives her chickens another 25 cups of feed. How many cups of feed does she need to give her chickens in the final meal of the day if the size of Wendi's flock is 20 chickens?\n\nProvide final answer as a number in a new line like #### 4"
+  }
+]

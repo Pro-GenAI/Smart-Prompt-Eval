@@ -5,16 +5,16 @@ Tests the impact of different role configurations on model performance.
 Based on the Power_of_Roles experiment.
 """
 
-from hack_prompt_eval.utils.eval_utils import (
+from utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info,
 )
-from hack_prompt_eval.utils.common_utils import attempt, log, user_message, system_message, bot_message
+from utils.common_utils import attempt, log, user_message, system_message, bot_message
 from typing import Dict, List
-from hack_prompt_eval.utils.common_utils import ChatCompletionMessageParam
+from utils.common_utils import ChatCompletionMessageParam
 
 
 def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageParam]]:

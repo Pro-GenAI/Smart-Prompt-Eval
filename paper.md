@@ -1,2 +1,0 @@
-Have you imaginged prompt-based LLM attacks other than Prompt Injection and Jailbreaking? We can use power of roles.
-Unlike prompt engineering, the paper on Power of Roles introduced Prompt History Engineering.

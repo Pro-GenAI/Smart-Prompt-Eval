@@ -8,14 +8,14 @@ Based on the Linguistic_Errors experiment.
 from typing import Dict
 import random
 
-from hack_prompt_eval.utils.eval_utils import (
+from utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
     run_evaluation_main,
     log_test_case_info,
 )
-from hack_prompt_eval.utils.common_utils import attempt, log
+from utils.common_utils import attempt, log
 
 # Set random seed for reproducibility
 random.seed(42)

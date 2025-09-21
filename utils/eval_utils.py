@@ -8,7 +8,10 @@ import json
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
-from hack_prompt_eval.utils.common_utils import log, model
+from utils.common_utils import log, model
+
+# Project root (two levels up from this file: /<project_root>/utils)
+project_root = Path(__file__).parent.parent
 
 
 def load_gsm8k_questions(
@@ -192,13 +195,59 @@ def run_evaluation_main(
 
     # Compute summary statistics
     total_problems = len(results["test_cases"])
-    correct_answers = sum(1 for case in results["test_cases"] if case["is_correct"])
-    accuracy = correct_answers / total_problems if total_problems > 0 else 0
+
+    # Support two kinds of test case representations:
+    # - Direct evaluations where each case has an `is_correct` boolean
+    # - Variant evaluations where each case has a `variant_results` dict mapping
+    #   variant_name -> boolean
+    total_attempts = 0
+    correct_answers = 0
+
+    for case in results.get("test_cases", []):
+        # Case with single boolean result
+        if "is_correct" in case:
+            total_attempts += 1
+            if case.get("is_correct"):
+                correct_answers += 1
+        # Case with multiple variant results
+        elif "variant_results" in case and isinstance(case["variant_results"], dict):
+            variant_vals = list(case["variant_results"].values())
+            total_attempts += len(variant_vals)
+            # Count each True/Truthy variant as a correct attempt
+            correct_answers += sum(1 for v in variant_vals if bool(v))
+        else:
+            # Unknown format: count as one attempt (not correct)
+            total_attempts += 1
+
+    accuracy = correct_answers / total_attempts if total_attempts > 0 else 0
 
     results["total_problems"] = total_problems
-    results["total_attempts"] = total_problems  # Assuming one attempt per problem
+    results["total_attempts"] = total_attempts
     results["correct_answers"] = correct_answers
     results["accuracy"] = accuracy
+
+    # If any test case used variant_results, compute per-variant summaries
+    per_variant_summary = {}
+    for case in results.get("test_cases", []):
+        vr = case.get("variant_results")
+        if isinstance(vr, dict):
+            for variant_name, val in vr.items():
+                if variant_name not in per_variant_summary:
+                    per_variant_summary[variant_name] = {"attempts": 0, "correct": 0}
+                per_variant_summary[variant_name]["attempts"] += 1
+                if bool(val):
+                    per_variant_summary[variant_name]["correct"] += 1
+
+    if per_variant_summary:
+        # Attach to results for downstream use and saving
+        # Compute accuracy for each variant
+        for vname, stats in per_variant_summary.items():
+            attempts = stats.get("attempts", 0)
+            correct = stats.get("correct", 0)
+            stats["accuracy"] = correct / attempts if attempts > 0 else 0
+
+        results["per_variant_summary"] = per_variant_summary
+
 
     # Log results summary
     log("\n" + "=" * 60)
@@ -212,7 +261,25 @@ def run_evaluation_main(
     if "correct_answers" in results:
         log(f"Correct Answers: {results['correct_answers']}")
     if "accuracy" in results:
-        log(".2f")
+        # Log accuracy as a percentage-like decimal with two decimals
+        try:
+            log(f"{results['accuracy']:.2f}")
+        except Exception:
+            # Fallback to raw value if formatting fails
+            log(str(results["accuracy"]))
+
+    # Print per-variant breakdown if present
+    pvs = results.get("per_variant_summary")
+    if pvs:
+        log("\nPer-variant breakdown:")
+        for variant_name, stats in pvs.items():
+            attempts = stats.get("attempts", 0)
+            correct = stats.get("correct", 0)
+            accuracy_v = correct / attempts if attempts > 0 else 0
+            try:
+                log(f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v:.2f}")
+            except Exception:
+                log(f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v}")
 
     # Save results (responses will be handled by individual evaluation functions)
     filename_base = eval_name.lower().replace(" ", "_")
@@ -221,3 +288,4 @@ def run_evaluation_main(
     log_evaluation_end(f"{eval_name.upper()} EVALUATION", output_file)
 
     return output_file
+

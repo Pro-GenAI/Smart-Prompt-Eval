@@ -32,18 +32,25 @@ SUPPORTED LANGUAGES:
 - hi: Hindi
 
 REQUIRES:
-- translate library: pip install translate
 - GSM8K dataset: evals/gsm8k_test.jsonl
 """
-
 import json
+import sys
 from pathlib import Path
+
+# Ensure project root is on sys.path so top-level imports like `utils` resolve
+# when running this script directly (e.g. `python scripts/translate_gsm8k.py`).
+# Project root is the parent of this script's directory.
+_THIS_DIR = Path(__file__).resolve().parent
+_PROJECT_ROOT = str(_THIS_DIR.parent)
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
 from typing import Dict, List, Optional
-from translate import Translator
 import time
 import argparse
 
-from hack_prompt_eval.utils.common_utils import log
+from utils.common_utils import log
 
 
 def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optional[str]:
@@ -60,6 +67,9 @@ def translate_text(text: str, target_lang: str, max_retries: int = 3) -> Optiona
     """
     for attempt in range(max_retries):
         try:
+            # Lazy import to avoid requiring the `translate` package unless translation is actually run
+            from translate import Translator
+
             translator = Translator(to_lang=target_lang)
             translation = translator.translate(text)
             return translation

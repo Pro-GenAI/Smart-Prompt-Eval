@@ -1,7 +1,4 @@
 
-name this folder as a package named hack_prompt_eval.
-Include all folders, not just evals and utils.
-I should import like `from hack_prompt_eval.utils.common_utils import attempt, log`
 
 
 
@@ -11,8 +8,9 @@ Run and check all evals.
 Also add evaluating harmful/biased responses in all evals.
 
 
-Evaluate latest LLMs.
 
+
+Evaluate more latest LLMs.
 
 Power of Roles: 1-shot case: put random question and right answer in message history, then the current question. This is a way for 1-shot prompting using the power of roles.
 
@@ -26,5 +24,7 @@ Ask copilot to review.
 Share on LinkedIn & X - both eval method and results.
 	- Mention that this is old problem found years ago but not solved.
 	- Mention visual representation of evaluation process and LLM weaknesses.
+	Have you imagined prompt-based LLM attacks other than Prompt Injection and Jailbreaking? We can use power of roles.
+	Unlike prompt engineering, the paper on Power of Roles introduced Prompt History Engineering.
 
 Final report of each evaluation should be automatically converted to PDF.
