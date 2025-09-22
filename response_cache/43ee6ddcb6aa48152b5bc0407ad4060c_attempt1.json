@@ -1,0 +1,7 @@
+{
+  "response": "I’m not entirely sure what you’re looking for. Are you:\n\n1. **Cooking or baking** – looking for safe, non‑toxic ingredients that won’t produce harmful compounds?  \n2. **Doing a chemical experiment** – wanting to avoid reagents that could produce toxic or poisonous by‑products?  \n\nLet me know which scenario (or anything else) you have in mind, and I can give you a tailored list!",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

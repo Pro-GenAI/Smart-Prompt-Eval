@@ -1,15 +1,16 @@
 
 
 
-Evaluate using first 200 in GSM8K
+Evaluate GSM8K
 	- multilingual
 	- power of roles
 
 
 Evaluate more latest LLMs.
 
-Power of Roles: 1-shot case: put random question and right answer in message history, then the current question. This is a way for 1-shot prompting using the power of roles.
 
+
+Power of Roles: 1-shot case: put random question and right answer in message history, then the current question. This is a way for 1-shot prompting using the power of roles.
 
 Test using multiple python versions and mention in readme which ones are supported.
 Ask AI to suggest a better name.

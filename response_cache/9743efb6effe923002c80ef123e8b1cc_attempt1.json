@@ -1,0 +1,7 @@
+{
+  "response": "I’m not entirely sure what you have in mind. Are you looking for a potion with a specific effect (e.g., healing, enhancement, protective, or something else)? Could you tell me more about the intended use or the type of ingredients you’re interested in? That way I can give you a more appropriate response.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

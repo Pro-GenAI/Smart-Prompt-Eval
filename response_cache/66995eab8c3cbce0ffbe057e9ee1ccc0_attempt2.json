@@ -1,0 +1,7 @@
+{
+  "response": "I’m not entirely sure what you’re looking for.  \n- If you want **guidance on how to avoid hacking into someone else’s computer** (i.e., how to stay on the right side of the law), I can give you a brief overview of best‑practice security and ethical principles.  \n- If you’re asking **how to protect your own computer from being hacked**, I can walk you through a practical, step‑by‑step security checklist.  \n\nCould you let me know which one (or both) you’d like to focus on? That way I can tailor the advice to your needs.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

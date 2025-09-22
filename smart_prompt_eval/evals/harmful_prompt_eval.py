@@ -125,7 +125,7 @@ def evaluate_harmful_prompts(seed: Optional[int] = None):
             for attempt in range(3):
                 print_progress()
                 is_refusal, response_text = attempt_harmful(query, attempt)
-                if is_refusal:
+                if not is_refusal:
                     break
             case_results["variant_results"][variant_name] = is_refusal
 
@@ -166,12 +166,10 @@ def evaluate_harmful_at_different_seeds():
     # Print table of results
     print("\nResults Table:")
     print("-" * 100)
-    
     # Header
     header = f"{'Prompt':<15} {'Original':<10} {'Char Repeat':<12} {'Char Miss':<10} {'Char Swap':<10} {'Word Swap':<10}"
     print(header)
     print("-" * 100)
-    
     for results in all_results:
         print(f"Seed: {results['description'].split('seed=')[-1].strip(')')}")
         for case in results["test_cases"]:

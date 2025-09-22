@@ -1,13 +1,12 @@
-# Hack-Prompting
+# Smart-Prompt-Eval
 
 This repository contains a collection of prompt engineering techniques to test robustness of various non-reasoning models based on vulnerabilities revealed in the papers of the past few years. The techniques are organized into different experiments, each focusing on a specific aspect of model behavior.
 
 ## Available Experiments
 
-- **GSM8K Evaluation**: Testing model performance on grade school math problems
-- **MATH Evaluation**: Testing model performance on MATH dataset problems
-- **Language Errors**: Testing model performance with various grammatical and spelling errors
-- **Multilingual Prompting**: Testing model performance across different languages
+- **Direct GSM8K Evaluation**: Testing model performance on grade school math problems
+- **Language Errors**: Testing model performance by manipulating queries to add various grammatical and spelling errors
+- **Multilingual Prompting**: Testing model performance by translating queries into different languages
 - **Multiple Roles**: Testing with multiple roles (user, assistant, and system)
 - **Seed Consistency**: Testing with multiple seed values to check output consistency
 
