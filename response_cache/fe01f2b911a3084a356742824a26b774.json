@@ -1,0 +1,7 @@
+{
+  "response": "The team won 15 games. #### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

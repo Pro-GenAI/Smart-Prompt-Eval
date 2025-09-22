@@ -1,4 +1,5 @@
 # Smart-Prompt-Eval
+<!-- Robust-Prompt-Eval -->
 
 This repository contains a collection of prompt engineering techniques to test robustness of various non-reasoning models based on vulnerabilities revealed in the papers of the past few years. The techniques are organized into different experiments, each focusing on a specific aspect of model behavior.
 
@@ -8,18 +9,8 @@ This repository contains a collection of prompt engineering techniques to test r
 - **Language Errors**: Testing model performance by manipulating queries to add various grammatical and spelling errors
 - **Multilingual Prompting**: Testing model performance by translating queries into different languages
 - **Multiple Roles**: Testing with multiple roles (user, assistant, and system)
-- **Seed Consistency**: Testing with multiple seed values to check output consistency
-
-## Shared Utilities
-
-The `evals/eval_utils.py` file contains shared functions used across all evaluation scripts to reduce code duplication:
-
-- `load_gsm8k_questions()`: Load questions from the centralized GSM8K dataset
-- `save_evaluation_results()`: Save results to JSON files
-- `log_evaluation_start/end()`: Standardized logging for evaluations
-- `extract_final_answer()`: Extract final answers from GSM8K format
-- `create_base_prompt()`: Create standardized prompts
-- `initialize_evaluation_results()`: Initialize result dictionaries
+<!-- - **Seed Consistency**: Testing with multiple seed values to check output consistency -->
+- **Evaluating Harmful Prompts**: Testing model responses to potentially harmful prompts, using original and manipulated versions of the harmful prompts
 
 ## Setup
 

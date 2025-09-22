@@ -1,0 +1,7 @@
+{
+  "response": "- Let Sarah = 400 pounds.\n- Sarah = 4 × Daid, so Daid = 400 / 4 = 100.\n- Ramond = 1/2 × Sara = 1/2 × 400 = 200.\n- Difference between Raymnd (Ramond) and David (Daid) = |200 − 100| = 100.\n\n100",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Mark can answer 5 questions each hour.  \n- For the first test: \\(5 \\times 8 = 40\\) questions answered, so \\(75 - 40 = 35\\) questions remain.  \n- For the second test: \\(5 \\times 6 = 30\\) questions answered, so \\(100 - 30 = 70\\) questions remain.\n\nTotal left incomplete: \\(35 + 70 = 105\\).\n\n#### 105",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

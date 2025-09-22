@@ -1,0 +1,7 @@
+{
+  "response": "The weekly teaching hours are missing. Let T be the number of hours she teaches per week.\n\nAnnual salary S = 50 * (20*T + 30*15) = 50 * (20T + 450) = 1000T + 22500.\n\nPlease provide T (hours per week teaching) to get a single numeric answer.\n\nExamples:\n- If T = 20, S = 1000*20 + 22500 = 42,500\n- If T = 25, S = 25,000 + 22,500 = 47,500\n- If T = 30, S = 30,000 + 22,500 = 52,500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

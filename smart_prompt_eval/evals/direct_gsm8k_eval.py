@@ -43,7 +43,7 @@ def evaluate_gsm8k():
         query = create_base_prompt(question)
 
         # Test the model
-        log(f"\nTesting GSM8K problem")
+        # log(f"\nTesting GSM8K problem")
         is_correct, response_text = attempt(query, correct_answer)
         case_results["is_correct"] = is_correct
 

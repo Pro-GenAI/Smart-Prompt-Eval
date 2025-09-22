@@ -1,0 +1,7 @@
+{
+  "response": "Janet sells 16 − (3 + 4) = 9 eggs per day. At $2 each she makes 9 × 2 = $18.\n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-mini"
+  }
+}

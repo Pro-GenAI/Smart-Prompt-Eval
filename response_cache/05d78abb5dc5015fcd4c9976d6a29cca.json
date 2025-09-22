@@ -1,0 +1,7 @@
+{
+  "response": "Dylan bought 38 chicken sausages and 44 fish sausages (6 more than the chicken ones). In total, he purchased  \n\n\\[\n38 + 44 = 82 \\text{ sausages.}\n\\]\n\n#### 82",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

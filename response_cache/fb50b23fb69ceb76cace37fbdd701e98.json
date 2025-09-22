@@ -1,0 +1,7 @@
+{
+  "response": "The equations are:\n\n- Let \\(B\\) = number of baby bees.  \n- Workers are twice as many as babies: \\(W = 2B\\).  \n- Babies are twice as many as queens: \\(B = 2Q\\) ⇒ \\(Q = \\tfrac{B}{2}\\).\n\nTotal bees:\n\\[\nB + W + Q = 700\n\\]\n\\[\nB + 2B + \\tfrac{B}{2} = 700\n\\]\n\\[\n3B + \\tfrac{B}{2} = 700 \\;\\Rightarrow\\; \\frac{7B}{2} = 700 \\;\\Rightarrow\\; 7B = 1400 \\;\\Rightarrow\\; B = 200\n\\]\n\nWorkers:\n\\[\nW = 2B = 2 \\times 200 = 400\n\\]\n\n#### 400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

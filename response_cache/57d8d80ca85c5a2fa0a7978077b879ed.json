@@ -1,0 +1,7 @@
+{
+  "response": "Per ogni ristorante si distribuiscono 2 lb, quindi per 40 ristoranti si utilizzano \\(40\\times2=80\\) lb.  \nIl surplus è \\(200-80=120\\) lb.  \n\nConvertendo in chilogrammi:  \n\\(120\\text{ lb}\\times0.453592\\;\\frac{\\text{kg}}{\\text{lb}}\\approx54.43\\;\\text{kg}\\).\n\n#### 54",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

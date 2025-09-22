@@ -1,0 +1,7 @@
+{
+  "response": "Pancho walks 20 miles on weekdays and 10 miles on weekends.  \nWeekdays: 5 days × 20 miles = 100 miles  \nWeekends: 2 days × 10 miles = 20 miles  \n\nTotal for the week = 100 miles + 20 miles = 120 miles.\n\n#### 120",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

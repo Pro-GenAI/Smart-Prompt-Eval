@@ -1,0 +1,7 @@
+{
+  "response": "First, find how many classes Judy runs in a week:\n\n- Weekdays: 5 classes × 5 days = **25 classes**\n- Saturday: **8 classes**\n\nTotal classes per week = 25 + 8 = **33 classes**.\n\nEach class has 15 students, and each student pays \\$15.  \nRevenue per class = 15 students × \\$15 = **\\$225**.\n\nTotal weekly revenue = 33 classes × \\$225 per class = \\$7,425.\n\n**Answer: 7425**  \n#### 7425",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

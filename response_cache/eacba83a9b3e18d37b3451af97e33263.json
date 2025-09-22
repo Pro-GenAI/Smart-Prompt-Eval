@@ -1,0 +1,7 @@
+{
+  "response": "To determine how many grams of chips you can eat, follow these steps:\n\n1. **Calories per serving**: 250 cal  \n2. **Servings per bag**: 5  \n3. **Weight per serving**: 300 g ÷ 5 = 60 g  \n4. **Calories per gram**: 250 cal ÷ 60 g ≈ 4.17 cal/g  \n\nRemaining calorie allowance:  \n2000 cal (daily target) − 1800 cal (already consumed) = **200 cal**  \n\nMaximum grams you can consume:  \n\\(200 cal \\times \\frac{1 g}{4.17 cal} ≈ 48 g\\)\n\n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

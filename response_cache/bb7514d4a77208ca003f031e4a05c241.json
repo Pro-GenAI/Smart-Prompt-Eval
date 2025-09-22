@@ -1,0 +1,7 @@
+{
+  "response": "Each chicken gets 3 cups per day, so for 20 chickens: 20 × 3 = 60 cups per day.\nMorning + afternoon = 15 + 25 = 40 cups.\nFinal meal = 60 − 40 = 20 cups.\n\n20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

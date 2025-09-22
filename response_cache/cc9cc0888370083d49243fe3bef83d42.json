@@ -1,0 +1,7 @@
+{
+  "response": "Jean is 24 years old. #### 24",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

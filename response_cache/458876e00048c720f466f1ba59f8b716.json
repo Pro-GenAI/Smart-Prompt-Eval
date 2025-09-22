@@ -1,0 +1,7 @@
+{
+  "response": "The number of girls not in the Girl Scout is\n\n#### 40",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

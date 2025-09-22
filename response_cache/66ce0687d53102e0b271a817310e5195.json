@@ -1,0 +1,7 @@
+{
+  "response": "Le anatre di uno stormo di 10 persone necessitano di 35 libbre di insetti a settimana. 35 lb ≈ 15,88 kg, quindi a 7 giorni la quantità richiesta è ≈ 2,27 kg al giorno.  \n\n#### 2.27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

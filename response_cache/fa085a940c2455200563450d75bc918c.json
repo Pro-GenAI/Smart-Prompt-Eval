@@ -1,0 +1,7 @@
+{
+  "response": "Ducks lay 16 eggs. She keeps 3 + 4 = 7, so she sells 16 - 7 = 9 eggs. At $2 each she makes 9 * 2 = $18.\n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-mini"
+  }
+}

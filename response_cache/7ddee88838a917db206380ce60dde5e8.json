@@ -1,0 +1,7 @@
+{
+  "response": "Let N be the initial number of fries.\n\n- Dave eats 14: remaining N - 14\n- Seagull eats half of Dave's amount: 7 more, remaining N - 21\n- Pigeons eat 9: remaining N - 30\n- Raccoon takes two thirds: remaining (N - 30)/3\n- Ants take 1: remaining (N - 30)/3 - 1 = 5\n\nSolve: (N - 30)/3 = 6 => N - 30 = 18 => N = 48\n\n48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

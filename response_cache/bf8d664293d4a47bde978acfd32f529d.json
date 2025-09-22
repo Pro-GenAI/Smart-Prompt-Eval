@@ -1,0 +1,7 @@
+{
+  "response": "- Distance from home after initial trip: 3 hours × 60 mph = 180 miles.\n- Return trip:\n  - First 2 hours: 0 miles closed.\n  - Next 0.5 hour at 30 mph: 0.5 × 30 = 15 miles.\n  - Remaining 1.5 hours at 80 mph: 1.5 × 80 = 120 miles.\n- Total closed distance in return: 15 + 120 = 135 miles.\n- Distance from home after 4 hours: 180 − 135 = 45 miles.\n\n45",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

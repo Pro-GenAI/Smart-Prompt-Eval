@@ -1,0 +1,7 @@
+{
+  "response": "Total cost before insurance: 500 + 800 = 1300\nInsurance (10% of 1300): 130\nGrand total: 1300 + 130 = 1430\n\n1430",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

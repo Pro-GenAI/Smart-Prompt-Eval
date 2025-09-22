@@ -1,0 +1,7 @@
+{
+  "response": "8 penne costeranno $12.00. #### 12",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The distance between the first stop (20 miles) and the second stop (60 − 15 = 45 miles) is  \n\\(45 - 20 = 25\\) miles.\n\n**Answer: #### 25**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

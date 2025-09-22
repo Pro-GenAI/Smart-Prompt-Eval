@@ -1,0 +1,7 @@
+{
+  "response": "Net profit = (20 candles × $2) − (2 pounds × $10) = 40 − 20 = 20\n\n20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "John raccoglie 360 pesche.  \n\n#### 360",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

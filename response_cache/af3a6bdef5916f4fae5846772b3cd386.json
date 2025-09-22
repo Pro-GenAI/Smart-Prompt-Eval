@@ -1,0 +1,7 @@
+{
+  "response": "Total expenditure for May and June = $940.  \n#### 940",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

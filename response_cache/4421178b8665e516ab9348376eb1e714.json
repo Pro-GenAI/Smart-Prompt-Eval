@@ -1,0 +1,7 @@
+{
+  "response": "- 0–6 hours: 30 leave\n- 6–12 hours: 15 return (half of 30)\n- 12–18 hours: 60 leave (twice 30)\n- Bees that left before 12–18 and hadn’t returned yet: 30 − 15 = 15\n- These 15 return in the last 6 hours\n\nAnswer: 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

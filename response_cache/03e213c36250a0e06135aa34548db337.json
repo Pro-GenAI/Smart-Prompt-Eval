@@ -1,0 +1,7 @@
+{
+  "response": "Um manto usa 2 parafusos de fibra azul e metade desse número em fibra branca, que é 1 parafuso. Assim, o total de parafusos necessários é 3.\n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

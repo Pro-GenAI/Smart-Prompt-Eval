@@ -1,0 +1,7 @@
+{
+  "response": "The overtime pay is 1.2 × $10 = $12 per hour.  \nRegular pay for 40 hours = 40 × $10 = $400.  \nOvertime pay for 5 hours = 5 × $12 = $60.  \nTotal earnings = $400 + $60 = **$460**  \n\n#### 460",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "48 <|constrain|>4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

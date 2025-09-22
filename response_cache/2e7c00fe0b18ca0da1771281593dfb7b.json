@@ -1,0 +1,7 @@
+{
+  "response": "The equations are:\n\n- Jamal’s phone holds 6 times as many photos as Brittany’s phone: \\(J = 6B\\).\n- Brittany’s phone holds 50 times as many photos as the number of ducks in Jamal’s photo: \\(B = 50D\\).\n\nGiven \\(J = 1800\\):\n\n1. \\(B = \\frac{J}{6} = \\frac{1800}{6} = 300\\).\n2. \\(D = \\frac{B}{50} = \\frac{300}{50} = 6\\).\n\nSo Jamal’s photograph contains **6 ducks**.\n\n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

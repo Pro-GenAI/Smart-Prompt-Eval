@@ -1,0 +1,7 @@
+{
+  "response": "The zookeeper’s apes consume 200 + 400 + 100 = 700 bananas each month.  \nOver two months that amounts to \\(700 \\times 2 = 1400\\) bananas.  \n\n#### 1400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

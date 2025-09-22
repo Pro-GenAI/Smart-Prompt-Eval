@@ -1,0 +1,7 @@
+{
+  "response": "The boat rows 1.25 ft/s (20 ft in 16 s).  \nIn 64 s she covers 1.25 ft/s × 64 s = 80 ft.  \n\nFor every 10 ft the leak adds 2 L, so over 80 ft:\n\n8 × 2 L = 16 L.  \n\nThus the boat had taken on 16 liters by the time she reached shore.\n\n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

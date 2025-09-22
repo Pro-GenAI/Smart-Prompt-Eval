@@ -1,0 +1,7 @@
+{
+  "response": "The hospital makes a daily profit of  \n\n**$10,000**\n\n#### 10000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

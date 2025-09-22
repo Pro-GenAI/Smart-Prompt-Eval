@@ -1,0 +1,7 @@
+{
+  "response": "John bought 5 blue ties at \\$40 each, so he spent  \n\\(5 \\times 40 = \\$200\\).\n\nSince he buys twice as many red ties as blue ties, he bought  \n\\(2 \\times 5 = 10\\) red ties.\n\nRed ties cost 50 % more than blue ties:\n\\(40 \\times 1.5 = \\$60\\) per red tie.\n\nCost for red ties:\n\\(10 \\times 60 = \\$600\\).\n\nTotal spending:\n\\(200 + 600 = \\$800\\).\n\n#### 800",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

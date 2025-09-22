@@ -1,0 +1,7 @@
+{
+  "response": "Peter spends \\(7 + 7 = 14\\) dollars each time he goes to the movies. With \\(42\\) dollars he can afford \\(\\left\\lfloor \\frac{42}{14} \\right\\rfloor = 3\\) visits.  \n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

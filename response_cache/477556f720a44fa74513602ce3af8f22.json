@@ -1,0 +1,7 @@
+{
+  "response": "The adults need 20 × 10 = 200 lb, the children need 5 × 5 = 25 lb, for a total of 225 lb.  \n**#### 225**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

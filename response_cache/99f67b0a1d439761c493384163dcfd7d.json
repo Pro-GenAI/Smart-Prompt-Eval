@@ -1,0 +1,7 @@
+{
+  "response": "The candle burns 2 cm each hour.  \nFrom 1 PM to 5 PM is 4 hours.  \nLoss = 2 cm/hour × 4 hours = 8 cm.\n\n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

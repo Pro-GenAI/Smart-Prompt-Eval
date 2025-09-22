@@ -1,0 +1,7 @@
+{
+  "response": "The number of children is found by subtracting the number of men and women from the total population:\n\n\\[\n23786 \\;-\\; 8417 \\;-\\; 9092 \\;=\\; 6277\n\\]\n\n**Answer:** #### 6277",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

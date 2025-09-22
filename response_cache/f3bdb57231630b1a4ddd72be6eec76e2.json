@@ -1,0 +1,7 @@
+{
+  "response": "Total hours per week = 3 + 1.5 + 1.5 = 6 hours.\nSpeed = distance / time = 60 miles / 6 hours = 10 mph.\n\n10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

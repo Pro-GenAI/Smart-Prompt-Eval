@@ -1,0 +1,7 @@
+{
+  "response": "Charlie started with 10 stickers.  \nHe bought 21 more → \\(10 + 21 = 31\\).  \nHe received 23 for his birthday → \\(31 + 23 = 54\\).  \nHe gave 9 to his sister → \\(54 - 9 = 45\\).  \nHe used 28 on a greeting card → \\(45 - 28 = 17\\).\n\nSo Charlie has **17 stickers left**.\n\n#### 17",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

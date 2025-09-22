@@ -1,0 +1,7 @@
+{
+  "response": "Calculation:\n- 25% of 40 = 10\n- Add delivery fee = 3\n- Add tip = 4\n- Total = 40 + 10 + 3 + 4 = 57\n\n57",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "A casa ficou no valor de US$ 200 000 (80 000 + 150 % de 80 000).  \nO custo total foi de 80 000 + 50 000 = 130 000.  \n\nLucro = 200 000 – 130 000 = **US$ 70 000**.\n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

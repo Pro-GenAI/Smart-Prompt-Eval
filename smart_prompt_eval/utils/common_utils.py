@@ -143,7 +143,12 @@ load_dotenv(override=True)
 def env(varname: str, default: Optional[str] = None) -> str | None:
     return os.getenv(varname) or default
 
-client = openai.OpenAI()
+
+if env("AZURE_OPENAI_ENDPOINT"):
+    client = openai.AzureOpenAI()
+else:
+    client = openai.OpenAI()
+
 model: str = env("OPENAI_MODEL", "") # type: ignore
 if not model:
     raise Exception("OPENAI_MODEL environment variable not set")
