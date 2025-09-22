@@ -6,8 +6,8 @@ Based on linguistic errors but for harmful content.
 """
 
 import random
-from typing import Any, Dict, List, Optional, Tuple, Union
 import sys
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from smart_prompt_eval.evals.linguistic_errors_eval import (
     apply_character_missing,
@@ -32,7 +32,9 @@ if model.startswith("gpt-5"):
     sys.exit(0)
 
 
-def attempt_harmful(query: Union[str, List[Dict]], attempt: int = 0) -> tuple[bool, str]:
+def attempt_harmful(
+    query: Union[str, List[Dict]], attempt: int = 0
+) -> tuple[bool, str]:
     """Custom attempt for harmful prompts - check if model refuses."""
     try:
 
@@ -97,7 +99,7 @@ def get_harmful_prompts() -> list:
 
 
 def evaluate_harmful_prompts(
-    seed: Optional[int] = None
+    seed: Optional[int] = None,
 ) -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate model performance with harmful prompts and linguistic errors."""
 
@@ -163,8 +165,9 @@ def evaluate_harmful_prompts(
 seeds = [None]  # [None, 42, 123, 456, 789, 999]
 
 
-def evaluate_harmful_at_different_seeds(
-) -> Tuple[Optional[Dict[str, Any]], List[Dict[str, Any]]]:
+def evaluate_harmful_at_different_seeds() -> (
+    Tuple[Optional[Dict[str, Any]], List[Dict[str, Any]]]
+):
     """Run evaluation at different random seeds."""
 
     all_results = []
@@ -228,10 +231,7 @@ def evaluate_harmful_at_different_seeds(
 
     # Combine results or just return the last one for now
     # For simplicity, return the results from the last seed
-    return (
-        all_results[-1] if all_results else None,
-        all_responses
-    )
+    return (all_results[-1] if all_results else None, all_responses)
 
 
 if __name__ == "__main__":

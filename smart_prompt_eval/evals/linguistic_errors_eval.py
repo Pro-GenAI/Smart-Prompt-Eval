@@ -56,7 +56,7 @@ def apply_character_missing(text: str) -> str:
         if len(word) > 5:
             # Remove a random character
             pos_to_remove = random.randint(0, len(word) - 1)
-            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1:]
+            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1 :]
             modified_words.append(modified_word)
         else:
             modified_words.append(word)

@@ -116,7 +116,9 @@ def log_evaluation_start(title: str) -> None:
     print("=" * 60)
 
 
-def log_evaluation_end(title: str, result_file: Path, responses_file: Optional[Path]) -> None:
+def log_evaluation_end(
+    title: str, result_file: Path, responses_file: Optional[Path]
+) -> None:
     """Log the end of an evaluation."""
     print(f"\n{'='*60}")
     print(f"{title} COMPLETE")
@@ -127,7 +129,9 @@ def log_evaluation_end(title: str, result_file: Path, responses_file: Optional[P
     print(f"{'='*60}")
 
 
-def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str) -> None:
+def log_test_case_info(
+    i: int, case_id: str, question: str, correct_answer: str
+) -> None:
     """Log standardized test case information."""
     print(f"Q{i+1} ", end="", flush=True)
     if i % 10 == 0:
@@ -139,9 +143,7 @@ def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str)
     # log(f"{'-'*40}")
 
 
-default_instruction: str = (
-    "Provide the final answer as a number at the end like #### 4"
-)
+default_instruction: str = "Provide the final answer as a number at the end like #### 4"
 
 
 def create_base_prompt(question: str, instruction: str = default_instruction) -> str:
@@ -175,10 +177,7 @@ def initialize_evaluation_results(
 
 
 def run_evaluation_main(
-    eval_function: Callable[..., Any],
-    eval_name: str,
-    *args: Any,
-    **kwargs: Any
+    eval_function: Callable[..., Any], eval_name: str, *args: Any, **kwargs: Any
 ) -> tuple[Path, Optional[Path]]:
     """
     Centralized main function for running evaluations.
@@ -300,7 +299,9 @@ def run_evaluation_main(
 
     # Save results (responses will be handled by individual evaluation functions)
     filename_base = eval_name.lower().replace(" ", "_")
-    result_file, responses_file = save_evaluation_results(results, filename_base, responses)
+    result_file, responses_file = save_evaluation_results(
+        results, filename_base, responses
+    )
 
     log_evaluation_end(f"{eval_name.upper()} EVALUATION", result_file, responses_file)
 

@@ -8,13 +8,14 @@ version = "0.0.1"
 description = "Tools for smart prompt evaluation"
 authors = [{ name = "Praneeth Vadlapati", email = "praneeth.vad@gmail.com" }]
 requires-python = ">=3.10"
-license = {text = "MIT"}
-keywords = ["ai", "ml", "evaluation", "prompting", "nlp", "openai"]
+license = "CC-BY-4.0"
+license-files = ["LICENSE"]
+keywords = ["ai", "llms", "llm", "evaluation", "prompting", "nlp", "openai"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: CC-BY 4.0",
+    # License is provided via the LICENSE file (Creative Commons BY 4.0)
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
@@ -23,7 +24,7 @@ classifiers = [
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
-readme = "README.md"
+readme = { file = "README.md", "content-type" = "text/markdown" }
 dependencies = ["python-dotenv", "openai", "translate"]
 
 [project.optional-dependencies]
@@ -43,9 +44,13 @@ Issues = "https://github.com/Pro-GenAI/Smart-Prompt-Eval/issues"
 
 [tool.setuptools.packages.find]
 include = ["smart_prompt_eval*"]
+exclude = ["smart_prompt_eval.results"]
+
+[tool.setuptools]
+"exclude-package-data" = { "*" = ["response_cache/*", "smart_prompt_eval/results/*"] }
 
 [tool.black]
-line-length = 88
+line-length = 95
 target-version = ['py310']
 include = '\.pyi?$'
 extend-exclude = '''

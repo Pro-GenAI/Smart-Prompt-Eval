@@ -3,25 +3,22 @@ Name: smart_prompt_eval
 Version: 0.0.1
 Summary: Tools for smart prompt evaluation
 Author-email: Praneeth Vadlapati <praneeth.vad@gmail.com>
-License: MIT
+License-Expression: CC-BY-4.0
 Project-URL: Homepage, https://github.com/Pro-GenAI/Smart-Prompt-Eval
 Project-URL: Repository, https://github.com/Pro-GenAI/Smart-Prompt-Eval
 Project-URL: Issues, https://github.com/Pro-GenAI/Smart-Prompt-Eval/issues
-Keywords: ai,ml,evaluation,prompting,nlp,openai
+Keywords: ai,llms,llm,evaluation,prompting,nlp,openai
 Classifier: Development Status :: 3 - Alpha
 Classifier: Intended Audience :: Developers
 Classifier: Intended Audience :: Science/Research
-Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
 Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.8
-Classifier: Programming Language :: Python :: 3.9
 Classifier: Programming Language :: Python :: 3.10
 Classifier: Programming Language :: Python :: 3.11
 Classifier: Programming Language :: Python :: 3.12
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
-Requires-Python: >=3.8
+Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 License-File: LICENSE
 Requires-Dist: python-dotenv
@@ -104,7 +101,7 @@ Run all quality checks:
 black smart_prompt_eval tests
 isort smart_prompt_eval tests
 flake8 smart_prompt_eval tests
-mypy smart_prompt_eval
+mypy smart_prompt_eval tests
 ```
 
 ### Testing

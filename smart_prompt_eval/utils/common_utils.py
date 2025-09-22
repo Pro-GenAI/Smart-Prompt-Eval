@@ -97,7 +97,9 @@ def bot_message(content: str) -> Dict[str, str]:
 
 
 def get_response(
-    messages: Union[str, List[Dict[str, str]]], attempt: Optional[int] = None, **kwargs: Any
+    messages: Union[str, List[Dict[str, str]]],
+    attempt: Optional[int] = None,
+    **kwargs: Any,
 ) -> Optional[str]:
     """Get response from OpenAI API with automatic caching."""
 

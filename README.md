@@ -66,8 +66,14 @@ Run all quality checks:
 black smart_prompt_eval tests
 isort smart_prompt_eval tests
 flake8 smart_prompt_eval tests
-mypy smart_prompt_eval
+mypy smart_prompt_eval tests
 ```
+<!-- 
+To test whether it builds without errors:
+```bash
+python -m build
+```
+-->
 
 ### Testing
 Run the test suite:

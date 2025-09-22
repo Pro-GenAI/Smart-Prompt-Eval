@@ -1,5 +1,9 @@
+.env.example
+.flake8
+.gitignore
 LICENSE
 README.md
+TODO.md
 pyproject.toml
 smart_prompt_eval/__init__.py
 smart_prompt_eval/run_eval.py
@@ -10,6 +14,13 @@ smart_prompt_eval.egg-info/dependency_links.txt
 smart_prompt_eval.egg-info/requires.txt
 smart_prompt_eval.egg-info/top_level.txt
 smart_prompt_eval/datasets/__init__.py
+smart_prompt_eval/datasets/gsm8k_test.jsonl
+smart_prompt_eval/datasets/gsm8k_test_de.jsonl
+smart_prompt_eval/datasets/gsm8k_test_es.jsonl
+smart_prompt_eval/datasets/gsm8k_test_fr.jsonl
+smart_prompt_eval/datasets/gsm8k_test_full.jsonl
+smart_prompt_eval/datasets/gsm8k_test_it.jsonl
+smart_prompt_eval/datasets/gsm8k_test_pt.jsonl
 smart_prompt_eval/evals/__init__.py
 smart_prompt_eval/evals/direct_gsm8k_eval.py
 smart_prompt_eval/evals/harmful_prompts_eval.py
@@ -17,9 +28,9 @@ smart_prompt_eval/evals/linguistic_errors_eval.py
 smart_prompt_eval/evals/multilingual_eval.py
 smart_prompt_eval/evals/multiple_roles_eval.py
 smart_prompt_eval/evals/seed_consistency_eval.py
-smart_prompt_eval/results/__init__.py
 smart_prompt_eval/utils/__init__.py
 smart_prompt_eval/utils/common_utils.py
 smart_prompt_eval/utils/eval_utils.py
 smart_prompt_eval/utils/response_cacher.py
+tests/__init__.py
 tests/test_basic.py

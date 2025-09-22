@@ -56,7 +56,9 @@ def load_translated_questions(
         print(f"Error reading translated file {file_path}: {e}")
         return []
 
-    print(f"Loaded {len(translated_questions)} translated questions for {language_code}")
+    print(
+        f"Loaded {len(translated_questions)} translated questions for {language_code}"
+    )
     return translated_questions
 
 

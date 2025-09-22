@@ -2,10 +2,6 @@
 
 Evaluate gpt-5-nano.
 
-Ensure I followed all standards for python packages.
-	To run_evaluation_main, dont pass description.
-	Run flake8, mypy, and other commands in readme, ensure I follow standards.
-	Ask copilot again in a new conversation here.
 Readme:
 	Generate a logo.
 	Add same badges as iRAT.
@@ -13,9 +9,9 @@ Readme:
 	Write a title & a subtitle in smaller font
 
 Ask copilot to review - create an Issue.
+	Review the code of my python package.
 
-Test on python 3.8 and ensure it is supported.
-	If not, test python 3.10 and mention it in pyproject.toml.
+Test on python 3.10
 
 
 Create an images to share on readme & social media.
