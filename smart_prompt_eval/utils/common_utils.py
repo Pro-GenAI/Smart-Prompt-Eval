@@ -97,7 +97,7 @@ def attempt(
         # else:
         #     print_error()
         return is_correct, response
-    except Exception as e:
+    except Exception:
         print_error(" SE ")
         return False, ""
 

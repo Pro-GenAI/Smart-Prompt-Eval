@@ -14,7 +14,7 @@ classifiers = [
     "Development Status :: 3 - Alpha",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: CC-BY 4.0",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
@@ -67,12 +67,12 @@ extend-exclude = '''
 [tool.isort]
 profile = "black"
 multi_line_output = 3
-line_length = 88
+line_length = 95
 known_first_party = ["smart_prompt_eval"]
 include_trailing_comma = true
 
 [tool.flake8]
-max-line-length = 88
+max-line-length = 95
 extend-ignore = ["E203", "W503"]
 exclude = [
     ".git",

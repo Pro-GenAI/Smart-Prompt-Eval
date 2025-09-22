@@ -9,7 +9,6 @@ from typing import Dict, List
 from smart_prompt_eval.utils.common_utils import (
     attempt,
     bot_message,
-    log,
     system_message,
     user_message,
 )

@@ -4,7 +4,7 @@ GSM8K Evaluation Script
 Tests model performance on grade school math problems.
 """
 
-from smart_prompt_eval.utils.common_utils import attempt, log
+from smart_prompt_eval.utils.common_utils import attempt
 from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
     initialize_evaluation_results,

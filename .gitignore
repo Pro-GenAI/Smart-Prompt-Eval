@@ -5,3 +5,4 @@ response.log
 archive.md
 .pytest_cache
 .vscode/
+.mypy_cache/

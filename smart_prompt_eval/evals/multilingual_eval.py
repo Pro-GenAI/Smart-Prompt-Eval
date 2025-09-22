@@ -14,7 +14,6 @@ from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
     initialize_evaluation_results,
     load_gsm8k_questions,
-    log_test_case_info,
     run_evaluation_main,
 )
 

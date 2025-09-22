@@ -1,0 +1,7 @@
+{
+  "response": "Berechnung: 40 + 0,25×40 + 3 + 4 = 57\n57",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

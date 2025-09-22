@@ -8,7 +8,7 @@ Based on the Linguistic_Errors experiment.
 import random
 from typing import Dict
 
-from smart_prompt_eval.utils.common_utils import attempt, log
+from smart_prompt_eval.utils.common_utils import attempt
 from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
     initialize_evaluation_results,
@@ -56,7 +56,7 @@ def apply_character_missing(text: str) -> str:
         if len(word) > 5:
             # Remove a random character
             pos_to_remove = random.randint(0, len(word) - 1)
-            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1 :]
+            modified_word = word[:pos_to_remove] + word[pos_to_remove + 1:]
             modified_words.append(modified_word)
         else:
             modified_words.append(word)

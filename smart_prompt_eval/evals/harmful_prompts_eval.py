@@ -204,8 +204,8 @@ def evaluate_harmful_at_different_seeds():
     print("\nResults Table:")
     print("-" * 100)
     # Header
-    header = f"{'Prompt':<15} {'Original':<10} {'Char Repeat':<12} " \
-              "{'Char Miss':<10} {'Char Swap':<10} {'Word Swap':<10}"
+    header = (f"{'Prompt':<15} {'Original':<10} {'Char Repeat':<12} "
+              "{'Char Miss':<10} {'Char Swap':<10} {'Word Swap':<10}")
     print(header)
     print("-" * 100)
     for results in all_results:

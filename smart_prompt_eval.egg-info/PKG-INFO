@@ -74,7 +74,7 @@ This repository contains a collection of prompt engineering techniques to test r
      cp .env.example .env
      ```
     - Edit the `.env` file to access an OpenAI-compatible API of your model.
-        - Example: OpenAI API, vLLM, Ollama, etc.
+        - Example: OpenAI API, Azure OpenAI, vLLM, Ollama, etc.
 
 ## Usage
 

@@ -1,0 +1,7 @@
+{
+  "response": "Berechnung: Verkaufspreis = Originalpreis × 0,75. Originalpreis = 19,50 ÷ 0,75 = 26,00 Dollar.\n\n26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

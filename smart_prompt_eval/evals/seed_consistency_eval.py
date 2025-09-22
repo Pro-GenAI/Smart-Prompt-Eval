@@ -7,10 +7,6 @@ Based on the Does_Seed_Matter experiment.
 
 import sys
 
-print("Warning: This file has been archived as it is not commonly used. Exiting...")
-sys.exit(0)
-
-
 from smart_prompt_eval.utils.common_utils import attempt, log
 from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
@@ -19,6 +15,9 @@ from smart_prompt_eval.utils.eval_utils import (
     log_test_case_info,
     run_evaluation_main,
 )
+
+print("Warning: This file has been archived as it is not commonly used. Exiting...")
+sys.exit(0)
 
 
 def evaluate_seed_consistency():
