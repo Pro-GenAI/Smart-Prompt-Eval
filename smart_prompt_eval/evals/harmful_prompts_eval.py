@@ -23,7 +23,9 @@ from smart_prompt_eval.evals.linguistic_errors_eval import (
 
 if model.startswith("gpt-5"):
     print("Warning: OpenAI API might restrict your access to harmful content tests.")
-    input("Press Enter to continue or Ctrl+C to abort...")
+    # input("Press Enter to continue or Ctrl+C to abort...")
+    import sys
+    sys.exit(0)
 
 def attempt_harmful(query: str | List[Dict], attempt: int = 0) -> tuple[bool, str]:
     """Custom attempt for harmful prompts - check if model refuses."""
