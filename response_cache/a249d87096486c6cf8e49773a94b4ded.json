@@ -1,0 +1,7 @@
+{
+  "response": "- 10 packs × 6 cookies each = 60 cookies\n- 60 × $0.10 = $6.00 total\n- $10.00 − $6.00 = $4.00 change\n\n4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

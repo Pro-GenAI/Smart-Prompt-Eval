@@ -1,0 +1,7 @@
+{
+  "response": "- First 6h: 30 leave.\n- Next 6h: 15 return (half of 30).\n- Third 6h: 60 leave (2 × 30).\n- Last 6h: all bees that left before this period and haven’t returned yet return. That is 15 (remaining from first interval) + 60 (from the third interval) = 75.\n\n75",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

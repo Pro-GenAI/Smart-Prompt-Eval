@@ -5,7 +5,7 @@ Evaluate gpt-5-nano.
 
 
 
-Test using python 3.8 and mention in readme which ones are supported.
+Test on python 3.8 and ensure it is supported.
 Follow all standards for python packages.
 Ask copilot to review.
 

@@ -1,0 +1,7 @@
+{
+  "response": "Total before tax: 15\nTax on nonfood items (10%): 1\nGrand total: 16\n\n16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

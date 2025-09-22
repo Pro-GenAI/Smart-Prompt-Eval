@@ -1,0 +1,7 @@
+{
+  "response": "1 adult ($12) + 1 child ($10) = $22. Change received = $8. Amount given = $22 + $8 = $30.\n\n30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}
