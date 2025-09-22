@@ -1,0 +1,7 @@
+{
+  "response": "El precio crece 20 % del precio original cada dos meses.  \n20 % de 20 $ = 4 $.  \n\nHay 36 meses ÷ 2 meses = 18 aumentos de 4 $:  \n\\[4 \\times 18 = 72\\] $ de incremento.\n\nPrecio final: 20 $ + 72 $ = **92 $**.  \n\n#### 92",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

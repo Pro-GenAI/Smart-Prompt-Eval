@@ -1,0 +1,7 @@
+{
+  "response": "The total cost of the chicken, milk, and apples is  \n\n- Chicken: \\$12  \n- Milk: 5 × \\$3 = \\$15  \n- Apples: 4 × \\$1.50 = \\$6  \n\nSum: \\$12 + \\$15 + \\$6 = \\$33  \n\nMarie paid \\$50, so the money spent on pizza boxes is  \n\n\\$50 – \\$33 = \\$17  \n\nEach pizza box costs \\$8.50, thus the number of boxes is  \n\n\\$17 ÷ \\$8.50 = 2  \n\n#### 2",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

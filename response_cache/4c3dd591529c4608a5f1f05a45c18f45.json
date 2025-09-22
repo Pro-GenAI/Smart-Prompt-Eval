@@ -1,0 +1,7 @@
+{
+  "response": "Each duck consumes 3.5 pounds of insects per week.  \nFor 10 ducks: \\(10 \\times 3.5 = 35\\) pounds per week.  \nDividing by 7 days gives \\(35 ÷ 7 = 5\\) pounds per day.\n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

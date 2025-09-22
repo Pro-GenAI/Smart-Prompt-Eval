@@ -1,0 +1,7 @@
+{
+  "response": "Siobhan hat 23 Juwelen. #### 23",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

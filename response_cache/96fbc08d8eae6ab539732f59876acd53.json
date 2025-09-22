@@ -1,0 +1,7 @@
+{
+  "response": "The total length is 280 feet.  \n#### 280",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Die aktuellen Altersanteile lauten: Darrell 63 Jahre, Allen 99 Jahre. In zehn Jahren wird Allen 99 + 10 = 109 Jahre alt sein. #### 109",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

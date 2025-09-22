@@ -1,0 +1,7 @@
+{
+  "response": "The annual pension after 30 years is $75,000.\n\n#### 75000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

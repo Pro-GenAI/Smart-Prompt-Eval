@@ -1,0 +1,7 @@
+{
+  "response": "The 300 g bag contains 5 servings, so each serving is \\(300\\,\\text{g} ÷ 5 = 60\\,\\text{g}\\).  \nEach serving has 250 calories, giving a calorie‑to‑weight ratio of  \n\n\\[\n\\frac{250 \\text{ cal}}{60 \\text{ g}} \\approx 4.17 \\text{ cal/g}.\n\\]\n\nYou can consume only \\(2000 - 1800 = 200\\) calories today.  \nThe weight of chips that fits within 200 calories is\n\n\\[\n\\text{grams} = \\frac{200 \\text{ cal}}{4.17 \\text{ cal/g}} \\approx 48 \\text{ g}.\n\\]\n\n**Answer: 48 grams**  \n\n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

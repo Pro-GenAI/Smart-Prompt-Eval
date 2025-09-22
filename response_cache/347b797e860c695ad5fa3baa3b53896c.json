@@ -1,0 +1,7 @@
+{
+  "response": "Rani ha 10 granchi in più di Monic, che ne ha 4 in meno rispetto a Bo. Se Bo ha 40 granchi:\n\n- Monic = Bo − 4 = 40 − 4 = 36  \n- Rani = Monic + 10 = 36 + 10 = 46  \n\nTotale: 40 + 36 + 46 = **122**  \n\n#### 122",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The second recipe has twice as many instructions as the first, so it contains \\(2 \\times 20 = 40\\) instructions.  \nThe total number of instructions for both recipes is therefore  \n\n\\[\n20 + 40 = 60.\n\\]\n\n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

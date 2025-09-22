@@ -1,0 +1,7 @@
+{
+  "response": "Il totale dei download nei tre mesi è: 60 + 180 + 126 = 366. #### 366",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

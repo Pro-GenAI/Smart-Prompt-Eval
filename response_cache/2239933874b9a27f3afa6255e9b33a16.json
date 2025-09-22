@@ -1,0 +1,7 @@
+{
+  "response": "Jimmy has $2 more than twice Ethel’s money.  \nEthel has $8, so twice that is $16.  \nAdding $2 gives Jimmy \\(16 + 2 = 18\\).\n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

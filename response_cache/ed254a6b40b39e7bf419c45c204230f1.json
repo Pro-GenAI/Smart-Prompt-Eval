@@ -1,0 +1,7 @@
+{
+  "response": "Anakin atrapó 3 peces payaso y Locsin atrapó 2 más, es decir 5.  \nEn total pescaron \\(3 + 5 = 8\\) peces.  \n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

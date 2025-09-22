@@ -1,0 +1,7 @@
+{
+  "response": "Marcy empieza a acumular el beneficio a partir del año 20 de servicio. Cada año después de ese punto, obtiene el 5 % de la pensión completa que correspondería tras 40 años.\n\n- **Años de acumulación:** 30 – 20 = 10 años  \n- **Porcentaje acumulado:** 10 × 5 % = 50 %  \n- **Pensión anual:** 50 % de $50 000 = $25 000\n\n**Respuesta final**  \n#### 25000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

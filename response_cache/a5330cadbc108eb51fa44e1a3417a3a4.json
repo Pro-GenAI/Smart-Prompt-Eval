@@ -1,0 +1,7 @@
+{
+  "response": "Katy verwendet 7 Teelöffel Zucker für jeden 13 Tassen Wasser.  \nSetzen wir \\(7x\\) für die Teelöffel Zucker und \\(13x\\) für die Tassen Wasser.  \nDie Summe ist \\(7x + 13x = 20x = 120\\).\n\n\\[\nx = \\frac{120}{20} = 6\n\\]\n\nZucker: \\(7 \\times 6 = 42\\) Teelöffel.\n\n#### 42",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

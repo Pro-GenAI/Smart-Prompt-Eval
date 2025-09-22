@@ -1,0 +1,7 @@
+{
+  "response": "The amount owed after 3 months is the original $100 plus 3 months of 2 % monthly interest:\n\n- Monthly interest on $100: 0.02 × 100 = $2\n- Interest for 3 months: $2 × 3 = $6\n\nTotal owed: $100 + $6 = $106\n\n#### 106",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "193.12",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

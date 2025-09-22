@@ -1,0 +1,7 @@
+{
+  "response": "John collects peaches for 3 hours at a rate of 2 peaches per minute.  \n3 hours = 180 minutes.  \n180 minutes × 2 peaches/minute = 360 peaches.\n\n#### 360",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

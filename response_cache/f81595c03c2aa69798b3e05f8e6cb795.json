@@ -1,0 +1,7 @@
+{
+  "response": "Claire cocina 3 huevos cada día.  \nEn 4 semanas hay 4 × 7 = 28 días.  \n\nNúmero de huevos usados: 3 × 28 = 84 huevos.  \n\nUna docena contiene 12 huevos, así que:\n\n84 ÷ 12 = 7 docenas.\n\n#### 7",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

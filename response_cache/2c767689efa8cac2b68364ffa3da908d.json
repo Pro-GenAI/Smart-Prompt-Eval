@@ -1,0 +1,7 @@
+{
+  "response": "The number of biscuits they eat together is 20.  \n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

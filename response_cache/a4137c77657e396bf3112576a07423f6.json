@@ -1,0 +1,7 @@
+{
+  "response": "Pour les 20 voitures disponibles, le nombre de voitures semi‑automatiques est \\(20 - (12 + 4) = 4\\).  \nLe pourcentage de voitures semi‑automatiques est \\(\\frac{4}{20}\\times100 = 20\\%\\).\n\n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

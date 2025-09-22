@@ -1,0 +1,7 @@
+{
+  "response": "Il y a 60 filles. Comme il y a deux fois plus de garçons que de filles, il y a \\(2 \\times 60 = 120\\) garçons.  \nLe nombre total d’élèves est donc \\(60 + 120 = 180\\).  \n\nChaque enseignant gère 5 élèves, donc le nombre d’enseignants est  \n\\[\n\\frac{180}{5} = 36 .\n\\]\n\n#### 36",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

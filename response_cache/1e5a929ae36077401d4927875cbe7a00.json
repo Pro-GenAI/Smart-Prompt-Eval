@@ -1,0 +1,7 @@
+{
+  "response": "The first friend pressed the bell **20** times.  \nThe second friend pressed it \\(1/4\\) more than the first: \\(20 + \\frac14 \\times 20 = 25\\) times.  \nThe fourth friend pressed it **60** times.  \nThe third friend pressed it 10 times more than the fourth: \\(60 + 10 = 70\\) times.\n\nAdding all presses: \\(20 + 25 + 70 + 60 = 175\\).\n\n#### 175",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

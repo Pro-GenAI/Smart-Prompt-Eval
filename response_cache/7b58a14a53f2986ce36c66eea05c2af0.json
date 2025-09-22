@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd a gagné  \\(13 \\text{ heures} \\times 10 \\$ / \\text{heure} = 130 \\$\\).\n\n#### 130",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

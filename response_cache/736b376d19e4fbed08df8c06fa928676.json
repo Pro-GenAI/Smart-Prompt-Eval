@@ -1,0 +1,7 @@
+{
+  "response": "Dana’s walking speed is 1.5 mph and her running speed is 6 mph.  \nShe runs for 2 hours and walks for 4 hours, so the total distance is  \n\\(6(2) + 1.5(4) = 12 + 6 = 18\\) miles.  \n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

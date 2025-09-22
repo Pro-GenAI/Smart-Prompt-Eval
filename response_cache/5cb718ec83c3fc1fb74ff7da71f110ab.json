@@ -1,0 +1,7 @@
+{
+  "response": "Harry slept 9 h and James slept 2/3 × 9 = 6 h, so Harry slept 3 h more than James. #### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

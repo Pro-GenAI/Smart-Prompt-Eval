@@ -1,0 +1,7 @@
+{
+  "response": "The school has twice as many boys as girls, so with 60 girls there are 120 boys.  \nTotal students = 60 + 120 = 180.  \nWith 5 students per teacher, the number of teachers is 180 ÷ 5 = 36.\n\n#### 36",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

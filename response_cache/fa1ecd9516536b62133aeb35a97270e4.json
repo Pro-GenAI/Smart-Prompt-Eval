@@ -1,0 +1,7 @@
+{
+  "response": "To find the number of games the team won, set up the equations based on the information given.\n\nLet  \n\\(W\\) = number of wins  \n\\(L\\) = number of losses  \n\nThe problem states:  \n1. Total games played = 22  \n   \\[\n   W + L = 22\n   \\]\n2. Wins exceeded losses by 8  \n   \\[\n   W - L = 8\n   \\]\n\nSolve the system:\n\nAdd the two equations:\n\\[\n(W + L) + (W - L) = 22 + 8 \\\\\n2W = 30 \\\\\nW = 15\n\\]\n\nThus the team won **15** games.\n\n#### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The cost before cashback: 10 gal × $3.00 / gal = $30.  \nCashback: 10 gal × $0.20 / gal = $2.  \nNet cost after cashback: $30 − $2 = $28.  \n\n#### 28",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Aleena paid $140 per month for the first six months, which totals  \n\\(6 \\times 140 = \\$840\\).\n\nFor the second six months she was charged 10 % less, so each month cost  \n\\(140 \\times 0.9 = \\$126\\).  \nOver six months that is  \n\\(6 \\times 126 = \\$756\\).\n\nAdding the two halves together gives  \n\\(840 + 756 = \\$1596\\).\n\nThe total amount she paid for the year is **$1,596**.  \n#### 1596",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

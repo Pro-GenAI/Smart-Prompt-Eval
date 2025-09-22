@@ -1,0 +1,7 @@
+{
+  "response": "Kelian deve leggere 20 istruzioni dalla prima ricetta e 40 istruzioni dalla seconda, per un totale di 60 istruzioni.  \n\n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

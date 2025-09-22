@@ -1,0 +1,7 @@
+{
+  "response": "Morsette: 5 apples + 8 oranges = 13 fruits  \nKael: 2 × 5 apples = 10 apples, ½ × 8 oranges = 4 oranges → 10 + 4 = 14 fruits  \n\nTotal fruits = 13 + 14 = 27  \n\n#### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

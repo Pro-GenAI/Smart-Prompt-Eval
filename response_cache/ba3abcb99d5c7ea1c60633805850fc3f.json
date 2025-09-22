@@ -1,0 +1,7 @@
+{
+  "response": "Vincent kann 18 Blumen für 9 $ kaufen (9 × 2 Blumen‑Pack zu je 1 $).  \nWenn er sie stattdessen in 3er‑Packungen kauft, kostet das 15 $ (6 × 2,50 $).  \n\nDer Preisunterschied beträgt 15 $ – 9 $ = 6 $.  \n\n**Antwort:** #### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

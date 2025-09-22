@@ -1,0 +1,7 @@
+{
+  "response": "John spends 35 hours a week taking care of his dogs. #### 35",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Seth’s age can be found by setting up a simple algebraic system.  \nLet \\(s\\) be Seth’s current age and \\(b\\) be Brooke’s current age.\n\n1. “Seth tiene el doble de edad que Brooke” → \\(s = 2b\\).  \n2. “En 2 años, la suma de sus edades será de 28” → \\((s+2) + (b+2) = 28\\).\n\nSimplify the second equation:\n\n\\[\ns + b + 4 = 28 \\quad\\Rightarrow\\quad s + b = 24.\n\\]\n\nSubstitute \\(s = 2b\\):\n\n\\[\n2b + b = 24 \\quad\\Rightarrow\\quad 3b = 24 \\quad\\Rightarrow\\quad b = 8.\n\\]\n\nNow find Seth’s age:\n\n\\[\ns = 2b = 2 \\times 8 = 16.\n\\]\n\n**Respuesta:** Seth tiene 16 años.  \n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

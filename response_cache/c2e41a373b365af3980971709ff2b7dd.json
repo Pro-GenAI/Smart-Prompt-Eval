@@ -1,0 +1,7 @@
+{
+  "response": "Para determinar el salario total actual de Adrien y Lylah, seguimos los pasos:\n\n1. **Salario de Adrien 4 años atrás**  \n   \\( S_A^{\\,0} = \\$40\\,000 \\)\n\n2. **Salario de Lylah 4 años atrás**  \n   El salario de Adrien era 30 % mayor que el de Lylah.  \n   \\[\n   S_A^{\\,0}=1.30\\,S_L^{\\,0}\\;\\Longrightarrow\\;\n   S_L^{\\,0}= \\frac{S_A^{\\,0}}{1.30}= \\frac{40\\,000}{1.30}= \\$30\\,769.23\n   \\]\n\n3. **Aumento de salarios durante los 4 años**  \n   Se indica que ambos salarios aumentaron simultáneamente, y el aumento mencionado es del 40 %.  \n   - Nuevo salario de Adrien:  \n     \\[\n     S_A^{\\,4}=1.40\\,S_A^{\\,0}=1.40\\times40\\,000=\\$56\\,000\n     \\]\n   - Nuevo salario de Lylah:  \n     \\[\n     S_L^{\\,4}=1.40\\,S_L^{\\,0}=1.40\\times30\\,769.23=\\$43\\,076.92\n     \\]\n\n4. **Salario total 4 años después**  \n   \\[\n   S_{\\text{total}}^{\\,4}=S_A^{\\,4}+S_L^{\\,4}\n   =56\\,000+43\\,076.92=\\$99\\,076.92\n   \\]\n\nRedondeando al entero más cercano:\n\n\\[\n\\boxed{99077}\n\\]",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

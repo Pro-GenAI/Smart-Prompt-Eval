@@ -1,0 +1,7 @@
+{
+  "response": "The boots cost $104.  \n#### 104",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

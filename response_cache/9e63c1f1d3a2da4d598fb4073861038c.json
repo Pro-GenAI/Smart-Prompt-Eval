@@ -1,0 +1,7 @@
+{
+  "response": "Because your daily target (22 200 000 cal) has already been exceeded by 111 800 000 cal, you cannot eat any more chips without going further over the target.  \n**Answer: 0 grams**  \n\n#### 0",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

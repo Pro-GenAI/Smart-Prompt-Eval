@@ -1,0 +1,7 @@
+{
+  "response": "Marilyn sold 10 times as many copies as Harold, so let Harold’s sales be H.  \nThen Marilyn’s sales are 10H, and the total is\n\n10H + H = 8000  \n11H = 8000  \nH = 8000 ÷ 11 ≈ 727.27\n\nSo Harold sold about 727 copies.\n\n#### 727",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

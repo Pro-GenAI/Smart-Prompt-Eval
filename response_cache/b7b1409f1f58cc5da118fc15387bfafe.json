@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd’s chickens lay 252 eggs each day.  \nWeekly production: \\(252 \\text{ eggs/day} \\times 7 \\text{ days} = 1764 \\text{ eggs/week}\\).\n\nHe sells eggs at $2 per dozen.  \nPrice per egg = \\(\\dfrac{2}{12} = \\$0.166666\\ldots\\).\n\nWeekly earnings: \\(1764 \\text{ eggs} \\times \\$0.166666\\ldots \\approx \\$294\\).\n\nSo Lloyd makes **$294 per week**.\n\n#### 294",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

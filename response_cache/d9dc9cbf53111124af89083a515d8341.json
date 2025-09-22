@@ -1,0 +1,7 @@
+{
+  "response": "The amount owed after 3 months with a 2% monthly compound interest is $106.12.  \n#### 106.12",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

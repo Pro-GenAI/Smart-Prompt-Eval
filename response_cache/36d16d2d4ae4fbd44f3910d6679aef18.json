@@ -1,0 +1,7 @@
+{
+  "response": "Anakin hat 6 Seepferdchen + 3 Clownfische = 9 Fische,  \nLocsin hat (6 – 3) = 3 Seepferdchen + (3 + 2) = 5 Clownfische = 8 Fische.  \nInsgesamt: 9 + 8 = 17 Fische.  \n\n#### 17",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

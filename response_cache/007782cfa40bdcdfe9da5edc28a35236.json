@@ -1,0 +1,7 @@
+{
+  "response": "The annual pension Marcy will receive after quitting at 30 years is **$2,500**. #### 2500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

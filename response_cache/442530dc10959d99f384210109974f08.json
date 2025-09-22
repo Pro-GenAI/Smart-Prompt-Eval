@@ -1,0 +1,7 @@
+{
+  "response": "The total cost for 5 crayons at $2 each is $10. With $20 she will receive $10 in change.  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

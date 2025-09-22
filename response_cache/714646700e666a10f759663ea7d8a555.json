@@ -1,0 +1,7 @@
+{
+  "response": "Ted plans to feed 20 adults and 5 children.  \n- Adult consumption: \\(10\\) lbs each → \\(20 \\times 10 = 200\\) lbs  \n- Child consumption: half of an adult → \\(5\\) lbs each → \\(5 \\times 5 = 25\\) lbs  \n\nTotal potato salad needed: \\(200 + 25 = 225\\) lbs.\n\n#### 225",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

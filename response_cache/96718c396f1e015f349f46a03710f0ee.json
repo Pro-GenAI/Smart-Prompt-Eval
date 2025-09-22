@@ -1,0 +1,7 @@
+{
+  "response": "Tom paga $15 por cada lavado, y recibe 4 lavados cada mes.  \nCosto mensual: \\(4 \\times 15 = \\$60\\).  \nEn un año (12 meses): \\(60 \\times 12 = \\$720\\).  \nAsí que pagará **$720** en un año.  \n\n#### 720",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The car consumes 4 gallons for 100 miles, so its mileage is\n\n\\[\n\\frac{100 \\text{ miles}}{4 \\text{ gallons}} = 25 \\text{ mpg}\n\\]\n\nWith a 12‑gallon tank, the total distance she can drive on a full tank is\n\n\\[\n25 \\text{ mpg} \\times 12 \\text{ gallons} = 300 \\text{ miles}\n\\]\n\n#### 300",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

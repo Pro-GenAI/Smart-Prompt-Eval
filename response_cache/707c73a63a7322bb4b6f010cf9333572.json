@@ -1,0 +1,7 @@
+{
+  "response": "The hospital sees 500 patients per day.  \nEach patient spends \\(24\\) minutes (0.4 h).  \nTotal patient‐time per day: \\(500 \\times 0.4 = 200\\) hours.\n\nRevenue from patients:  \n\\(200\\) h \\(\\times \\$200/\\text{h} = \\$40{,}000\\).\n\nDoctor cost:  \n\\(200\\) h \\(\\times \\$150/\\text{h} = \\$30{,}000\\).\n\nProfit per day:  \n\\(\\$40{,}000 - \\$30{,}000 = \\$10{,}000\\).\n\n#### 10000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

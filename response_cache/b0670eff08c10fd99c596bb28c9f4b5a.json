@@ -1,0 +1,7 @@
+{
+  "response": "We started with 2 containers × 5 vehicles each = 10 vehicles.  \nAfter the next day the total was 30 vehicles, so the added vehicles were 30 − 10 = 20.  \nEach new container holds 5 vehicles, therefore the number of new containers is 20 ÷ 5 = 4.\n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Marissa has already walked 6 miles in 2 h.  \nShe wants an overall average of 4 mph, so the total time for 12 mi must be  \n\n\\[\n\\frac{12\\ \\text{mi}}{4\\ \\text{mph}} = 3\\ \\text{h}.\n\\]\n\nWith 2 h already used, she has only 1 h left to cover the remaining 6 mi, so she needs  \n\n\\[\n\\frac{6\\ \\text{mi}}{1\\ \\text{h}} = 6\\ \\text{mph}.\n\\]\n\n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

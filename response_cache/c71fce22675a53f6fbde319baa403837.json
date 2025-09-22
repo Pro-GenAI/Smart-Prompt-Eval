@@ -1,0 +1,7 @@
+{
+  "response": "Die Preissteigerung ist linear: alle zwei Monate erhöht sich der Preis um 20 % des ursprünglichen Preises, also um 4 €. Nach 36 Monaten (18 Zeiträume) steigt der Preis um 18 × 4 = 72 €.  \n\nEndpreis = 20 € + 72 € = **92 €**  \n\n#### 92",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

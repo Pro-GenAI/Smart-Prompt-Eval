@@ -1,0 +1,7 @@
+{
+  "response": "The ship covers 30 miles to the destination (10 mph × 3 h).  \nOn the return it travels at 6 mph, so the time is \\(30 mi ÷ 6 mph = 5 h\\).\n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

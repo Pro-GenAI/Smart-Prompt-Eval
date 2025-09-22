@@ -1,0 +1,7 @@
+{
+  "response": "The final price is $57.00.\n\n#### 57",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

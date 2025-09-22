@@ -1,0 +1,7 @@
+{
+  "response": "The total cost of the ties is  \n\\( \\text{total} = \\text{cost of blue ties} + \\text{cost of red ties}\\).\n\nLet  \n- \\(b\\) = number of blue ties,  \n- \\(r = 2b\\) = number of red ties (twice as many),  \n- \\(x\\) = price of one blue tie,  \n- red ties cost \\(1.5x\\).\n\nThen the total spending is  \n\n\\[\nx\\,b + 1.5x\\,r = x\\,b + 1.5x(2b) = x\\,b + 3x\\,b = 4x\\,b.\n\\]\n\nWe know the total spending is \\$200:\n\n\\[\n4x\\,b = 200 \\quad\\Longrightarrow\\quad x\\,b = 50.\n\\]\n\nThe amount spent on the blue ties is \\(x\\,b = \\$50\\).\n\n**Answer: #### 50**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

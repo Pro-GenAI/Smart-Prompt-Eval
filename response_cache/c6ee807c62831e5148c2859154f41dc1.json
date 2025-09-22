@@ -1,0 +1,7 @@
+{
+  "response": "John drinks 4 glasses of water on each weekday (breakfast, lunch, dinner, and before bed).  \nOn weekends he replaces the dinner glass with soda, so he drinks 3 glasses of water per weekend day (breakfast, lunch, before bed).\n\nWeekdays: 5 days × 4 glasses = 20  \nWeekends: 2 days × 3 glasses = 6  \n\nTotal glasses of water in a week = 20 + 6 = 26\n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "John hat 10 Hektar, jeder Hektar enthält 100 Ananas.  \nGesamtzahl der Ananas = 10 × 100 = 1000 Ananas.  \n\nEr kann alle 3 Monate ernten → 12 Monate ÷ 3 Monate = 4 Ernten pro Jahr.  \n\nErnte in einem Jahr = 1000 × 4 = 4000 Ananas.  \n\n#### 4000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The keeper’s monthly totals:\n- Monkeys: 200 bananas\n- Gorillas: 400 bananas\n- Aboons: 100 bananas\n\nTotal per month = 200 + 400 + 100 = 700 bananas.  \nFor 2 months: 700 × 2 = 1400 bananas.\n\n#### 1400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

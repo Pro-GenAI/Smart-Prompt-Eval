@@ -1,0 +1,7 @@
+{
+  "response": "The ages are in a 7:11 ratio.  \nLet \\(7x\\) be LarrelD’s age and \\(11x\\) be Allen’s age.  \n\\(7x + 11x = 18x = 162 \\Rightarrow x = 9\\).  \n\nThus, Allen’s current age is \\(11 \\times 9 = 99\\).  \nIn 10 years, Allen will be \\(99 + 10 = 109\\).  \n\n**Answer:** #### 109",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The total roll‑ups eaten were \\(48 + 42 = 90\\).  \nOn average each ate \\(90 \\div 2 = 45\\).\n\n#### 45",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

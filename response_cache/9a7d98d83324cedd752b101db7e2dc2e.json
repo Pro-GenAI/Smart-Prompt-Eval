@@ -1,0 +1,7 @@
+{
+  "response": "Morisette brought 5 apples and 8 oranges, so she has 5 + 8 = 13 fruits.  \nKael brought twice as many apples as Morisette: 2 × 5 = 10 apples.  \nFor oranges, he brought half as many as Morisette: 8 ÷ 2 = 4 oranges.  \nKael’s total is 10 + 4 = 14 fruits.  \n\nAdding both together: 13 + 14 = 27 fruits in total.  \n\n#### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

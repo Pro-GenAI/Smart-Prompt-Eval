@@ -1,0 +1,7 @@
+{
+  "response": "The difference is **100** pounds.  \n#### 100",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

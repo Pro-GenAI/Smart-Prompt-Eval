@@ -1,0 +1,7 @@
+{
+  "response": "El gasto de José en mayo fue de \\$500. En junio fue \\$60 menos, es decir, \\$500 − \\$60 = \\$440.  \nEl gasto total durante los dos meses fue:\n\n\\$500 + \\$440 = \\$940\n\n#### 940",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Cecilia will use 5 bags of dog food in the first year. #### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

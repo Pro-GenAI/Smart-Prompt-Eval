@@ -1,0 +1,7 @@
+{
+  "response": "Bailey comenzó con $60.  \n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

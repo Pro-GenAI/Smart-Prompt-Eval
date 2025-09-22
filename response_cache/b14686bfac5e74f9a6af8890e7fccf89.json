@@ -1,0 +1,7 @@
+{
+  "response": "Claire prépare une omelette de 3 œufs chaque matin. En 4 semaines, il y a \\(4\\times 7=28\\) jours, donc elle consomme \\(3\\times 28=84\\) œufs.  \n\nComme 12 œufs constituent une douzaine, elle mangera \\(\\frac{84}{12}=7\\) dizaines d’œufs.  \n\n#### 7",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

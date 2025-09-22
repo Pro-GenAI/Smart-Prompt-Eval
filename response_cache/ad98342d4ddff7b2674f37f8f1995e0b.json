@@ -1,0 +1,7 @@
+{
+  "response": "Dave’s pack began with \\(N\\) fries.\n\n1. **Dave** ate 40 → remaining: \\(N-40\\).  \n2. **Seagull** steals the pack (doesn’t eat).  \n3. **Eagle** lands and gobbles half of what Dave ate: \\( \\tfrac12\\times40 = 20\\).  \n   Remaining: \\(N-40-20 = N-60\\).  \n4. **Three pigeons** each eat 3 fries → \\(3\\times3 = 9\\).  \n   Remaining: \\(N-60-9 = N-69\\).  \n5. **Raccoon** steals two‑thirds of what’s left:  \n   Left after raccoon: \\(\\tfrac13(N-69)\\).  \n6. **Ants** carry off one fry → final count \\(= \\tfrac13(N-69)-1 = 5\\).\n\nSolve for \\(N\\):\n\n\\[\n\\tfrac13(N-69)-1 = 5 \\quad\\Rightarrow\\quad \\tfrac13(N-69)=6 \\quad\\Rightarrow\\quad N-69=18 \\quad\\Rightarrow\\quad N=87.\n\\]\n\nCheck:  \n- Start: 87 fries.  \n- Dave eats 40 → 47 left.  \n- Eagle eats 20 → 27 left.  \n- Pigeons eat 9 → 18 left.  \n- Raccoon takes 2/3 of 18 (12) → 6 left.  \n- Ants take 1 → 5 left. ✔️\n\nSo the pack originally contained **87 French fries**.\n\n#### 87",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

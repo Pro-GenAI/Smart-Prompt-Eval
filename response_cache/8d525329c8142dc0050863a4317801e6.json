@@ -1,0 +1,7 @@
+{
+  "response": "Morisette porta 5 mele + 8 arance = 13 frutti.  \nKael porta 2 × 5 = 10 mele e ½ × 8 = 4 arance = 14 frutti.  \nTotale = 13 + 14 = 27 frutti.  \n\n#### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

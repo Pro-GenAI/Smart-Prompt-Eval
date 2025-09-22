@@ -1,0 +1,7 @@
+{
+  "response": "John bebe 26 vasos de agua en una semana. #### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

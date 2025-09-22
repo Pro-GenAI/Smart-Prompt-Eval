@@ -1,0 +1,7 @@
+{
+  "response": "There are 30 unoccupied units in the building. #### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

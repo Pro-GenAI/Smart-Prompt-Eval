@@ -1,0 +1,7 @@
+{
+  "response": "Grand-mère Jones a 5 tartes, chacune découpée en 8 parts, soit \\(5 \\times 8 = 40\\) parts au total.  \nÀ la fin de la soirée il restait 14 parts.  \nLes parts emportées par les invités sont donc \\(40 - 14 = 26\\).  \n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

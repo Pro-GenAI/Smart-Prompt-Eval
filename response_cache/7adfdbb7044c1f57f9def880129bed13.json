@@ -1,0 +1,7 @@
+{
+  "response": "The total paid for the year is $1,596.  \n#### 1596",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

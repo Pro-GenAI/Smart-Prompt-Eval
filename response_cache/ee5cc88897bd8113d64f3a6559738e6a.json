@@ -1,0 +1,7 @@
+{
+  "response": "Los patos necesitan comer 3.5 libras de insectos cada semana, y con una bandada de diez patos eso es 3.5 × 10 = 35 libras por semana. Dividiendo entre los 7 días de la semana, cada día se requieren 35 ÷ 7 = 5 libras de insectos.  \n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

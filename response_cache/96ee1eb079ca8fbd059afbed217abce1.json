@@ -1,0 +1,7 @@
+{
+  "response": "Ci sono 9 unicorni nelle Highlands scozzesi e due terzi di questi sono femmine, quindi: 9 × (2/3) = 6.  \n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

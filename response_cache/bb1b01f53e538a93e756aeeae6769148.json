@@ -1,0 +1,7 @@
+{
+  "response": "Anakin: 10 + 6 + 3 = 19 fish  \nLocsin: 5 + 3 + 5 = 13 fish  \nTotal = 19 + 13 = 32 fish\n\n#### 32",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

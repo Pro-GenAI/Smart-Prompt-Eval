@@ -1,0 +1,7 @@
+{
+  "response": "Sadie a dormi :  \n- Lundi : 8 h  \n- Mardi : 8 h − 2 h = 6 h  \n- Mercredi : 8 h − 2 h = 6 h  \n\nPour le reste de la semaine (jeudi, vendredi, samedi, dimanche) :  \nchaque jour elle a dormi 1 h de plus que le mardi et mercredi, soit 6 h + 1 h = 7 h.\n\nCalcul du total :  \n- Lundi + Mardi + Mercredi = 8 h + 6 h + 6 h = 20 h  \n- Jeudi + Vendredi + Samedi + Dimanche = 4 × 7 h = 28 h  \n\nTotal hebdomadaire = 20 h + 28 h = 48 h.  \n\n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

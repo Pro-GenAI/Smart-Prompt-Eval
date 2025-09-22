@@ -1,0 +1,7 @@
+{
+  "response": "Ryan pianta 2 fiori al giorno.  \nIn 15 giorni:  \n\\(2 \\text{ fiori/giorno} \\times 15 \\text{ giorni} = 30 \\text{ fiori}\\).  \n\nSe 5 di questi non sono cresciuti, il numero di fiori effettivamente presenti è:  \n\\(30 - 5 = 25\\).\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

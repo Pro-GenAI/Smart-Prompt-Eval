@@ -121,14 +121,17 @@ def evaluate_multilingual_prompting():
     for language in languages:
         lang_code = lang_codes[language]
 
-        log(f"\n{'='*60}")
+        # log(f"\n{'='*60}")
+        log("\n")
         log(f"Processing {language} ({lang_code})")
-        log(f"{'='*60}")
+        # log(f"{'='*60}")
 
         # Get the lookup for this language
         lang_lookup = translated_lookup.get(lang_code, {})
 
         for i, test_case in enumerate(test_questions):
+            if i % 5 == 0:
+                print(i, end=" ", flush=True)
             question = test_case["question"]
             correct_answer = test_case["answer"]
             case_id = test_case["id"]

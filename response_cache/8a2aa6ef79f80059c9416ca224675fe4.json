@@ -1,0 +1,7 @@
+{
+  "response": "Después de 10 años Tom tiene 91 árboles restantes. #### 91",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

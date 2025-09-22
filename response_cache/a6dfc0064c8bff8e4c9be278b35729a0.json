@@ -1,0 +1,7 @@
+{
+  "response": "The total expenditure for May and June is:\n\n- May: \\$50,000  \n- June: \\$50,000 – \\$60 = \\$49,940  \n\nTotal = \\$50,000 + \\$49,940 = \\$99,940  \n\n**Answer:**\n\n#### 99940",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

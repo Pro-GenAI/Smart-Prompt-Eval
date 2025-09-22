@@ -1,0 +1,7 @@
+{
+  "response": "The total number of potted plants Mary starts with is\n\n\\[\n18\\ (\\text{new}) + 2 \\times 40\\ (\\text{on the ledges}) = 18 + 80 = 98.\n\\]\n\nShe gives away 1 plant from each of the 40 ledges, so she gives away\n\n\\[\n1 \\times 40 = 40\n\\]\n\nplants.\n\nThe number of plants she keeps is\n\n\\[\n98 - 40 = 58.\n\\]\n\n#### 4 58",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

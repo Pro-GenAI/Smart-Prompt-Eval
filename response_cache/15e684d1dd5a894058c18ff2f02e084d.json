@@ -1,0 +1,7 @@
+{
+  "response": "The iPhone of Brandon is 8 years old.  \n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

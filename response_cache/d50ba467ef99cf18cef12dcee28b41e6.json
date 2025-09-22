@@ -1,0 +1,7 @@
+{
+  "response": "Los dos equipos completan 4 vueltas de 400 m cada uno.  \n\n**Equipo rápido:**  \n4 corredores × 55 s = **220 s**.\n\n**Equipo más lento:**  \n1.º corredor: 60 s  \n2.º corredor: 60 − 3 = 57 s  \n3.º corredor: 57 − 3 = 54 s  \n4.º corredor: 54 − 3 = 51 s  \nTotal: 60 + 57 + 54 + 51 = **222 s**.\n\nLa diferencia es 222 s − 220 s = **2 s**.  \n\n**Respuesta:** #### 2",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

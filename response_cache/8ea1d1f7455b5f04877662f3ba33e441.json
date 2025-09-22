@@ -1,0 +1,7 @@
+{
+  "response": "Ryan plants 2 flowers a day for 15 days, which means he plants \\(2 \\times 15 = 30\\) flowers in total. If 5 of those flowers did not grow, then the number that did grow is\n\n\\[\n30 - 5 = 25.\n\\]\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

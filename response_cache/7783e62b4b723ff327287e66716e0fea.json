@@ -1,0 +1,7 @@
+{
+  "response": "The semi‑automatic cars are 20% of the total fleet.  \n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

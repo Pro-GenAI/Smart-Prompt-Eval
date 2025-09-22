@@ -1,0 +1,7 @@
+{
+  "response": "Das ursprüngliche Preiskonzept: 25 % Rabatt bedeutet 75 % des ursprünglichen Preises bleiben.  \n\\[\n0{,}75P = 19,50\\;\\text{Dollar}\\quad\\Rightarrow\\quad P = \\frac{19,50}{0{,}75}=26\\;\\text{Dollar}\n\\]\n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

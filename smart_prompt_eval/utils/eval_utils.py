@@ -127,11 +127,14 @@ def log_evaluation_end(title: str, result_file: Path, responses_file: Path):
 
 def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str):
     """Log standardized test case information."""
-    log(f"\n{'-'*40}")
-    log(f"Testing case {i+1}: {case_id}")
+    log(f"Q{i+1} ", end="", flush=True)
+    if i % 10 == 0:
+        log()  # New line every 10 cases
+    # log(f"\n{'-'*40}")
+    # log(f"Testing case {i+1}: {case_id}")
     # log(f"Question: {question}")
     # log(f"Correct answer: {correct_answer}")
-    log(f"{'-'*40}")
+    # log(f"{'-'*40}")
 
 
 default_instruction: str = "Provide the final answer as a number at the end like #### 4"

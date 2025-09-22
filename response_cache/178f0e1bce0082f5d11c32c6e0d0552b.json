@@ -1,0 +1,7 @@
+{
+  "response": "Jan a 18 animaux, Marcia 6 animaux, et Cindy 4 animaux.  \nTotal = 18 + 6 + 4 = 28.  \n**#### 28**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

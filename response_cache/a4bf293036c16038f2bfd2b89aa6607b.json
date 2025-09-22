@@ -1,0 +1,7 @@
+{
+  "response": "They picked a total of 30 apples. #### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

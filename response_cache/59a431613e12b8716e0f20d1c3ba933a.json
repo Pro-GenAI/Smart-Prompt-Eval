@@ -1,0 +1,7 @@
+{
+  "response": "Il guardiano deve ordinare 1400 banane per coprire i due mesi.  \n#### 1400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Kylar’s first glass costs $5.  \nEvery second glass is 60 % of that price: $5 × 0.6 = $3.  \n\nSo each pair of glasses costs $5 + $3 = $8.  \nThere are 16 glasses ÷ 2 = 8 pairs.  \n\nTotal cost = 8 × $8 = **$64**.  \n#### 64",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

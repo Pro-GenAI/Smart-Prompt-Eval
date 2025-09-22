@@ -1,0 +1,7 @@
+{
+  "response": "Si \\(D\\) représente la quantité de lessive que David fait, alors :\n\n- Sarah fait \\(4D\\) (quatre fois plus que David).  \n- Raymond fait la moitié de la lessive de Sarah, soit \\(\\frac12 (4D) = 2D\\).\n\nÉtant donné que Sarah fait 400 livres :\n\n\\[\n4D = 400 \\quad\\Longrightarrow\\quad D = 100 \\text{ livres}\n\\]\n\nAinsi :\n\n- Raymond fait \\(2D = 2 \\times 100 = 200\\) livres.  \n- David fait \\(D = 100\\) livres.\n\nLa différence entre la quantité de lessive de Raymond et celle de David est :\n\n\\[\n200 - 100 = 100 \\text{ livres}\n\\]\n\n#### 100",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

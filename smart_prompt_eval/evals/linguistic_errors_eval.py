@@ -151,7 +151,6 @@ def evaluate_linguistic_errors():
         variants = create_error_variants(question)
 
         for variant_name, query in variants.items():
-            log(f"\nTesting variant: {variant_name}")
             is_correct, response_text = attempt(query, correct_answer)
             case_results["variant_results"][variant_name] = is_correct
 

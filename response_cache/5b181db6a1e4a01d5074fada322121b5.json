@@ -1,0 +1,7 @@
+{
+  "response": "The total money raised is $221.  \n\n#### 221",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

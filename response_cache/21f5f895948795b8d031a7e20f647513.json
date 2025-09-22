@@ -1,0 +1,7 @@
+{
+  "response": "Raphael gastó un total de $34.  \n#### 34",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

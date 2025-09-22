@@ -1,0 +1,7 @@
+{
+  "response": "In der Klasse gibt es 20 Schüler.  \n- 20 % für zeitgenössischen Tanz → 0,20 × 20 = 4 Schüler.  \n- Rest = 20 – 4 = 16 Schüler.  \n- 25 % des Restes für Jazztanz → 0,25 × 16 = 4 Schüler.  \n- Rest = 16 – 4 = 12 Schüler → Hip‑Hop‑Tanz.  \n\nProzentsatz der Hip‑Hop‑Schüler: (12 / 20) × 100 = 60 %.  \n\n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

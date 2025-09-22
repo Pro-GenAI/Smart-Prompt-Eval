@@ -1,0 +1,7 @@
+{
+  "response": "You can eat 48 grams.\n\n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

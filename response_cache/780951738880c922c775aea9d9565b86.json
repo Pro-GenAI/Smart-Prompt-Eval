@@ -1,0 +1,7 @@
+{
+  "response": "The total salary of Adien and Lylh four years later is $99{,}077$.\n\n#### 99077",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Josh spent a total of $80,000 + $50,000 = $130,000.  \nThe repairs increased the value by 150 % of the original price, so the new value is\n\n\\[\n80,000 \\times (1 + 1.50) = 80,000 \\times 2.50 = \\$200,000.\n\\]\n\nProfit = sale price – cost = \\$200,000 – \\$130,000 = **\\$70,000**.  \n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

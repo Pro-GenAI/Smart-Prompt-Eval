@@ -1,0 +1,7 @@
+{
+  "response": "Pancho camina 5 días de semana a 20 millas cada día: 5 × 20 = 100 millas.  \nEn los fines de semana (2 días) camina 10 millas cada día: 2 × 10 = 20 millas.  \n\nTotal semanal: 100 + 20 = 120 millas.  \n\n#### 120",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

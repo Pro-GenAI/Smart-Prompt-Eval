@@ -1,0 +1,7 @@
+{
+  "response": "The classroom has 4 teachers, each with 2 lessons a day, so there are \\(4 \\times 2 = 8\\) lessons in total.  \nThe whiteboard is cleaned 3 times per lesson, giving \\(8 \\times 3 = 24\\) cleanings in a day.  \n\n#### 24",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

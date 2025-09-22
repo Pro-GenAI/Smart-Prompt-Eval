@@ -1,0 +1,7 @@
+{
+  "response": "There are 187 raspberries in total.  \n#### 187",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

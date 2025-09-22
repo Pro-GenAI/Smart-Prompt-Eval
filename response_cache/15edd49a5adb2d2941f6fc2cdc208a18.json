@@ -1,0 +1,7 @@
+{
+  "response": "The total number of pets in the neighborhood is: #### 348",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

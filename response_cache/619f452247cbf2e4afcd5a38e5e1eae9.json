@@ -1,0 +1,7 @@
+{
+  "response": "In un quartiere, il numero di conigli domestici è dodici in meno rispetto al numero combinato di cani e gatti. Con 60 cani e due gatti per ogni cane, il totale è 60 cani + 120 gatti = 180 animali di queste due specie. I conigli sono 12 meno, quindi 180 – 12 = 168 conigli. Sommandoli a cani e gatti otteniamo 60 + 120 + 168 = 348 animali domestici in totale.  \n\n#### 348",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

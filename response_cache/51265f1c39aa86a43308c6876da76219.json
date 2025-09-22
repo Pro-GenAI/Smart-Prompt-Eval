@@ -1,0 +1,7 @@
+{
+  "response": "Violetta needs 5 crayons, each costing 2 $, so she spends 5 × 2 = 10 $.  \nWith 20 $ she has, the change will be 20 $ – 10 $ = 10 $.  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

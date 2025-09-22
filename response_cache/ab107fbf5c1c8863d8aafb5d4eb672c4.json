@@ -1,0 +1,7 @@
+{
+  "response": "Una candela che si scioglie di 2 centimetri all'ora perderà in 4 ore:  \n\\(4 \\text{ ore} \\times 2 \\text{ cm/ora} = 8 \\text{ cm}\\).\n\n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

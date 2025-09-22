@@ -1,0 +1,7 @@
+{
+  "response": "225 libbre di insalata di patate corrispondono a circa 102 kg. #### 102",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

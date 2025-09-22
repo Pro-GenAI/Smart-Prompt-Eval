@@ -1,0 +1,7 @@
+{
+  "response": "Combien de poissons ont-ils pu attraper ?  \n\nAnakin : 6 hippocampes + 3 poissons-clowns = 9 poissons  \nLocsin : (6‑3)=3 hippocampes + (3+2)=5 poissons-clowns = 8 poissons  \n\nTotal : 9 + 8 = 17  \n\n#### 17",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

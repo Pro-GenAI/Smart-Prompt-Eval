@@ -1,0 +1,7 @@
+{
+  "response": "The ages work out to a total of 33 years for the four birds. #### 33",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

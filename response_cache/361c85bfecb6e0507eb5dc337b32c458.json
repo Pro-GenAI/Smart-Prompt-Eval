@@ -1,0 +1,7 @@
+{
+  "response": "John possède 10 hectares de champ d’ananas, et il y a 100 ananas par hectare.  \nAinsi, le nombre total d’ananas dans son champ est :\n\n\\[\n10 \\text{ hectares} \\times 100 \\text{ ananas/hectare} = 1000 \\text{ ananas}\n\\]\n\nIl peut récolter ses ananas toutes les 3 mois, ce qui correspond à :\n\n\\[\n\\frac{12 \\text{ mois}}{3 \\text{ mois/harvest}} = 4 \\text{ récoltes par an}\n\\]\n\nChaque récolte donne les 1000 ananas disponibles, donc le nombre total d’ananas qu’il peut récolter en un an est :\n\n\\[\n1000 \\text{ ananas/harvest} \\times 4 \\text{ harvests} = 4000 \\text{ ananas}\n\\]\n\n#### 4000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

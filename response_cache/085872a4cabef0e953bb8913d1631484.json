@@ -1,0 +1,7 @@
+{
+  "response": "The son was born 14 years ago.  \n#### 14",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

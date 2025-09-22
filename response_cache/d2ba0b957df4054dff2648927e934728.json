@@ -1,0 +1,7 @@
+{
+  "response": "The well‑rounded team runs each leg in 55 s, so:\n\n\\(4 \\times 55 = 220\\) s.\n\nThe other team’s times are:\n\n- 1st leg: 60 s  \n- 2nd leg: 57 s  \n- 3rd leg: 54 s  \n- 4th leg: 51 s  \n\nTotal: \\(60 + 57 + 54 + 51 = 222\\) s.\n\nThus the faster team wins by \\(222 - 220 = 2\\) seconds.\n\n**Answer:** #### 2",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

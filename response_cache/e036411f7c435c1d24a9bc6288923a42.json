@@ -1,0 +1,7 @@
+{
+  "response": "The white carnations are \\(x\\).  \nThe pink Calla‑lilies are five times the white carnations:  \n\n\\[\n200 = 5x \\;\\Longrightarrow\\; x = 40\n\\]\n\nSandra ordered four times as many red roses as white carnations:\n\n\\[\n\\text{red roses} = 4x = 4 \\times 40 = 160\n\\]\n\nFred must deliver **160** red roses by 17 h.\n\n#### 160",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

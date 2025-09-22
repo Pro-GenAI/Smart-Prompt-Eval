@@ -1,0 +1,7 @@
+{
+  "response": "Monday: 4 miles  \nTuesday: 6 × 4 = 24 miles  \nLet Wednesday be \\(x\\) miles.\n\nTotal from Monday to Wednesday:  \n\\(4 + 24 + x = 41\\)\n\n\\(x = 41 - 28 = 13\\)\n\nWalt walked **13** miles on Wednesday.  \n#### 13",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

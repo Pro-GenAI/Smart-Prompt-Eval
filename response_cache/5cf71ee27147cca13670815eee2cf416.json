@@ -1,0 +1,7 @@
+{
+  "response": "The tree starts producing lemons the year after it’s planted, and the revenue from those lemons more than covers the planting cost and yearly maintenance from the very first year.  \n**Answer: #### 1**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

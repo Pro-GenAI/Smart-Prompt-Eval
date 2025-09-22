@@ -1,0 +1,7 @@
+{
+  "response": "The total number of blocks Johnny picks up is 2125. #### 2125",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

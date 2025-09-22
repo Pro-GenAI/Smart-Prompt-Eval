@@ -1,0 +1,7 @@
+{
+  "response": "The program had:\n\n- First month: 60 downloads  \n- Second month: 3 × 60 = 180 downloads  \n- Third month: 30 % reduction from the second month → 180 × 0.70 = 126 downloads  \n\nTotal downloads over the three months:\n\n60 + 180 + 126 = **366**\n\n#### 366",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

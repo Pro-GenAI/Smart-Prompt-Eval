@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd makes $294 per week.  \n#### 294",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

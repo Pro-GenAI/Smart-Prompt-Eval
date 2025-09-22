@@ -1,0 +1,7 @@
+{
+  "response": "The winner received \\( \\frac{3}{4} \\times 80 = 60 \\) votes.  \nThe loser therefore received \\( 80 - 60 = 20 \\) votes.\n\n**Answer: #### 20**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

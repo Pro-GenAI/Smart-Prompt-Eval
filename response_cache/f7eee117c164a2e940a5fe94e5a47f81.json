@@ -1,0 +1,7 @@
+{
+  "response": "Marcy would receive 10 years × 5% = 50% of the full pension.  \n50% × $50,000 = $25,000 per year.\n\n#### 25000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

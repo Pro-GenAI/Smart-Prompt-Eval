@@ -1,0 +1,7 @@
+{
+  "response": "Tom fa 4 lavaggi auto al mese.  \nCosto per lavaggio = $15  \nLavaggi all’anno = 4 × 12 = 48  \nCosto annuo = 48 × $15 = $720  \n\n#### 720",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

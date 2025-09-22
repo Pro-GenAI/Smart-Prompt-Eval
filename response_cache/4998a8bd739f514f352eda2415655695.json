@@ -1,0 +1,7 @@
+{
+  "response": "There are 70 pink chewing gums. #### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

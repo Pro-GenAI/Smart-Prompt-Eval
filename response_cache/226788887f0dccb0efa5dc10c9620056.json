@@ -1,0 +1,7 @@
+{
+  "response": "She uses 60 portions in 60 days.  \nA box contains 15 portions → 60 ÷ 15 = 4 boxes.  \nCost per box = $4.00 → 4 × $4.00 = $16.00.  \n\nThus, she will spend **$16.00** in 60 days.  \n\n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

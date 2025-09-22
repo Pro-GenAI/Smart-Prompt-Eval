@@ -1,0 +1,7 @@
+{
+  "response": "The whiteboard is cleaned \\(3\\) times for each lesson.  \nWith \\(4\\) teachers each having \\(A\\) lessons per day, the total number of lessons per day is  \n\\(4 \\times A\\).\n\nHence the total number of cleanings in a day is  \n\\(3 \\times (4A) = 12A\\).\n\n#### 12A",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

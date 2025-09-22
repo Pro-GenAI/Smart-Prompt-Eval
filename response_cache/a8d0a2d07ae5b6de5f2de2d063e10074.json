@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd produce 252 huevos diarios.  \nSemanalmente: \\(252 \\times 7 = 1764\\) huevos.  \nHay \\(1764 \\div 12 = 147\\) docenas.  \nA $2 cada una, el ingreso semanal es \\(147 \\times 2 = 294\\) dólares.  \n\n#### 294",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

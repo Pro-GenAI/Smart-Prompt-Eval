@@ -1,0 +1,7 @@
+{
+  "response": "Eliza earns 40 hrs × $10 / hr = $400, plus 5 hrs × $12 / hr = $60 overtime.  \nTotal = $400 + $60 = $460.  \n\n#### 460",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

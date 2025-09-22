@@ -1,0 +1,7 @@
+{
+  "response": "The building has \\(15 \\times 8 = 120\\) units in total.  \nIf \\( \\tfrac{3}{4}\\) are occupied, then \\( \\tfrac{1}{4}\\) are unoccupied.  \n\\(\\tfrac{1}{4} \\times 120 = 30\\) units are vacant.\n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The equations are:\n\n- Seth is twice as old as Broke: S = 2B  \n- In two years the sum of their ages will be 28: (S+2)+(B+2) = 28 → S + B = 24\n\nSubstitute S = 2B into S + B = 24:\n\n2B + B = 24  \n3B = 24  \nB = 8\n\nThen S = 2B = 16.\n\nSo Seth is 16 years old.\n\n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

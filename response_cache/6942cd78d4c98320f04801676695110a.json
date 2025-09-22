@@ -1,0 +1,7 @@
+{
+  "response": "Jimmy tiene $2 más del doble de lo que tiene Ethel.  \nDado que Ethel tiene $8:\n\n- Doble de 8 = 16  \n- Más 2 = 16 + 2 = 18  \n\nPor lo tanto, Jimmy tiene **$18**.  \n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

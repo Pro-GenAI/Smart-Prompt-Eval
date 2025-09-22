@@ -1,0 +1,7 @@
+{
+  "response": "The probability of a single roll being greater than 3 is \\(3/6 = 50\\%\\).  \nThe probability of two consecutive even rolls is \\((3/6)^2 = 25\\%\\).  \n\nDifference = \\(50\\% - 25\\% = 25\\%\\).\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

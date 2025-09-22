@@ -1,0 +1,7 @@
+{
+  "response": "Die Berechnung lautet:\n\n- Monat 1: \\(60\\) Downloads  \n- Monat 2: \\(3 \\times 60 = 180\\) Downloads  \n- Monat 3: \\(180 \\times 0{,}70 = 126\\) Downloads  \n\nSumme der drei Monate:  \n\\(60 + 180 + 126 = 366\\)  \n\n#### 366",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

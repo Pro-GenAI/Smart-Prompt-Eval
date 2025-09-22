@@ -1,0 +1,7 @@
+{
+  "response": "In Toulouse gibt es doppelt so viele Schafe wie in Charleston. Charleston hat 4-mal so viele Schafe wie Seattle. Wenn Seattle 20 Schafe hat:\n\n- Seattle = 20  \n- Charleston = 4 × 20 = 80  \n- Toulouse = 2 × 80 = 160  \n\nSumme: 20 + 80 + 160 = **260**  \n\n#### 260",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

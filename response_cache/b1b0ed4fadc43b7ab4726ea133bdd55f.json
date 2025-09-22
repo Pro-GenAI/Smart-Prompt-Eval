@@ -1,0 +1,7 @@
+{
+  "response": "The total cost of the known items is  \n- Chicken meal: \\$12  \n- 5 milk packs: 5 × \\$3 = \\$15  \n- 4 apples: 4 × \\$1.50 = \\$6  \n\nSubtotal = \\$12 + \\$15 + \\$6 = \\$33  \n\nMarie paid \\$50, so the cost of the pizza boxes is  \n\\$50 – \\$33 = \\$17  \n\nEach pizza box costs \\$8.50.  \nNumber of boxes = \\$17 ÷ \\$8.50 = 2  \n\n#### 2",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

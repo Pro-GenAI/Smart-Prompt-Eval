@@ -1,0 +1,7 @@
+{
+  "response": "The ten ducks eat 3.5 lb/week each, so together they need 35 lb/week.  \nPer day that’s 35 lb ÷ 7 days = 5 lb/day.  \n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

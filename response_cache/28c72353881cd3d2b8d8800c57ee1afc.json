@@ -1,0 +1,7 @@
+{
+  "response": "The profit equation is  \n\\(10x - 5x = 25\\), where \\(x\\) is the number of gallons.  \nSolving gives \\(x = 5\\) gallons.  \nCost of lemons per gallon is $3, so total lemons cost \\(5 \\times 3 = 15\\).\n\n#### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

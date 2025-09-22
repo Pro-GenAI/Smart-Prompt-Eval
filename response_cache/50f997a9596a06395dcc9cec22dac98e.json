@@ -1,0 +1,7 @@
+{
+  "response": "The number of ducks in Amal’s photograph is 36. #### 36",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Cynthia isst 1 Portion Eis pro Abend.  \nIn 60 Tagen hat sie daher 60 Portionen.\n\nEin Karton enthält 15 Portionen, also benötigt sie:\n\n\\( \\frac{60}{15} = 4 \\) Kartons.\n\nJeder Karton kostet 4,00 $, also gibt sie insgesamt:\n\n\\( 4 \\times 4,00 \\, \\$ = 16,00 \\, \\$ \\).\n\n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

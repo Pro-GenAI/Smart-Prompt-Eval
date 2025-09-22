@@ -1,0 +1,7 @@
+{
+  "response": "Toula’s purchases were:\n\n- **Donuts**: 3 dozen × \\$68/dozen = \\$204  \n- **Mini cupcakes**: 2 dozen × \\$80/dozen = \\$160  \n- **Mini cheesecakes**: 6 dozen × \\$55/dozen = \\$330  \n\nAdding them up:  \n\\$204 + \\$160 + \\$330 = **\\$694**\n\n#### 694",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "In totale 240–80 = 160 cinesi.  \nSe i ragazzi cinesi sono 60, le ragazze sono 160 – 60 = 100.\n\n**Final answer:**\n\n#### 100",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

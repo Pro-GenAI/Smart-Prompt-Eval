@@ -1,0 +1,7 @@
+{
+  "response": "Die Patienten werden jeweils 24 Minuten lang gesehen, also 0,4 Stunde pro Patient.  \nFür 500 Patienten ergibt das 500 × 0,4 = 200 Stunden pro Tag.\n\n* Einnahmen: 200 $ / Stunde × 200 Stunden = 40 000 $  \n* Kosten (Ärzte): 150 $ / Stunde × 200 Stunden = 30 000 $\n\nGewinn pro Tag  \n= 40 000 $ – 30 000 $  \n= **10 000** $",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

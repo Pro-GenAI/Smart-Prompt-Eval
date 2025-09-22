@@ -1,0 +1,7 @@
+{
+  "response": "The maximum number of boxes that can be loaded without exceeding the bridge’s weight limit is:\n\n#### 83",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Pour s’assurer d’avoir assez de salade pour tous, Ted doit apporter 205 livres.\n\n#### 205",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

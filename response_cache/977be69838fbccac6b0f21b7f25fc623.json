@@ -1,0 +1,7 @@
+{
+  "response": "Um 15 spanische Flans zu backen, braucht Sandra insgesamt \\(15 \\times 3 = 45\\) Eier.  \nFür jedes Babysitten bekommt sie einen Korb mit 9 Eiern.  \n\n\\[\n\\frac{45 \\text{ Eier}}{9 \\text{ Eier/Korb}} = 5 \\text{ Babysittungen}\n\\]\n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

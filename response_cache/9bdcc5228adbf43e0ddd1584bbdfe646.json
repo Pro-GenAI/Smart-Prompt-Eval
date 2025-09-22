@@ -1,0 +1,7 @@
+{
+  "response": "Il lui faut 5 heures pour revenir. #### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

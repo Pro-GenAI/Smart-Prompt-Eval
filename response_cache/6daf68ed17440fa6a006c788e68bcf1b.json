@@ -1,0 +1,7 @@
+{
+  "response": "El descuento del 30 % sobre $100 es $30, por lo que el precio final es $70.  \n\n#### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

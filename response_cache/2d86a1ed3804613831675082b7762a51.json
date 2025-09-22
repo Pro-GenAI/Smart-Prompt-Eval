@@ -1,0 +1,7 @@
+{
+  "response": "Hay 400 abejas obreras. #### 400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

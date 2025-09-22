@@ -1,0 +1,7 @@
+{
+  "response": "The javelin can be thrown 3 × 400 ft = 1200 ft while holding the gemstone.  \nThe dragon’s flames reach 1000 ft, so Polly can stand **200 ft** beyond that reach and still hit the dragon.\n\n**Answer:** #### 200",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

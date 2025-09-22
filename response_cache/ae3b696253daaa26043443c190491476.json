@@ -1,0 +1,7 @@
+{
+  "response": "John runs at a speed of 10 miles per hour.  \n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

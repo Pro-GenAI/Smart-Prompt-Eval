@@ -1,0 +1,7 @@
+{
+  "response": "Carl needs to pay $6.00 for the biscuits and receives $4.00 in change. #### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

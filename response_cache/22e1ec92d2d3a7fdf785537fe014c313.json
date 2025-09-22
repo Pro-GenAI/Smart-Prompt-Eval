@@ -1,0 +1,7 @@
+{
+  "response": "Claire consumes 84 eggs in 4 weeks. That equals 7 dozen eggs.  \n#### 7",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

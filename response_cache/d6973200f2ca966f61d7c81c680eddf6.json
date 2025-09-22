@@ -1,0 +1,7 @@
+{
+  "response": "The red roses must be 160.  \n#### 160",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Dan has 3 rose bushes.  \nEach bush contains 25 roses, so the total number of roses is  \n\\(3 \\times 25 = 75\\).  \n\nEach rose has 8 thorns, so the total number of thorns is  \n\\(75 \\times 8 = 600\\).  \n\n#### 600",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Para que Sandra reciba la cantidad correcta de flores, Fred debe entregar **160** rosas rojas antes de las 5 pm.  \n\n#### 160",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The guesses are:\n\n- First friend: \\(80\\)\n- Second friend: \\(20 + \\tfrac12 \\times 80 = 20 + 40 = 60\\)\n- Third friend: \\(80 + 0.25 \\times 80 = 80 + 20 = 100\\)\n\nAverage:\n\\[\n\\frac{80 + 60 + 100}{3} = \\frac{240}{3} = 80\n\\]\n\n#### 80",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

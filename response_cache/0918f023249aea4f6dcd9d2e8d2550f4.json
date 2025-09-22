@@ -1,0 +1,7 @@
+{
+  "response": "En el líquido final hay **15 litros** de agua. #### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The teacher has 33 classes per week (5 classes × 5 weekdays = 25 + 8 on Saturday).  \nEach class has 15 students and she charges $15,000 per student, so each class brings in:\n\n15 students × $15,000 = $225,000  \n\nTotal weekly revenue:\n\n33 classes × $225,000 = $7,425,000  \n\n#### 7425000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

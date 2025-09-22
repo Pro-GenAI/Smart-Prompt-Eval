@@ -1,0 +1,7 @@
+{
+  "response": "Eliza earns $10 per hour for the first 40 hours, and $12 per hour for overtime.  \n- Regular pay: \\(40 \\times 10 = \\$400\\)  \n- Overtime pay: \\(5 \\times 12 = \\$60\\)  \n\nTotal earnings = \\(400 + 60 = \\$460\\).  \n\n#### 460",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

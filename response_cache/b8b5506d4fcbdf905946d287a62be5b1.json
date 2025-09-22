@@ -1,0 +1,7 @@
+{
+  "response": "The number of pink gumballs is given by the equation  \n\n\\( \\text{pink} = 4 \\times \\text{blue} + 22 \\).\n\nWith 12 blue gumballs:\n\n\\( \\text{pink} = 4(12) + 22 = 48 + 22 = 70 \\).\n\n#### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

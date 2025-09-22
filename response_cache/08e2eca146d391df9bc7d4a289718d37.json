@@ -1,0 +1,7 @@
+{
+  "response": "The building has \\(15 \\text{ floors} \\times 8 \\text{ units per floor} = 120\\) units in total.  \nSince \\(\\frac{3}{4}\\) of the building is occupied, the occupied units are  \n\\(\\frac{3}{4}\\times 120 = 90\\).  \n\nThus, the unoccupied units are  \n\\(120 - 90 = 30\\).  \n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

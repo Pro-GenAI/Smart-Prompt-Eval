@@ -1,0 +1,7 @@
+{
+  "response": "The number of spoons in Julia's package is 10.\n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

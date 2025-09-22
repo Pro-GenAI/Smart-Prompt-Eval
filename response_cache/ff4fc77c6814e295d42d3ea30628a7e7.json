@@ -1,0 +1,7 @@
+{
+  "response": "Henry’s second stop was at 45 miles (60 – 15). His first stop was at 20 miles.  \nDistance between the stops: 45 – 20 = 25 miles.  \n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

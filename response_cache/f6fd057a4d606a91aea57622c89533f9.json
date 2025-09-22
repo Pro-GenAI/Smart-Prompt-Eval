@@ -1,0 +1,7 @@
+{
+  "response": "John läuft insgesamt 6 Stunden pro Woche und legt dabei 60 Meilen zurück.  \nDurchschnittsgeschwindigkeit  \n\\(= \\dfrac{60\\text{ mi}}{6\\text{ h}} = 10\\text{ mph}\\).  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

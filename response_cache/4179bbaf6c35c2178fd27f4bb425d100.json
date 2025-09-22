@@ -1,0 +1,7 @@
+{
+  "response": "Peter dépense 7 $ pour le billet et 7 $ pour le pop‑corn, soit 14 $ par sortie.  \nAvec 42 $, il peut aller au cinéma 42 ÷ 14 = 3 fois.  \n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

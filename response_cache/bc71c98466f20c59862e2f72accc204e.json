@@ -1,0 +1,7 @@
+{
+  "response": "Carl’s total purchase is  \n\\(10\\ \\text{packs} \\times 6\\ \\text{cookies/pack} \\times \\$0.10/\\text{cookie}= \\$6.00\\).  \nHe pays with a \\$10 bill, so the change is  \n\\(\\$10 - \\$6 = \\$4\\).\n\n**Answer:** #### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

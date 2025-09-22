@@ -1,0 +1,7 @@
+{
+  "response": "The total cost for one adult and one child ticket is\n\n\\[\n12 + 10 = 22 \\text{ dollars.}\n\\]\n\nLet \\(X\\) be the amount given to the cashier.  \nSince the mother received $8 in change:\n\n\\[\nX - 22 = 8 \\quad\\Longrightarrow\\quad X = 30.\n\\]\n\nSo she gave **$30** to the cashier.  \n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

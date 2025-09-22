@@ -1,0 +1,7 @@
+{
+  "response": "The chickens produce 252 eggs per day.  \nWeekly production: \\(252 \\text{ eggs/day} \\times 7 \\text{ days} = 1764 \\text{ eggs}\\).\n\nPrice: $2 per dozen (12 eggs).  \nNumber of dozens: \\(1764 \\div 12 = 147\\).\n\nRevenue: \\(147 \\text{ dozens} \\times \\$2 = \\$294\\).\n\n#### 294",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

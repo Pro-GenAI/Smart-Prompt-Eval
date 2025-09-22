@@ -1,0 +1,7 @@
+{
+  "response": "Die Kosten für 10 Gallonen betragen  \n\\(10 \\times 3{,}00 = 30{,}00\\) $  \n\nCashback:  \n\\(10 \\times 0{,}20 = 2{,}00\\) $  \n\nNetto‑Kosten:  \n\\(30{,}00 - 2{,}00 = 28{,}00\\) $\n\n#### 28",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

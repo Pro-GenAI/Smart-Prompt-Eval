@@ -1,0 +1,7 @@
+{
+  "response": "There are 6 277 children in Soda. #### 6277",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

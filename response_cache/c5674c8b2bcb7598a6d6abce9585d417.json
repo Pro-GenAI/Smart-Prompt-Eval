@@ -1,0 +1,7 @@
+{
+  "response": "The net balance after all expenses and gifts is:\n\n\\[\n60\\,000 - 15\\,000 - 20\\,000 - 12\\,500 - 200\\,000 - 7\\,770\\,000 = -7\\,957\\,500\n\\]\n\nSo he would be short by **$7,957,500**. #### 7,957,500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Il prezzo originale del libro era $26.00. #### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

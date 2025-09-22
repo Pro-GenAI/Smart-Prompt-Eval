@@ -1,0 +1,7 @@
+{
+  "response": "Eliza earns $400 for the first 40 hours and $60 for the 5 overtime hours (at $12 per hour).  \nTotal earnings this week: $460.  \n\n#### 460",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

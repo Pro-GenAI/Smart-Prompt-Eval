@@ -1,0 +1,7 @@
+{
+  "response": "The total time per session is 2 h (TV) + 1 h (reading) = 3 h.  \nHe does 3 sessions a week: 3 × 3 h = 9 h per week.  \nIn 4 weeks: 4 × 9 h = 36 h.  \n\n#### 36",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

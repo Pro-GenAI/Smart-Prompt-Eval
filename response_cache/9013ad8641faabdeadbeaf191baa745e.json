@@ -1,0 +1,7 @@
+{
+  "response": "After 36 months the price would be $92.  \n#### 92",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "There are 4 schools.  \nEach school sends:  \n- 5 female players  \n- 5 male players  \n- 1 coach for the female team  \n- 1 coach for the male team  \n\nThat’s \\(5 + 5 + 1 + 1 = 12\\) people per school.  \nWith 4 schools, the total number of people sent is\n\n\\[\n12 \\times 4 = 48\n\\]\n\n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The package contained 163 Post‑it notes. #### 163",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

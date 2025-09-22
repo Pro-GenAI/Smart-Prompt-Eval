@@ -1,0 +1,7 @@
+{
+  "response": "Si un sac de billes coûte 20 $ et que le prix augmente de 20 % du prix initial tous les deux mois, le prix après 36 mois (18 périodes) est :\n\n\\(P = 20 \\times (1.20)^{18} \\approx 20 \\times 26.6233 \\approx 532.47\\)\n\nDonc un sac de billes coûterait environ **532,47 $** après 36 mois. #### 532.47",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

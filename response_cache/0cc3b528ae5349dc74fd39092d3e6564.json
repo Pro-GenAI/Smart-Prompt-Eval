@@ -1,0 +1,7 @@
+{
+  "response": "The raspberry bush contains a total of #### 187 raspberries.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

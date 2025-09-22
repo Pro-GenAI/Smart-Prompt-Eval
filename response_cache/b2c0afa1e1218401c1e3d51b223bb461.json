@@ -1,0 +1,7 @@
+{
+  "response": "4 washes/month × 12 months = 48 washes/year  \n48 washes × $15/wash = $720\n\n#### 720",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

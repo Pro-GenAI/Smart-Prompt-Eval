@@ -1,0 +1,7 @@
+{
+  "response": "Il primo test ha 75 domande, ma in 8 ore a 5 domande all’ora può rispondere a 40; resta quindi 75 – 40 = 35 domande incomplete.  \nIl secondo test ha 100 domande, e in 6 ore a 5 domande all’ora può rispondere a 30; resta quindi 100 – 30 = 70 domande incomplete.  \n\nIn totale le domande lasciate incomplete sono 35 + 70 = 105.\n\n**#### 105**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

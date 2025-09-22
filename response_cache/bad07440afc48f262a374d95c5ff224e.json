@@ -1,0 +1,7 @@
+{
+  "response": "John drinks 4 glasses of water per normal day.  \nOn Saturday and Sunday he skips the water at dinner, so he drinks only 3 glasses on each of those days.  \n\n- Weekdays (Mon‑Fri): 5 days × 4 glasses = 20 glasses  \n- Weekend (Sat‑Sun): 2 days × 3 glasses = 6 glasses  \n\nTotal per week = 20 + 6 = **26** glasses.  \n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

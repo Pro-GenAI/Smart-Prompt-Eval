@@ -1,0 +1,7 @@
+{
+  "response": "Jimmy has 18 dollars.  \n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

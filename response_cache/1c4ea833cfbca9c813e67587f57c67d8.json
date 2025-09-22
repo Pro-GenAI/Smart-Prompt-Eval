@@ -1,0 +1,7 @@
+{
+  "response": "The total number of pets is #### 22",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

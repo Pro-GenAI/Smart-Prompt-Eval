@@ -1,0 +1,7 @@
+{
+  "response": "The distances covered are:\n\n- Running: \\(6 \\text{ mph} \\times 2 \\text{ h} = 12\\) miles  \n- Walking: \\(1.5 \\text{ mph} \\times 4 \\text{ h} = 6\\) miles  \n\nTotal distance \\(= 12 + 6 = 18\\) miles.  \n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Sadie’s total sleep for the week is 48 hours. #### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

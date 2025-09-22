@@ -1,0 +1,7 @@
+{
+  "response": "John bought 2 pairs of shoes for each of his 3 children, so he purchased \\(2 \\times 3 = 6\\) pairs.  \nEach pair costs \\$60, thus the total cost is  \n\n\\[\n6 \\times 60 = \\$360\n\\]\n\n#### 360",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

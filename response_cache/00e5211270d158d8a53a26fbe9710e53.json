@@ -1,0 +1,7 @@
+{
+  "response": "Es sind 40 Mädchen nicht bei den Pfadfinderinnen. #### 40",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

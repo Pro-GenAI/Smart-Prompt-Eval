@@ -1,0 +1,7 @@
+{
+  "response": "Tom fait 4 lavages de voiture par mois, soit \\(4 \\times 12 = 48\\) lavages par an.  \nChaque lave-auto coûte 15 $, donc le coût annuel est  \n\\(48 \\times 15 = 720\\) dollars.  \n\n#### 720",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

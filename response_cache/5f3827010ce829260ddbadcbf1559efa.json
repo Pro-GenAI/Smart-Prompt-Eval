@@ -1,0 +1,7 @@
+{
+  "response": "Ryann plants 2 flowers each day. Over 15 days he plants  \n\\(2 \\times 15 = 30\\) flowers.  \nIf 5 of them do not grow, he is left with  \n\\(30 - 5 = 25\\) flowers.\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

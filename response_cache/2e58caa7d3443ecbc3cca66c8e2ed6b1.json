@@ -1,0 +1,7 @@
+{
+  "response": "The total amount Dillon will spend is #### 907.5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

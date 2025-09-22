@@ -1,0 +1,7 @@
+{
+  "response": "Per soddisfare il requisito di 3 tazze di mangime al giorno per gallina, la quantità totale di mangime necessaria per i 20 polli è:\n\n\\(20 \\text{ galline} \\times 3 \\text{ tazze} = 60 \\text{ tazze}\\).\n\nDopo aver dato 15 tazze al mattino e 25 tazze nel pomeriggio, l’ultimo pasto deve coprire la differenza:\n\n\\(60 - (15 + 25) = 60 - 40 = 20\\).\n\nQuindi l’ultimo pasto richiede 20 tazze di mangime.\n\n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

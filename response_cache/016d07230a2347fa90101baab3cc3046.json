@@ -1,0 +1,7 @@
+{
+  "response": "Lily hizo 50 amigos.  \nAmy hizo 20 amigos más que Lily, por lo que Amy hizo \\(50 + 20 = 70\\) amigos.  \nJuntos tienen \\(50 + 70 = 120\\) amigos.  \n\n#### 120",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Marissa wants an overall average speed of 4 mph.  \n- She has already walked 6 miles in 2 hours.  \n- To average 4 mph over 12 miles, her total time must be \\(12 \\text{ mi} \\div 4 \\text{ mph} = 3\\) hours.  \n- She has 1 hour left to walk the remaining 6 miles, so she needs a speed of \\(6 \\text{ mi} \\div 1 \\text{ hr} = 6\\) mph.  \n\n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

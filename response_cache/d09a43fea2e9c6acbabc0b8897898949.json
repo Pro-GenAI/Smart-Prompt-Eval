@@ -1,0 +1,7 @@
+{
+  "response": "The jewelry investment yields a larger expected profit:\n\n- Jewelry: 5,000 × 1.025 = **5,125** → profit = 5,125 − 5,000 = **125**  \n- Gadgets: 8,000 × 1.012 = **8,096** → profit = 8,096 − 8,000 = **96**\n\nThus the merchant should choose the jewelry, achieving a profit of **$125**.\n\n#### 125",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

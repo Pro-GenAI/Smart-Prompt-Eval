@@ -1,0 +1,7 @@
+{
+  "response": "The chest contained 595 gems in total.  \n#### 595",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

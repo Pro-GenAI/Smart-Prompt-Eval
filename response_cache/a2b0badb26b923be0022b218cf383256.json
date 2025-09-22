@@ -1,0 +1,7 @@
+{
+  "response": "Per calcolare l’ipotesi media basta sommare le tre stime e dividerle per 3.\n\n1. Primo amico: 80  \n2. Secondo amico: “20 più della metà del primo” → \\( \\frac{80}{2} + 20 = 40 + 20 = 60 \\)  \n3. Terzo amico: “il 25 % in più rispetto al primo” → \\( 80 \\times 1{,}25 = 100 \\)\n\nSomma delle stime: \\(80 + 60 + 100 = 240\\)\n\nMedia: \\( \\frac{240}{3} = 80 \\)\n\n#### 80",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

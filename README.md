@@ -43,7 +43,12 @@ The `evals/eval_utils.py` file contains shared functions used across all evaluat
     - Edit the `.env` file to access an OpenAI-compatible API of your model.
         - Example: OpenAI API, vLLM, Ollama, etc.
 
-4. Run the evaluation:
+4. Install the package:
+   ```bash
+   pip install -e .
+   ```
+
+5. Run the evaluation:
    ```bash
    python evaluate.py
    ```

@@ -1,0 +1,7 @@
+{
+  "response": "John has 10 hectares × 100 pineapples per hectare = 1 000 pineapples in the field.  \nHarvesting every 3 months means 12 months ÷ 3 months = 4 harvests in a year.  \nEach harvest yields 1 000 pineapples, so over the year he harvests:\n\n1 000 × 4 = 4 000 pineapples.\n\n#### 4000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

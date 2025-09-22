@@ -1,0 +1,7 @@
+{
+  "response": "La abuela Jones horneó 5 tartas de manzana, cada una cortada en 8 piezas, lo que da un total de \\(5 \\times 8 = 40\\) piezas. Al final de la noche quedaron 14 piezas. Por lo tanto, los invitados se llevaron \\(40 - 14 = 26\\) piezas de pastel.  \n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

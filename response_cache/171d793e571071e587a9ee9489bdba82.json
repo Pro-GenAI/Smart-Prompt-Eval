@@ -1,0 +1,7 @@
+{
+  "response": "Dans une classe de 20 élèves :  \n- 20 % de 20 = 4 élèves en danse contemporaine.  \n- Il reste 20 − 4 = 16 élèves.  \n- 25 % de ces 16 élèves = 0,25 × 16 = 4 élèves en jazz.  \n- Le reste est en hip‑hop : 16 − 4 = 12 élèves.  \n\nPourcentage en hip‑hop :  \n\\( \\frac{12}{20} \\times 100 = 60\\% \\)  \n\n#### 60",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

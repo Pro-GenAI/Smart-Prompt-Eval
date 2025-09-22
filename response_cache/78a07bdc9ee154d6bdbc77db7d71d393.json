@@ -1,0 +1,7 @@
+{
+  "response": "The net change each year is +8 trees (10 planted – 2 chopped).  \nStarting with 50 trees, after 10 years:\n\n50 + 10 × 8 = 50 + 80 = 130 trees.\n\nThen 30% die, leaving 70% of 130:\n\n130 × 0.7 = 91 trees.\n\n#### 91",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

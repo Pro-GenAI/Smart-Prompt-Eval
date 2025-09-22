@@ -1,0 +1,7 @@
+{
+  "response": "Shiela muss für die 5 Handys insgesamt 750 USD bezahlen.  \nFür jedes Handy fällt ein Zins von 2 % an:  \n\\(150 USD × 0,02 = 3 USD\\) pro Handy.  \n\nGesamtzins = \\(5 × 3 USD = 15 USD\\).\n\nGesamtkosten = 750 USD + 15 USD = 765 USD.  \n\nIn 3 Monatsraten wird gezahlt:  \n\\(765 USD ÷ 3 = 255 USD\\) pro Monat.  \n\n#### 255",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

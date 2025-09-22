@@ -1,0 +1,7 @@
+{
+  "response": "The car travels 100 miles on the 4 gallons she added.  \nMileage = \\( \\frac{100\\text{ miles}}{4\\text{ gallons}} = 25 \\text{ mpg}\\).\n\nWith a full 12‑gallon tank:\n\n\\( 25 \\text{ mpg} \\times 12\\text{ gallons} = 300\\text{ miles}\\).\n\n#### 300",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

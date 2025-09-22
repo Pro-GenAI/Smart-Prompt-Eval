@@ -1,0 +1,7 @@
+{
+  "response": "John recolecta 360 melocotones. #### 360",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

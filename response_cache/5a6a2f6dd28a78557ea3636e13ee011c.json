@@ -1,0 +1,7 @@
+{
+  "response": "Para una semana:\n\n- Clases de lunes a viernes: 5 clases/día × 5 días = 25 clases  \n- Clases de sábado: 8 clases  \n\nTotal de clases = 25 + 8 = **33 clases**.\n\nCada clase tiene 15 estudiantes y cobra $15 por estudiante, por lo que el ingreso por clase es:\n\n15 estudiantes × $15 = **$225**.\n\nIngresos semanales:\n\n33 clases × $225/clase = **$7,425**.\n\n#### 7425",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

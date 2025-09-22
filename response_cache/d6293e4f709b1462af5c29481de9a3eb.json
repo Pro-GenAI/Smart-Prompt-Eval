@@ -1,0 +1,7 @@
+{
+  "response": "Julia hatte nach dem Kauf ihrer eigenen Packung noch fünf zusätzliche Löffel erhalten und drei davon beim Probieren verbraucht.  \n\\[\nx+5-3 = 12 \\implies x+2 = 12 \\implies x = 10\n\\]\n\nDie Packung, die Julia gekauft hat, enthielt also 10 Löffel.  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

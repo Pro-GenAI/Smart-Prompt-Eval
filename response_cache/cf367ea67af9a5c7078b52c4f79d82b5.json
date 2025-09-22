@@ -1,0 +1,7 @@
+{
+  "response": "Mor: 5 manzanas + 8 naranjas = 13  \nKael: 2 × 5 manzanas = 10 + ½ × 8 naranjas = 4 → 14  \n\nTotal = 13 + 14 = **27**  \n\n#### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

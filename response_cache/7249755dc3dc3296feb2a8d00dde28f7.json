@@ -1,0 +1,7 @@
+{
+  "response": "Poppy legt ¼ von 1000 = 250 Teile auf.  \nRest: 1000 – 250 = 750 Teile.\n\nDie Mutter legt ⅓ des Restes: ⅓ × 750 = 250 Teile.  \nGesamt auf dem Brett: 250 + 250 = 500 Teile.\n\nAlso bleiben noch **500** Teile zu platzieren.  \n\n**Answer: #### 500**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The zookeeper needs to feed the animals every month.  \nMonthly banana requirement: 200 (monkeys) + 400 (gorillas) + 100 (baboon) = **700** bananas.  \nSince he orders for 2 months: 700 × 2 = **1400** bananas.\n\n#### 1400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

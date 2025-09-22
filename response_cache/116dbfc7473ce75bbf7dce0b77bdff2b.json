@@ -1,0 +1,7 @@
+{
+  "response": "Mandy devra rembourser 106.12 $ à Benedict après 3 mois. #### 106.12",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

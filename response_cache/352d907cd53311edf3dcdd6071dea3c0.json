@@ -1,0 +1,7 @@
+{
+  "response": "Para alcanzar las 200 cal restantes, necesita consumir 0.8 porción, lo que equivale a 48 g.  \n#### 48",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

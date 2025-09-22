@@ -1,0 +1,7 @@
+{
+  "response": "The house was bought for $80 000 and repaired for $50 000, a total investment of $130 000.  \nA 150 % increase on the original $80 000 raises the value by $80 000 × 1.5 = $120 000, so the new value is $80 000 + $120 000 = $200 000.  \nProfit = $200 000 − $130 000 = $70 000.  \n\n#### 70000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

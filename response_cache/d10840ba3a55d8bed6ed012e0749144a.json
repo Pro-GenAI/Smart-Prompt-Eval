@@ -1,0 +1,7 @@
+{
+  "response": "Cecilia utilisera 5 sacs. #### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

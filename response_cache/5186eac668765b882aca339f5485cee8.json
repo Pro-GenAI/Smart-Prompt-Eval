@@ -1,0 +1,7 @@
+{
+  "response": "A candle that melts at 2 cm per hour will lose 2 cm × 4 hours = 8 cm.  \n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The lemon tree will break even after **8** years.  \n#### 8",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Rosie runs 10 mph for the first 3 hours, covering  \n\\(10 \\times 3 = 30\\) miles.  \n\nShe then runs for the remaining \\(7-3 = 4\\) hours at 5 mph, covering  \n\\(5 \\times 4 = 20\\) miles.  \n\nTotal distance: \\(30 + 20 = 50\\) miles.\n\n#### 50",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

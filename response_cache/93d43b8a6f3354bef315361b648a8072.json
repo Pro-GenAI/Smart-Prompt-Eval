@@ -1,0 +1,7 @@
+{
+  "response": "John sammelt 3 Stunden lang Pfirsiche.  In 3 Stunden sind das 3 × 60 = 180 Minuten.  Bei 2 Pfirsichen pro Minute sammelt er 180 × 2 = 360 Pfirsiche.  \n\n#### 360",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

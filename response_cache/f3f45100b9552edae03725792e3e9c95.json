@@ -1,0 +1,7 @@
+{
+  "response": "Lloyd ganó $130 durante las primeras dos semanas.  \n#### 130",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Las dos niñas recibieron \\( \\frac{1}{6}\\) de 24 litros cada una, es decir \\(4\\) litros.  \nTotal que recibieron las niñas: \\(4 + 4 = 8\\) litros.  \n\nUn niño recibió 6 litros.  \n\nLitros distribuidos en total: \\(8 + 6 = 14\\) litros.  \n\nLitros que quedaban: \\(24 - 14 = 10\\) litros.  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

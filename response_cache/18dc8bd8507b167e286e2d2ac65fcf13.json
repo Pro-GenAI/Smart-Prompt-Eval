@@ -1,0 +1,7 @@
+{
+  "response": "Ryan planta 2 flores al día en su jardín. Después de 15 días, habrá plantado \\(2 \\times 15 = 30\\) flores. Si 5 de ellas no crecieron, entonces el número final de flores es \\(30 - 5 = 25\\).\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

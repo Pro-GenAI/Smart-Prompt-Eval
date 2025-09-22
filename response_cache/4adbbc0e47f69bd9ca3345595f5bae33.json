@@ -1,0 +1,7 @@
+{
+  "response": "Jill’s annual salary is $57,500. #### 57500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

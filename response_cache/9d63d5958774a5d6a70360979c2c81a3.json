@@ -1,0 +1,7 @@
+{
+  "response": "Para calcular el total de patas, sumamos las patas de cada grupo:\n\n- Arañas: \\(80 \\times 8 = 640\\)\n- Insectos: \\(90 \\times 6 = 540\\)\n- Invertebrados mutantes: \\(3 \\times 10 = 30\\)\n\nTotal de patas:\n\\(640 + 540 + 30 = 1210\\)\n\n#### 1210",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

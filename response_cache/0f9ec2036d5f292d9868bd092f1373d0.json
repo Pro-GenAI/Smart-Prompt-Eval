@@ -1,0 +1,7 @@
+{
+  "response": "In einem 15‑stöckigen Mehrfamilienhaus mit 8 Einheiten pro Etage gibt es insgesamt:\n\n\\[\n15 \\times 8 = 120 \\text{ Einheiten.}\n\\]\n\nDrei Viertel des Gebäudes sind belegt, also:\n\n\\[\n\\frac{3}{4} \\times 120 = 90 \\text{ bewohnte Einheiten.}\n\\]\n\nDie restlichen Einheiten sind unbewohnbar:\n\n\\[\n120 - 90 = 30 \\text{ unbewohnbare Einheiten.}\n\\]\n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Pour obtenir le total de saucisses achetées, il suffit d’additionner les deux types de saucisses :\n\n- Saucisses de poulet : 38  \n- Saucisses de poisson : 38 + 6 = 44  \n\nTotal = 38 + 44 = 82.\n\n#### 82",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Die Hundefuttermenge in der ersten 180 Tage beträgt 180 Tassen. Für die restlichen 185 Tage (365 – 180) füttert Cecilia 2 Tassen pro Tag, also 370 Tassen. Insgesamt also 550 Tassen. Da eine Tüte 110 Tassen enthält, braucht sie 550 ÷ 110 = 5 Tüten.  \n\n**#### 5**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

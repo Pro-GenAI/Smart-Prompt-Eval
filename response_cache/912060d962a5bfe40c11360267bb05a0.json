@@ -1,0 +1,7 @@
+{
+  "response": "Eliza earns $460 this week.  \n**Answer:** #### 460",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

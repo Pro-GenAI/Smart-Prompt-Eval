@@ -1,0 +1,7 @@
+{
+  "response": "Gretchen has 70 gold coins. #### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

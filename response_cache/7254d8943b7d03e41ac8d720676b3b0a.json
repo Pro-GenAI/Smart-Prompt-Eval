@@ -1,0 +1,7 @@
+{
+  "response": "Dylan comprò 38 salsicce di pollo e 44 salsicce di pesce (38 + 6).  \nIn totale: 38 + 44 = 82 salsicce.\n\n#### 82",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

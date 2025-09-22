@@ -1,0 +1,7 @@
+{
+  "response": "Grace weighs 25.4 lb and Alex weighs 99.6 lb.  \n#### 99.6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The distance between the first stop (after 20 miles) and the second stop (15 miles before the 60‑mile finish, i.e., at 45 miles) is  \n\n\\[45 - 20 = 25 \\text{ miles}.\\]\n\n#### 25",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

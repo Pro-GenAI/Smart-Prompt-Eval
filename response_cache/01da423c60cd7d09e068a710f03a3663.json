@@ -1,0 +1,7 @@
+{
+  "response": "Jenna recogió 10 manzanas y su madre 20, por lo que juntos recogieron 30 manzanas.  \n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

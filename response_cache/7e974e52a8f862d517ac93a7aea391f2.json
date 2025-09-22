@@ -1,0 +1,7 @@
+{
+  "response": "The calculations work out as follows:\n\n1. Start with \\(N\\) vacuum cleaners.  \n2. Sold \\( \\frac{1}{3}N \\) at the green house → remaining \\( N - \\frac{N}{3} = \\frac{2N}{3} \\).  \n3. Sold 2 more at the red house → remaining \\( \\frac{2N}{3} - 2 \\).  \n4. Sold half of what was left at the orange house, so the amount left after that is  \n   \\[\n   \\frac{1}{2}\\left(\\frac{2N}{3} - 2\\right).\n   \\]  \n5. This final amount equals 5:  \n   \\[\n   \\frac{1}{2}\\left(\\frac{2N}{3} - 2\\right) = 5.\n   \\]\n   Multiply by 2: \\(\\frac{2N}{3} - 2 = 10\\).  \n   Add 2: \\(\\frac{2N}{3} = 12\\).  \n   Multiply by 3: \\(2N = 36\\).  \n   Divide by 2: \\(N = 18\\).\n\nSo she must have started with **18** vacuum cleaners.\n\n#### 18",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The trains each travel 80 mi west on day 1 and 150 mi north on day 2, for a total of 80 + 150 = 230 miles each.\n\n#### 230",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

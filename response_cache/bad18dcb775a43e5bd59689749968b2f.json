@@ -1,0 +1,7 @@
+{
+  "response": "Peter kann sich jede Kinobesuch inklusive Ticket und Popcorn für 14 $ leisten.  \nMit 42 $ hat er: 42 $ ÷ 14 $ = **3** Besuche.  \n\n#### 3",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

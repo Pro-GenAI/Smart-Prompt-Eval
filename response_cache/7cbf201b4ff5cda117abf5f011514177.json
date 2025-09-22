@@ -1,0 +1,7 @@
+{
+  "response": "14 hours per week × $10/hour = $140.  \n#### 140",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

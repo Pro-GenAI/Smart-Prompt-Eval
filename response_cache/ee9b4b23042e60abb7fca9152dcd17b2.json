@@ -1,0 +1,7 @@
+{
+  "response": "Die Differenz beträgt ungefähr **313 m**.  \n\n#### 313",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

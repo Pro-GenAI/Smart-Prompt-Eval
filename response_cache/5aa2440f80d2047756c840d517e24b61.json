@@ -1,0 +1,7 @@
+{
+  "response": "Cynthia eats one serving of ice cream every night. She buys cartons of ice cream with 15 servings per carton at a cost of $4.00 per carton. After 60 days, she will need 60 servings, which equals 4 cartons (since 60 ÷ 15 = 4). The total cost is 4 cartons × $4.00 each = $16.00. #### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

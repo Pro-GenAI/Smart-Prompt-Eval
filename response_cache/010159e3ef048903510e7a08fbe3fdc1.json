@@ -1,0 +1,7 @@
+{
+  "response": "Juan y su hermano Carlos obtuvieron una ganancia total de $25 y cada galón les da una ganancia de $5. Por lo tanto vendieron 25 ÷ 5 = 5 galones.  \nEl gasto en limones por galón es de $3, así que en total gastaron 5 × $3 = **$15** en limones.  \n\n#### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

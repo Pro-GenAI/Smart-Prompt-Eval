@@ -1,0 +1,7 @@
+{
+  "response": "El beneficio diario del hospital es:\n\n\\[\n\\text{Beneficio} = (\\text{Horas de atención} \\times 200) - (\\text{Horas de atención} \\times 150) = 200 \\times (200-150) = 200 \\times 50 = 10\\,000\n\\]\n\n#### 10000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

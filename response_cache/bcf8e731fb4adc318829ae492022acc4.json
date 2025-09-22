@@ -1,0 +1,7 @@
+{
+  "response": "Darrel’s age \\(D\\) and Allen’s age \\(A\\) are in the ratio \\(7:11\\).\n\nLet the common multiplier be \\(k\\):\n\\[\nD = 7k,\\qquad A = 11k\n\\]\n\nTheir total age is 162:\n\\[\n7k + 11k = 162 \\;\\Longrightarrow\\; 18k = 162 \\;\\Longrightarrow\\; k = 9\n\\]\n\nThus Allen’s present age is\n\\[\nA = 11k = 11 \\times 9 = 99\n\\]\n\nTen years from now Allen will be:\n\\[\n99 + 10 = 109\n\\]\n\n**Answer:** #### 109",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Charlie has 12 friends. If that equals three times Dorothy's friends, then Dorothy has \\(12/3 = 4\\) friends. James has four times Dorothy’s friends, so he has \\(4 \\times 4 = 16\\) friends.\n\n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

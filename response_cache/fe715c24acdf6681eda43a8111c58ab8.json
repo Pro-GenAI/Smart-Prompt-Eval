@@ -1,0 +1,7 @@
+{
+  "response": "The basket has 25 oranges.  \n- Bad oranges: 1  \n- Unripe oranges: 20 % of 25 = 0.20 × 25 = 5  \n- Sour oranges: 2  \n\nTotal oranges that are not good: 1 + 5 + 2 = 8.  \nGood oranges = 25 − 8 = 17.  \n\n#### 17",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

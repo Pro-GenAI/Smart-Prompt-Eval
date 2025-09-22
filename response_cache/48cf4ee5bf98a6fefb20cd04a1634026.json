@@ -1,0 +1,7 @@
+{
+  "response": "The hat costs \\$25, the jacket costs three times that amount, and the pants cost the average of the hat and jacket.\n\n- Hat: \\$25  \n- Jacket: 3 × \\$25 = \\$75  \n- Pants: (25 + 75) ÷ 2 = 100 ÷ 2 = \\$50  \n\nTotal cost of one uniform = 25 + 75 + 50 = **\\$150**.\n\n#### 150",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

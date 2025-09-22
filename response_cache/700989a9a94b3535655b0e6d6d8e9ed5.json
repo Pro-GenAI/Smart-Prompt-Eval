@@ -1,0 +1,7 @@
+{
+  "response": "Elaine a commencé avec 20 cartes.  \n- **Premier mois** : elle a collecté \\(3 \\times 20 = 60\\) cartes.  \n- **Deuxième mois** : elle a collecté \\(60 - 20 = 40\\) cartes.  \n- **Troisième mois** : elle a collecté \\(2 \\times (60 + 40) = 200\\) cartes.  \n\nTotal après les trois mois = \\(20 + 60 + 40 + 200 = 320\\).  \n\n#### 320",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

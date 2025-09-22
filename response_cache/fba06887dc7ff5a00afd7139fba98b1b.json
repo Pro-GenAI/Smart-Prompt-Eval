@@ -1,0 +1,7 @@
+{
+  "response": "The depth on Wednesday is 16 feet.  \n#### 16",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

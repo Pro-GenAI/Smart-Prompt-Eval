@@ -1,0 +1,7 @@
+{
+  "response": "The pension is $50,000 per year.  \nFrom year 21 to 30 (10 years) she gets an additional 5 % of the pension value each year, i.e. 10 × (5 % × $50,000) = 10 × $2,500 = $25,000.  \nSo her annual pension after 30 years of service is $50,000 + $25,000 = $75,000.  \n\n#### 75000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Mary a 2 plantes par rebord sur 40 rebords, soit 2 × 40 = 80 plantes.  \nElle reçoit 18 nouvelles plantes, donc elle possède 80 + 18 = 98 plantes.  \nDemain elle donne 1 plante de chaque rebord, soit 40 plantes.  \nPlantes restantes = 98 – 40 = 58.\n\n#### 58",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

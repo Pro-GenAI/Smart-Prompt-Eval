@@ -1,0 +1,7 @@
+{
+  "response": "The weekly revenue is calculated as follows:\n\n- Each class earns \\(15 \\text{ students} \\times \\$15 = \\$225\\).\n- She teaches \\(5 \\text{ classes/day} \\times 5 \\text{ weekdays} = 25\\) classes during the week.\n- On Saturday she teaches \\(8\\) additional classes.\n- Total classes in the week: \\(25 + 8 = 33\\).\n\nTotal weekly earnings:\n\\[\n33 \\text{ classes} \\times \\$225 \\text{ per class} = \\$7,\\!425.\n\\]\n\n#### 7425",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -13,7 +13,7 @@ smart_prompt_eval/evals/direct_gsm8k_eval.py
 smart_prompt_eval/evals/linguistic_errors_eval.py
 smart_prompt_eval/evals/multilingual_prompting_eval.py
 smart_prompt_eval/evals/power_of_roles_eval.py
-smart_prompt_eval/evals/seed_consistency_eval.py
+smart_prompt_eval/evals/z_seed_consistency_eval.py
 smart_prompt_eval/scripts/translate_gsm8k.py
 smart_prompt_eval/utils/__init__.py
 smart_prompt_eval/utils/common_utils.py

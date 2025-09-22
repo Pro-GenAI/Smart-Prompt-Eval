@@ -1,0 +1,7 @@
+{
+  "response": "Jill arbeitet 35 Stunden pro Woche als Lehrerin und bekommt 20 $ pro Stunde:\n\n\\(35 \\times 20 = 700\\) $ pro Woche.\n\nAls Cheerleading‑Trainerin arbeitet sie 15 Stunden pro Woche und bekommt 30 $ pro Stunde:\n\n\\(15 \\times 30 = 450\\) $ pro Woche.\n\nWöchentliche Gesamteinkünfte:\n\n\\(700 + 450 = 1\\,150\\) $.\n\nSie arbeitet 50 Wochen im Jahr, also:\n\n\\(1\\,150 \\times 50 = 57\\,500\\) $.\n\nDas Jahresgehalt beträgt also 57 500 $.\n\n#### 57500",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

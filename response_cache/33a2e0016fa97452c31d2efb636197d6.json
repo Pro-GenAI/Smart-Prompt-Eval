@@ -1,0 +1,7 @@
+{
+  "response": "The total hours Lloyd worked is \\(5 + 8 = 13\\) hours.  \nAt \\$10 per hour, his earnings are \\(13 \\times 10 = \\$130\\).\n\n#### 130",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

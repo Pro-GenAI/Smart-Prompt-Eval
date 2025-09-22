@@ -1,0 +1,7 @@
+{
+  "response": "The profit equals the revenue minus the costs.  \n- **Customers:** 3 existing + 5 potential = 8 houses.  \n- **Bleach bottles:** 8 houses × 2 bottles = 16 bottles.  \n  Cost = 16 × $2 = $32.  \n- **Towel packs:** 8 houses × 1 pack = 8 packs.  \n  Cost = 8 × $5 = $40.  \n\n**Total expenses:** $32 + $40 = $72.  \n**Total revenue:** $92.  \n\n**Profit:** $92 − $72 = $20.\n\n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

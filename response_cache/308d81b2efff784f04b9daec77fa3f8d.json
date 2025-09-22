@@ -1,0 +1,7 @@
+{
+  "response": "She has covered 6 miles in 2 hours.  \nTo average 4 mph over 12 miles, the total time must be  \n\n\\[\n\\frac{12\\text{ miles}}{4\\text{ mph}} = 3\\text{ hours}.\n\\]\n\nShe already used 2 hours, so she has only 1 hour left for the remaining 6 miles.  \nThus her required speed is\n\n\\[\n\\frac{6\\text{ miles}}{1\\text{ hour}} = 6\\text{ mph}.\n\\]\n\n**Answer: 6**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

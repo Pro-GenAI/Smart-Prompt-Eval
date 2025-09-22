@@ -1,0 +1,7 @@
+{
+  "response": "The total revenue is calculated as follows:\n\n- Weekly classes: 5 classes/day × 5 weekdays = 25 classes  \n  plus 8 classes on Saturday → 25 + 8 = 33 classes.\n\n- Revenue per class: 15 students × $15.00 = $225.\n\n- Weekly revenue: 33 classes × $225 = $7,425.\n\n#### 7425",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

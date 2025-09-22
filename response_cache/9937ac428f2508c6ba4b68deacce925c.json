@@ -1,0 +1,7 @@
+{
+  "response": "John trinkt an den Wochentagen 4 Gläser Wasser pro Tag (Frühstück, Mittag, Abendessen und vor dem Schlafengehen).  \nAn den Wochenenden hat er 3 Gläser Wasser pro Tag (Frühstück, Mittag und vor dem Schlafengehen, da er zum Abendessen stattdessen Limonade trinkt).  \n\nAn 5 Wochentagen: 5 × 4 = 20 Gläser  \nAn 2 Wochenendtagen: 2 × 3 = 6 Gläser  \n\nGesamt: 20 + 6 = 26 Gläser\n\n#### 26",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

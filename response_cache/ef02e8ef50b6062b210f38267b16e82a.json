@@ -1,0 +1,7 @@
+{
+  "response": "For every pound of beeswax (and wicks) Charlie spends $110.00 and can make 10 candles, so the cost per candle is:\n\n\\[\n\\frac{\\$110.00}{10} = \\$11.00\n\\]\n\nHe sells each candle for $2.00.  \nSelling 20 candles gives revenue:\n\n\\[\n20 \\times \\$2.00 = \\$40.00\n\\]\n\nTo produce 20 candles he needs \\(20 / 10 = 2\\) pounds of beeswax, costing:\n\n\\[\n2 \\times \\$110.00 = \\$220.00\n\\]\n\nNet profit:\n\n\\[\n\\$40.00 - \\$220.00 = -\\$180.00\n\\]\n\nSo Charlie’s net profit is **-180** dollars.\n\n#### -180",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "El total de salchichas que compró Dylan es:\n\n**#### 82**",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

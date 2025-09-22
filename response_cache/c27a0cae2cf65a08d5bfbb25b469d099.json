@@ -1,0 +1,7 @@
+{
+  "response": "Morisette hat 5 Äpfel und 8 Orangen.  \nKael hat doppelt so viele Äpfel und die Hälfte der Orangen:\n\n- Kaels Äpfel: 2 × 5 = 10  \n- Kaels Orangen: ½ × 8 = 4  \n\nGesamte Früchte:  \n\\(5+10+8+4 = 27\\).\n\n#### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

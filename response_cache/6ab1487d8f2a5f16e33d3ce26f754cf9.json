@@ -1,0 +1,7 @@
+{
+  "response": "There are 600 thorns in total. #### 600",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

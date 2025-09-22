@@ -1,0 +1,7 @@
+{
+  "response": "The number of girls not in the girl scut is #### 40",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

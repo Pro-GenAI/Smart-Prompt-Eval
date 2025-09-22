@@ -1,0 +1,7 @@
+{
+  "response": "The minimum monthly payment for all debts is $1,000.  \nJessic wants to pay 50 % more than this, so she pays:\n\n\\[\n1.5 \\times \\$1{,}000 = \\$1{,}500 \\text{ per month}\n\\]\n\nOver 12 months:\n\n\\[\n\\$1{,}500 \\times 12 = \\$18{,}000\n\\]\n\n#### 18000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

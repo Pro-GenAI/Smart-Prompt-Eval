@@ -1,0 +1,7 @@
+{
+  "response": "Tommy earns a total of $221 from selling the brownies and cheesecakes.  \n\n#### 221",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

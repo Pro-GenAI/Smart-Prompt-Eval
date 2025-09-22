@@ -1,0 +1,7 @@
+{
+  "response": "In the equation, the number of pink gumballs is 22 more than four times the number of blue gumballs:\n\n\\[\n\\text{pink} = 4 \\times \\text{blue} + 22\n\\]\n\nWith 12 blue gumballs:\n\n\\[\n\\text{pink} = 4 \\times 12 + 22 = 48 + 22 = 70\n\\]\n\n#### 70",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

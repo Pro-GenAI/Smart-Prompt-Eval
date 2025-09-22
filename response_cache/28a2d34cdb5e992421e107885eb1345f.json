@@ -1,0 +1,7 @@
+{
+  "response": "The total number of sausages Dylaan bought is 82. #### 82",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "The ten ducks need 35 pounds of insects per week, which is 5 pounds per day.  \n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

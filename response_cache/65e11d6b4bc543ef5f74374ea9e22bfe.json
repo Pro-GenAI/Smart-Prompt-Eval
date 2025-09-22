@@ -1,0 +1,7 @@
+{
+  "response": "The class consists of 80 girls (since \\(200 \\times \\frac{2}{5}=80\\)).  \nTwo‑thirds of the girls are in the Girl Scouts, so \\( \\frac{2}{3}\\times 80 = 53.33\\) girls are in the Scouts.  \nHence the number of girls not in the Scouts is \\(80-53.33 \\approx 26.67\\), which rounds to **27** girls. #### 27",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

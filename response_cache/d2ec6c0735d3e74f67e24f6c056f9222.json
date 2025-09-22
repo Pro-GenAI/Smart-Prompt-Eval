@@ -1,0 +1,7 @@
+{
+  "response": "The estimations are: 80, 800, and 100.  \nAverage = (80 + 800 + 100) / 3 = 980 / 3 ≈ 326.67.\n\n#### 326.67",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Jordan plays video games 2 hours per day, which is 2 × 7 = 14 hours per week.  \nIf he worked those 14 hours at $10 per hour, he would earn:\n\n14 hours × $10/hour = $140.\n\n#### 140",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

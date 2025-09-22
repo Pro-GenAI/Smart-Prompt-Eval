@@ -1,0 +1,7 @@
+{
+  "response": "The total sales are 88,000 copies.  \nLet \\(x\\) be the number of copies Harald sold.  \nMarilyn’s record sold 10 times as many copies, so she sold \\(10x\\).\n\n\\[\n10x + x = 88{,}000 \\implies 11x = 88{,}000 \\implies x = \\frac{88{,}000}{11} = 8{,}000\n\\]\n\nHarald sold **8,000** copies.  \n\n#### 8000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

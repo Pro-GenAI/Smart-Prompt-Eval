@@ -1,0 +1,7 @@
+{
+  "response": "The original cost of the groceries was $3546.40. #### 3546.40",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

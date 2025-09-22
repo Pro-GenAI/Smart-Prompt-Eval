@@ -1,0 +1,7 @@
+{
+  "response": "John ha 10 ettari di un campo di ananas. Ci sono 100 ananas per ettaro, quindi in ogni raccolto ottiene 10 ettari × 100 ananas/ettaro = 1000 ananas.  \nPoiché può raccogliere ogni 3 mesi, raccoglie 12 mesi ÷ 3 mesi = 4 volte all’anno.  \n\nQuindi, in un anno, raccoglie:  \n1000 ananas × 4 = 4000 ananas.\n\n#### 4000",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

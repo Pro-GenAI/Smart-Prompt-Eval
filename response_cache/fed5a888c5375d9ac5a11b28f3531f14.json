@@ -1,0 +1,7 @@
+{
+  "response": "Shiela’s total cost for 5 phones is  \n\\(5 \\times 150 = 750\\).\n\nInterest at 2 % per month on the whole amount:  \n\\(750 \\times 0.02 \\times 3 = 45\\).\n\nTotal amount to be paid:  \n\\(750 + 45 = 795\\).\n\nDividing this over the 3‑month installment plan gives the monthly payment:  \n\\(795 ÷ 3 = 265\\).\n\nHence, Shiela will pay **$265 per month** for 3 months.  \n\n#### 265",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

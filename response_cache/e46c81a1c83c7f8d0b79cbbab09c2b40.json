@@ -1,0 +1,7 @@
+{
+  "response": "Cody eats three times as many cookies as Amir.  \nAmir eats 5 cookies, so Cody eats \\(3 \\times 5 = 15\\) cookies.  \nTogether they eat \\(5 + 15 = 20\\) cookies.  \n\n#### 20",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

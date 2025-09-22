@@ -2,9 +2,9 @@
 
 
 Evaluate using first 200 in GSM8K
-	- Linguistic errors
 	- multilingual
 	- power of roles
+
 Also add evaluating harmful/biased responses in all evals - create something like a dataset.
 	- Generate using AI
 
@@ -27,5 +27,7 @@ Share on LinkedIn & X - both eval method and results.
 	- Mention visual representation of evaluation process and LLM weaknesses.
 	Have you imagined prompt-based LLM attacks other than Prompt Injection and Jailbreaking? We can use power of roles.
 	Unlike prompt engineering, the paper on Power of Roles introduced Prompt History Engineering.
+
+Tag major media, influencers, and researchers in the field.
 
 Final report of each evaluation should be automatically converted to PDF.

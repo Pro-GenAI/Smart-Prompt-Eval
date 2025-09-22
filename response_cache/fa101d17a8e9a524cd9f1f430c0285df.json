@@ -1,0 +1,7 @@
+{
+  "response": "Hiring the accountant will net Jackie $15 more than doing the taxes herself.  \n\n#### 15",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

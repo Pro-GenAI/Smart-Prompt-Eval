@@ -1,0 +1,7 @@
+{
+  "response": "Emily ha 4 figli di nome Amy, Jackson, Corey e James.  \n- James = 10 anni.  \n- James è 1 anno più giovane di Corey ⇒ Corey = 11 anni.  \n- Amy è 2 anni più giovane di Corey ⇒ Amy = 11 – 2 = 9 anni.  \n- Amy è 5 anni più grande di Jackson ⇒ Jackson = 9 – 5 = 4 anni.  \n\nQuindi Jackson ha **4** anni.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

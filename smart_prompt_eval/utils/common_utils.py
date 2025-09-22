@@ -1,4 +1,5 @@
 import os
+import time
 from typing import Optional
 
 from dotenv import load_dotenv
@@ -9,10 +10,10 @@ from smart_prompt_eval.utils.response_cacher import get_cache_key, get_cached_re
 
 
 
-def log(text="", filename="output.txt"):
-    print(text)
+def log(text="", filename="output.txt", *args, **kwargs):
+    print(text, *args, **kwargs)
     # with open(filename, "a") as f:
-    #     print(text, file=f)
+    #     print(text, *args, **kwargs, file=f)
 
 
 def print_progress(chr="."):
@@ -87,10 +88,10 @@ def attempt(question, correct_answer, params: Optional[dict] = None) -> tuple[bo
         extracted_answer = extract_answer(response)
         # print_progress(response)  # type: ignore
         is_correct = extracted_answer == correct_answer
-        if is_correct:
-            print_progress()
-        else:
-            print_error()
+        # if is_correct:
+        #     print_progress()
+        # else:
+        #     print_error()
         return is_correct, response
     except Exception as e:
         print_error(" SE ")
@@ -140,10 +141,12 @@ def attempt(question, correct_answer, params: Optional[dict] = None) -> tuple[bo
 load_dotenv(override=True)
 
 def env(varname: str, default: Optional[str] = None) -> str | None:
-    return os.getenv(varname, default)
+    return os.getenv(varname) or default
 
 client = openai.OpenAI()
-model = env("OPENAI_MODEL")
+model: str = env("OPENAI_MODEL", "") # type: ignore
+if not model:
+    raise Exception("OPENAI_MODEL environment variable not set")
 
 
 def message(content: str, role: str) -> ChatCompletionMessageParam:
@@ -178,11 +181,27 @@ def get_response(
     # Make API call if not cached
     if isinstance(messages, str):
         messages = [user_message(messages)]
-    response = client.chat.completions.create(
-        messages=messages,
-        **kwargs,  # More arguments like seed, temperature, etc.
-    )
-    response_text = response.choices[0].message.content
+
+    response_text = None
+    for attempt in range(3):
+        try:
+            response = client.chat.completions.create(
+                messages=messages,
+                **kwargs,  # More arguments like seed, temperature, etc.
+            )
+            response_text = response.choices[0].message.content
+            if not response_text:
+                raise Exception("Empty response")
+            break
+        except openai.RateLimitError:
+            print_error(" RL ")
+            time.sleep(30)  # Wait before retrying
+            if attempt < 2:
+                continue
+            response_text = None
+        except Exception as e:
+            print_error(" Ex ")
+            response_text = None
     if not response_text:
         return None
     save_cached_response(cache_key, response_text, **kwargs)

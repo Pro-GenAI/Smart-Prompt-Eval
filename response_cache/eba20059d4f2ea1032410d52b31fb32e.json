@@ -1,0 +1,7 @@
+{
+  "response": "To find the unoccupied units:\n\n1. **Total units in the building**  \n   \\(15 \\text{ floors} \\times 8 \\text{ units/floor} = 120\\) units.\n\n2. **Occupied units (3/4 of the building)**  \n   \\(\\frac{3}{4} \\times 120 = 90\\) units.\n\n3. **Unoccupied units**  \n   \\(120 \\text{ total} - 90 \\text{ occupied} = 30\\) units.\n\nThus the building has **30 unoccupied units**.  \n\n#### 30",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

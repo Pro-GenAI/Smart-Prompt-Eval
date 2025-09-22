@@ -1,0 +1,7 @@
+{
+  "response": "Jeder Zug legt in den beiden Tagen insgesamt 230 Meilen zurück.  \n#### 230",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

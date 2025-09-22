@@ -1,0 +1,7 @@
+{
+  "response": "The merchant's cost per sack is $20 + $2 = $22.  \nHe sells each at $30, so his profit per sack is $30 – $22 = $8.  \nWith a total profit of $400:  \n\\[\n\\text{Number of sacks} = \\frac{400}{8} = 50\n\\]\n\n#### 50",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

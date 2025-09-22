@@ -1,0 +1,7 @@
+{
+  "response": "Rani hat 10 Krabben mehr als Monic.  \nMonic hat 4 Krabben weniger als Bo.  \nBo hat 40 Krabben.\n\nMonic = Bo – 4 = 40 – 4 = 36  \nRani = Monic + 10 = 36 + 10 = 46  \n\nGesamtzahl = Bo + Monic + Rani = 40 + 36 + 46 = **122**  \n\n#### 122",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

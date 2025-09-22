@@ -1,0 +1,7 @@
+{
+  "response": "The total number of Pokémon cards she has now is 320.  \n#### 320",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

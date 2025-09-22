@@ -1,0 +1,7 @@
+{
+  "response": "Billy sold a total of 7 DVDs on Tuesday.  \n\n#### 7",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}
