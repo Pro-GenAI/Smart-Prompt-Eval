@@ -16,27 +16,27 @@ This repository contains a collection of prompt engineering techniques to test r
 
 1. Clone the repository and open the directory:
    ```bash
-   git clone https://github.com/Pro-GenAI/Smart-Prompting-Eval.git
-   cd Smart-Prompting-Eval
+   git clone https://github.com/Pro-GenAI/Smart-Prompt-Eval.git
+   cd Smart-Prompt-Eval
    ```
 
-2. Install the required dependencies:
+2. Install the package in development mode:
    ```bash
-   pip install -r requirements.txt
+   pip install -e .
    ```
 
-3. Set up .env file:
+3. (Optional) Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+4. Set up .env file:
     - Create a `.env` file in the root directory using .env.example as a template:
      ```bash
      cp .env.example .env
      ```
     - Edit the `.env` file to access an OpenAI-compatible API of your model.
-        - Example: OpenAI API, vLLM, Ollama, etc.
-
-4. Install the package:
-   ```bash
-   pip install -e .
-   ```
+        - Example: OpenAI API, Azure OpenAI, vLLM, Ollama, etc.
 
 ## Usage
 
@@ -49,6 +49,30 @@ python smart_prompt_eval/run_eval.py
 ```bash
 python smart_prompt_eval/evals/harmful_prompts_eval.py
 python smart_prompt_eval/run_eval.py harmful_prompts_eval
+```
+
+## Development
+
+### Code Quality
+This project uses several tools to maintain code quality:
+
+- **Black**: Code formatting
+- **isort**: Import sorting
+- **flake8**: Linting
+- **mypy**: Type checking
+
+Run all quality checks:
+```bash
+black smart_prompt_eval tests
+isort smart_prompt_eval tests
+flake8 smart_prompt_eval tests
+mypy smart_prompt_eval
+```
+
+### Testing
+Run the test suite:
+```bash
+pytest
 ```
 
 ### Base papers with code

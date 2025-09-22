@@ -3,3 +3,5 @@ __pycache__/
 # response_cache/
 response.log
 archive.md
+.pytest_cache
+.vscode/

@@ -3,7 +3,119 @@ Name: smart_prompt_eval
 Version: 0.0.1
 Summary: Tools for smart prompt evaluation
 Author-email: Praneeth Vadlapati <praneeth.vad@gmail.com>
+License: MIT
+Project-URL: Homepage, https://github.com/Pro-GenAI/Smart-Prompt-Eval
+Project-URL: Repository, https://github.com/Pro-GenAI/Smart-Prompt-Eval
+Project-URL: Issues, https://github.com/Pro-GenAI/Smart-Prompt-Eval/issues
+Keywords: ai,ml,evaluation,prompting,nlp,openai
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: python-dotenv
 Requires-Dist: openai
 Requires-Dist: translate
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: flake8; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Dynamic: license-file
+
+# Smart-Prompt-Eval
+<!-- Robust-Prompt-Eval -->
+
+This repository contains a collection of prompt engineering techniques to test robustness of various non-reasoning models based on vulnerabilities revealed in the papers of the past few years. The techniques are organized into different experiments, each focusing on a specific aspect of model behavior.
+
+## Available Experiments
+
+- **Direct GSM8K Evaluation**: Testing model performance on grade school math problems
+- **Language Errors**: Testing model performance by manipulating queries to add various grammatical and spelling errors
+- **Multilingual Prompting**: Testing model performance by translating queries into different languages
+- **Multiple Roles**: Testing with multiple roles (user, assistant, and system)
+- **Evaluating Harmful Prompts**: Testing model responses to potentially harmful prompts, using original and manipulated versions of the harmful prompts
+<!-- - **Seed Consistency**: Testing with multiple seed values to check output consistency -->
+
+## Setup
+
+1. Clone the repository and open the directory:
+   ```bash
+   git clone https://github.com/Pro-GenAI/Smart-Prompt-Eval.git
+   cd Smart-Prompt-Eval
+   ```
+
+2. Install the package in development mode:
+   ```bash
+   pip install -e .
+   ```
+
+3. (Optional) Install development dependencies:
+   ```bash
+   pip install -e ".[dev]"
+   ```
+
+4. Set up .env file:
+    - Create a `.env` file in the root directory using .env.example as a template:
+     ```bash
+     cp .env.example .env
+     ```
+    - Edit the `.env` file to access an OpenAI-compatible API of your model.
+        - Example: OpenAI API, vLLM, Ollama, etc.
+
+## Usage
+
+### Running All Evaluations
+```bash
+python smart_prompt_eval/run_eval.py
+```
+
+### Running Individual Evaluations
+```bash
+python smart_prompt_eval/evals/harmful_prompts_eval.py
+python smart_prompt_eval/run_eval.py harmful_prompts_eval
+```
+
+## Development
+
+### Code Quality
+This project uses several tools to maintain code quality:
+
+- **Black**: Code formatting
+- **isort**: Import sorting
+- **flake8**: Linting
+- **mypy**: Type checking
+
+Run all quality checks:
+```bash
+black smart_prompt_eval tests
+isort smart_prompt_eval tests
+flake8 smart_prompt_eval tests
+mypy smart_prompt_eval
+```
+
+### Testing
+Run the test suite:
+```bash
+pytest
+```
+
+### Base papers with code
+
+- Does Seed Matter - https://github.com/Pro-GenAI/PromptSeed
+- Linguistic Errors - https://github.com/Pro-GenAI/PromptSpell
+- Multilingual Prompting - https://github.com/Pro-GenAI/PromptLang
+- The Power of Roles - https://github.com/Pro-GenAI/Power-of-Roles

@@ -1,3 +1,11 @@
 python-dotenv
 openai
 translate
+
+[dev]
+black
+flake8
+isort
+mypy
+pytest
+pytest-cov

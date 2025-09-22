@@ -12,10 +12,12 @@ Available evaluation modules:
     - evals.multiple_roles_eval
     - evals.harmful_prompts_eval
 """
-import sys
+
 # import runpy
 import subprocess
+import sys
 from pathlib import Path
+
 
 def get_eval_modules():
     """Get list of evaluation modules to run."""
@@ -28,6 +30,7 @@ def get_eval_modules():
         modules.append(module_name)
     return modules
 
+
 if len(sys.argv) < 2:
     # Run all modules
     modules = get_eval_modules()
@@ -37,8 +40,9 @@ if len(sys.argv) < 2:
             # runpy.run_module(module, run_name="__main__", alter_sys=True)
             # Run in subprocess to prevent sys.exit from stopping the batch
             full_module = f"smart_prompt_eval.{module}"
-            result = subprocess.run([sys.executable, "-m", full_module], 
-                                  cwd=Path(__file__).parent.parent)
+            result = subprocess.run(
+                [sys.executable, "-m", full_module], cwd=Path(__file__).parent.parent
+            )
             if result.returncode != 0:
                 print(f"Module {module} exited with code {result.returncode}")
         except Exception as e:
@@ -54,6 +58,7 @@ else:
     # runpy.run_module(module, run_name="__main__", alter_sys=True)
     # Run the module in subprocess to handle sys.exit gracefully
     full_module = f"smart_prompt_eval.{module}"
-    result = subprocess.run([sys.executable, "-m", full_module], 
-                        cwd=Path(__file__).parent.parent)
+    result = subprocess.run(
+        [sys.executable, "-m", full_module], cwd=Path(__file__).parent.parent
+    )
     sys.exit(result.returncode)

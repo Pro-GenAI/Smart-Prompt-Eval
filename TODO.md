@@ -4,10 +4,14 @@
 Evaluate gpt-5-nano.
 
 
+Ensure I followed all standards for python packages.
 
 Test on python 3.8 and ensure it is supported.
-Follow all standards for python packages.
+	If not, test python 3.10 and mention it in pyproject.toml.
 Ask copilot to review.
+
+Make repo public in Pro-GenAI org.
+Add readme with same badges as iRAT.
 
 
 

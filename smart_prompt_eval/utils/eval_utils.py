@@ -6,7 +6,7 @@ Shared functions for evaluation scripts to reduce code duplication.
 
 import json
 from pathlib import Path
-from typing import List, Dict, Any, Optional
+from typing import Any, Dict, List, Optional
 
 from smart_prompt_eval.utils.common_utils import log, model
 
@@ -105,7 +105,7 @@ def save_evaluation_results(
         with open(responses_file, "w") as f:
             json.dump(responses, f, indent=2)
 
-    return results_file, responses_file # type: ignore
+    return results_file, responses_file  # type: ignore
 
 
 def log_evaluation_start(title: str):
@@ -254,7 +254,6 @@ def run_evaluation_main(
 
         results["per_variant_summary"] = per_variant_summary
 
-
     # Log results summary
     log("\n" + "=" * 60)
     log("RESULTS SUMMARY")
@@ -283,15 +282,18 @@ def run_evaluation_main(
             correct = stats.get("correct", 0)
             accuracy_v = correct / attempts if attempts > 0 else 0
             try:
-                log(f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v:.2f}")
+                log(
+                    f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v:.2f}"
+                )
             except Exception:
-                log(f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v}")
+                log(
+                    f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v}"
+                )
 
     # Save results (responses will be handled by individual evaluation functions)
     filename_base = eval_name.lower().replace(" ", "_")
-    result_file, responses_file = save_evaluation_results(results, filename_base, responses) # type: ignore
+    result_file, responses_file = save_evaluation_results(results, filename_base, responses)  # type: ignore
 
     log_evaluation_end(f"{eval_name.upper()} EVALUATION", result_file, responses_file)
 
     return result_file, responses_file
-

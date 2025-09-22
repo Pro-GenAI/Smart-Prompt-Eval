@@ -4,21 +4,22 @@ Multiple Roles Evaluation
 Tests the impact of different role configurations on model performance.
 """
 
-from smart_prompt_eval.utils.eval_utils import (
-    load_gsm8k_questions,
-    create_base_prompt,
-    initialize_evaluation_results,
-    run_evaluation_main,
-    log_test_case_info,
-)
+from typing import Dict, List
+
 from smart_prompt_eval.utils.common_utils import (
     attempt,
-    log,
-    user_message,
-    system_message,
     bot_message,
+    log,
+    system_message,
+    user_message,
 )
-from typing import Dict, List
+from smart_prompt_eval.utils.eval_utils import (
+    create_base_prompt,
+    initialize_evaluation_results,
+    load_gsm8k_questions,
+    log_test_case_info,
+    run_evaluation_main,
+)
 
 
 def create_role_variants(question: str) -> Dict[str, List[Dict[str, str]]]:

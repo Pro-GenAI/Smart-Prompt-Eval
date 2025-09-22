@@ -5,18 +5,18 @@ Tests model performance across different languages.
 Based on the Multilingual_Prompting experiment.
 """
 
-from typing import Dict, Optional, List
 import json
 from pathlib import Path
+from typing import Dict, List, Optional
 
+from smart_prompt_eval.utils.common_utils import attempt, log
 from smart_prompt_eval.utils.eval_utils import (
-    load_gsm8k_questions,
     create_base_prompt,
     initialize_evaluation_results,
-    run_evaluation_main,
+    load_gsm8k_questions,
     log_test_case_info,
+    run_evaluation_main,
 )
-from smart_prompt_eval.utils.common_utils import attempt, log
 
 
 def load_translated_questions(

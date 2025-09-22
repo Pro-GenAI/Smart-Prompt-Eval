@@ -1,0 +1,7 @@
+{
+  "response": "- Monthly minimums total: 300 + 220000 + 500 = 220800\n- 50% more than minimum: 1.5 × 220800 = 331200 per month\n- Yearly amount: 331200 × 12 = 3974400\n\n3974400",
+  "timestamp": null,
+  "kwargs": {
+    "model": "gpt-5-nano"
+  }
+}

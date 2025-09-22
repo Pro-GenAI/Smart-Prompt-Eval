@@ -2,12 +2,14 @@ import os
 import time
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from dotenv import load_dotenv
 import openai
+from dotenv import load_dotenv
 
-from smart_prompt_eval.utils.response_cacher import get_cache_key, \
-    get_cached_response, save_cached_response
-
+from smart_prompt_eval.utils.response_cacher import (
+    get_cache_key,
+    get_cached_response,
+    save_cached_response,
+)
 
 
 def log(text="", filename="output.txt", *args, **kwargs):
@@ -75,7 +77,9 @@ def extract_answer(answer):
     return answer.strip()
 
 
-def attempt(question, correct_answer, params: Optional[Dict[str, Any]] = None) -> Tuple[bool, str]:
+def attempt(
+    question, correct_answer, params: Optional[Dict[str, Any]] = None
+) -> Tuple[bool, str]:
     # with open("response.log", "a") as f:
     #     print("Q:", question, file=f)
     try:
@@ -140,6 +144,7 @@ def attempt(question, correct_answer, params: Optional[Dict[str, Any]] = None) -
 
 load_dotenv(override=True)
 
+
 def env(varname: str, default: Optional[str] = None) -> Optional[str]:
     return os.getenv(varname) or default
 
@@ -149,7 +154,7 @@ if env("AZURE_OPENAI_ENDPOINT"):
 else:
     client = openai.OpenAI()
 
-model: str = env("OPENAI_MODEL", "") # type: ignore
+model: str = env("OPENAI_MODEL", "")  # type: ignore
 if not model:
     raise Exception("OPENAI_MODEL environment variable not set")
 
@@ -171,9 +176,7 @@ def bot_message(content: str) -> Dict[str, str]:
 
 
 def get_response(
-    messages: Union[str, List[Dict[str, str]]],
-    attempt: Optional[int] = None,
-    **kwargs
+    messages: Union[str, List[Dict[str, str]]], attempt: Optional[int] = None, **kwargs
 ) -> Optional[str]:
     """Get response from OpenAI API with automatic caching."""
 

@@ -34,17 +34,19 @@ SUPPORTED LANGUAGES:
 REQUIRES:
 - GSM8K dataset: datasets/gsm8k_test.jsonl
 """
-import json
-from pathlib import Path
-
-from typing import Dict, List, Optional
-import time
 import argparse
+import json
+import time
+from pathlib import Path
+from typing import Dict, List, Optional
+
 from translate import Translator
 
-from smart_prompt_eval.utils.common_utils import log, env
+from smart_prompt_eval.utils.common_utils import env, log
 
 translators = {}
+
+
 def get_translator(lang: str) -> Translator:
     if lang not in translators:
         translators[lang] = Translator(
@@ -215,47 +217,53 @@ def main():
         lang_name = language_config[lang_code]
         output_file = output_dir / f"gsm8k_test_{lang_code}.jsonl"
         existing_translations[lang_code] = set()
-        
+
         if output_file.exists():
-            log(f"Loading existing translations for {lang_name} ({lang_code}) from {output_file}")
+            log(
+                f"Loading existing translations for {lang_name} ({lang_code}) from {output_file}"
+            )
             with open(output_file, encoding="utf-8") as f:
                 for line in f:
                     if line.strip():
                         try:
                             data = json.loads(line.strip())
-                            original_id = data.get("original_id") or data["id"].rsplit("_", 1)[0]
+                            original_id = (
+                                data.get("original_id") or data["id"].rsplit("_", 1)[0]
+                            )
                             existing_translations[lang_code].add(original_id)
                         except json.JSONDecodeError:
                             continue
-            log(f"Found {len(existing_translations[lang_code])} existing translations for {lang_name}")
+            log(
+                f"Found {len(existing_translations[lang_code])} existing translations for {lang_name}"
+            )
 
     # Process each question across all languages
     for i, question_data in enumerate(original_questions):
         question_id = question_data["id"]
         original_question = question_data["question"]
         answer = question_data["answer"]
-        
+
         log(f"\nProcessing question {i+1}/{len(original_questions)}: {question_id}")
-        
+
         question_successful = 0
-        
+
         for lang_code in args.languages:
             if lang_code not in language_config:
                 continue
-                
+
             lang_name = language_config[lang_code]
             output_file = output_dir / f"gsm8k_test_{lang_code}.jsonl"
-            
+
             # Skip if already translated
             if question_id in existing_translations[lang_code]:
                 # log(f"  {lang_name}: Already translated, skipping")
                 continue
-            
+
             log(f"  Translating to {lang_name}...")
-            
+
             # Translate the question
             translated_question = translate_question(original_question, lang_code)
-            
+
             # Open file in append mode and write the translation
             with open(output_file, "a", encoding="utf-8") as f:
                 if translated_question:
@@ -286,12 +294,14 @@ def main():
                         "translation_failed": True,
                     }
                     f.write(json.dumps(translated_entry, ensure_ascii=False) + "\n")
-        
+
         if question_successful > 0:
             log(f"  Completed {question_successful} translations for {question_id}")
-        
+
         total_successful += question_successful
-        total_processed += len([lang for lang in args.languages if lang in language_config])
+        total_processed += len(
+            [lang for lang in args.languages if lang in language_config]
+        )
 
     # Summary
     log("\n" + "=" * 60)

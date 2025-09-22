@@ -1,10 +1,11 @@
-import json
 import hashlib
+import json
 import os
 
 # Simple response caching
 CACHE_DIR = "response_cache"
 os.makedirs(CACHE_DIR, exist_ok=True)
+
 
 def get_cache_key(messages, **kwargs):
     """Generate a unique cache key based on request content."""
@@ -12,7 +13,9 @@ def get_cache_key(messages, **kwargs):
         content = messages
     else:
         # For message lists, combine all content
-        content = " ".join([msg.get("content", "") for msg in messages if msg.get("content")])
+        content = " ".join(
+            [msg.get("content", "") for msg in messages if msg.get("content")]
+        )
 
     # Include relevant kwargs in cache key
     cache_data = {
@@ -26,25 +29,29 @@ def get_cache_key(messages, **kwargs):
     cache_str = json.dumps(cache_data, sort_keys=True)
     return hashlib.md5(cache_str.encode()).hexdigest()
 
+
 def get_cached_response(cache_key):
     """Get cached response if it exists."""
     cache_file = os.path.join(CACHE_DIR, f"{cache_key}.json")
     if os.path.exists(cache_file):
         try:
-            with open(cache_file, 'r', encoding='utf-8') as f:
+            with open(cache_file, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 return data.get("response")
         except (json.JSONDecodeError, KeyError):
             return None
     return None
 
+
 def save_cached_response(cache_key, response, **kwargs):
     """Save response to cache."""
     cache_file = os.path.join(CACHE_DIR, f"{cache_key}.json")
     data = {
         "response": response,
-        "timestamp": os.path.getctime(cache_file) if os.path.exists(cache_file) else None,
-        "kwargs": kwargs
+        "timestamp": (
+            os.path.getctime(cache_file) if os.path.exists(cache_file) else None
+        ),
+        "kwargs": kwargs,
     }
-    with open(cache_file, 'w', encoding='utf-8') as f:
+    with open(cache_file, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
