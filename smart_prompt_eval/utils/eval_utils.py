@@ -10,7 +10,7 @@ from typing import List, Dict, Any, Optional
 
 from smart_prompt_eval.utils.common_utils import log, model
 
-# Project root (two levels up from this file: /<project_root>/utils)
+# Project root (one level up from this file: /<project_root>/utils)
 project_root = Path(__file__).parent.parent
 
 
@@ -29,7 +29,7 @@ def load_gsm8k_questions(
     """
     questions = []
     # Use path relative to this file's directory
-    gsm8k_path = Path(__file__).parent.parent / "datasets" / "gsm8k_test.jsonl"
+    gsm8k_path = project_root / "datasets" / "gsm8k_test.jsonl"
     with open(gsm8k_path, "r") as f:
         for i, line in enumerate(f):
             if i < start_idx:

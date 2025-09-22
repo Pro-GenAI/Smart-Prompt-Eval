@@ -105,7 +105,7 @@ def apply_word_swapping(text: str) -> str:
     return " ".join(words)
 
 
-# Set random seed for reproducibility
+# Set random seed for reproducibility of manipulating random characters
 random.seed(42)
 
 

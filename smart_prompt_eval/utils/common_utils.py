@@ -1,6 +1,6 @@
 import os
 import time
-from typing import Dict, Optional
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from dotenv import load_dotenv
 import openai
@@ -75,7 +75,7 @@ def extract_answer(answer):
     return answer.strip()
 
 
-def attempt(question, correct_answer, params: Optional[dict] = None) -> tuple[bool, str]:
+def attempt(question, correct_answer, params: Optional[Dict[str, Any]] = None) -> Tuple[bool, str]:
     # with open("response.log", "a") as f:
     #     print("Q:", question, file=f)
     try:
@@ -140,7 +140,7 @@ def attempt(question, correct_answer, params: Optional[dict] = None) -> tuple[bo
 
 load_dotenv(override=True)
 
-def env(varname: str, default: Optional[str] = None) -> str | None:
+def env(varname: str, default: Optional[str] = None) -> Optional[str]:
     return os.getenv(varname) or default
 
 
@@ -171,10 +171,10 @@ def bot_message(content: str) -> Dict[str, str]:
 
 
 def get_response(
-    messages: str | list[Dict[str, str]],
+    messages: Union[str, List[Dict[str, str]]],
     attempt: Optional[int] = None,
     **kwargs
-) -> str | None:
+) -> Optional[str]:
     """Get response from OpenAI API with automatic caching."""
 
     # Generate cache key

@@ -141,7 +141,7 @@ def main():
 
     # Compute defaults relative to the package directory so the script can be
     # executed from the repo root and still find `smart_prompt_eval/datasets`.
-    package_root = Path(__file__).resolve().parents[1]
+    package_root = Path(__file__).resolve().parent
     default_datasets_dir = package_root / "datasets"
     default_input = default_datasets_dir / "gsm8k_test.jsonl"
 

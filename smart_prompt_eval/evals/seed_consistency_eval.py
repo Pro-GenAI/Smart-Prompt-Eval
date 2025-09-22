@@ -5,6 +5,11 @@ Tests whether different seed values affect model output consistency.
 Based on the Does_Seed_Matter experiment.
 """
 
+import sys
+print("This file has been archived as it is not commonly used.")
+sys.exit(0)
+
+
 from smart_prompt_eval.utils.eval_utils import (
     load_gsm8k_questions,
     create_base_prompt,

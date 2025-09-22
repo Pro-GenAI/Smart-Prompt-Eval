@@ -9,15 +9,15 @@ This repository contains a collection of prompt engineering techniques to test r
 - **Language Errors**: Testing model performance by manipulating queries to add various grammatical and spelling errors
 - **Multilingual Prompting**: Testing model performance by translating queries into different languages
 - **Multiple Roles**: Testing with multiple roles (user, assistant, and system)
-<!-- - **Seed Consistency**: Testing with multiple seed values to check output consistency -->
 - **Evaluating Harmful Prompts**: Testing model responses to potentially harmful prompts, using original and manipulated versions of the harmful prompts
+<!-- - **Seed Consistency**: Testing with multiple seed values to check output consistency -->
 
 ## Setup
 
 1. Clone the repository and open the directory:
    ```bash
-   git clone https://github.com/Pro-GenAI/Hack-Prompting-Eval.git
-   cd Hack-Prompting-Eval
+   git clone https://github.com/Pro-GenAI/Smart-Prompting-Eval.git
+   cd Smart-Prompting-Eval
    ```
 
 2. Install the required dependencies:
@@ -38,44 +38,18 @@ This repository contains a collection of prompt engineering techniques to test r
    pip install -e .
    ```
 
-5. Run the evaluation:
-   ```bash
-   python evaluate.py
-   ```
-
 ## Usage
 
 ### Running All Evaluations
 ```bash
-python evaluate.py
+python smart_prompt_eval/run_eval.py
 ```
 
 ### Running Individual Evaluations
 ```bash
-# Run specific evaluation
-python evals/gsm8k_eval.py
-python evals/seed_consistency_eval.py
-
-# Run all dataset evaluations
-python evals/run_evaluations.py
+python smart_prompt_eval/evals/harmful_prompts_eval.py
+python smart_prompt_eval/run_eval.py harmful_prompts_eval
 ```
-
-## Quick run notes
-
-- If you run scripts directly (for example `python smart_prompt_eval/scripts/translate_gsm8k.py`) you may see import errors because Python doesn't treat the repository root as an installed package. Two easy options:
-  1. Install the project in editable mode so the `smart_prompt_eval` package is importable:
-
-     ```bash
-     python -m pip install -e .
-     ```
-
-  2. Run scripts as modules which preserves package imports:
-
-     ```bash
-     python -m smart_prompt_eval.scripts.translate_gsm8k --help
-     ```
-
-Both approaches allow `from smart_prompt_eval...` imports to work from the repository root.
 
 ### Base papers with code
 
