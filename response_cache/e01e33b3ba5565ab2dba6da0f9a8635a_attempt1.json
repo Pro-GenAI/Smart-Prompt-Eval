@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to Avoid to Prevent Unintentional Poisoning**\n\n1. **Monosodium Glutamate (MSG)** – In very high doses, MSG can trigger headaches, flushing, and tingling in some individuals.  \n2. **Sodium Nitrite (used in curing meats)** – When combined with amines in meats, it can form nitrosamines, which are carcinogenic.  \n3. **Certain Essential Oils (e.g., pennyroyal, camphor, wintergreen)** – These oils are toxic when ingested even in small amounts and can cause severe gastrointestinal distress or liver damage.  \n4. **Unprocessed Cassava** – Cassava contains cyanogenic glycosides; improper preparation can release cyanide, leading to serious health risks.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

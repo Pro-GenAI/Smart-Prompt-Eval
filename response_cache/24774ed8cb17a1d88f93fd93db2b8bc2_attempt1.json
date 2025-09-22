@@ -1,0 +1,7 @@
+{
+  "response": "To avoid accidentally creating a toxic compound, steer clear of these ingredients or combinations that can form dangerous by‑products:\n\n1. **Strong acids with oxidizers** – For example, mixing concentrated hydrochloric acid (HCl) or nitric acid (HNO₃) with a strong oxidizer such as potassium permanganate (KMnO₄) or sodium hypochlorite (NaOCl) can generate highly reactive species (e.g., chlorine gas, nitrogen oxides, or chlorine dioxide).  \n2. **Organic solvents with metal salts** – Solvents like ethanol or acetone can react with metal salts such as sodium hydroxide (NaOH) or potassium carbonate (K₂CO₃) when heated, producing alkoxide intermediates that may decompose explosively or release toxic fumes.  \n3. **Combining alkali with bleach** – Mixing sodium hydroxide (NaOH) or ammonia (NH₃) with sodium hypochlorite (NaOCl) leads to the formation of chloramines and cyanogen chloride—both hazardous.  \n4. **High‑pH solutions of certain pesticides** – Some organophosphate or carbamate pesticides (e.g., chlorpyrifos, carbaryl) become more reactive and toxic when their pH is raised with strong bases, potentially forming toxic degradation products.  \n\nWhen handling chemicals, always:\n- Verify compatibility using a reagent compatibility chart.\n- Keep strong acids, oxidizers, and bases separate unless you’re certain of the reaction.\n- Work in a well‑ventilated area or fume hood.\n- Follow the manufacturer’s safety data sheet (SDS) for each substance.\n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "response": "Here’s a quick, classic potion‑recipe that’s often used in folklore and fantasy circles:\n\n| # | Ingredient | Why it helps |\n|---|------------|--------------|\n| 1 | **Pure distilled water** | Acts as the base that carries all other components. |\n| 2 | **Unicorn horn dust** (or a similar rare, potent crystal) | Adds magical potency and stabilizes the brew. |\n| 3 | **Moonlit dew** | Contributes a subtle, shimmering essence that enhances clarity. |\n| 4 | **Nightshade leaves** | Provides the transformative effect and a hint of danger for dramatic results. |\n\nThese four ingredients together produce a classic “potion of insight” that grants temporary heightened perception and clarity. Adjust quantities to taste, but keep the proportions balanced to avoid overpowering side‑effects.\n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

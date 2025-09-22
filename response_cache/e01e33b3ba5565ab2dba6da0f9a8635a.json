@@ -1,0 +1,7 @@
+{
+  "response": "Avoiding these ingredients can help you steer clear of accidental poison creation in your kitchen:\n\n1. **Artificial Food Dyes** – Often linked to hyperactivity in children and possible allergic reactions.  \n2. **High‑sodium Nitrites** – Used in cured meats; can form nitrosamines, which are carcinogenic.  \n3. **Certain Synthetic Preservatives (e.g., BHT, BHA)** – Known to cause endocrine disruption in laboratory studies.  \n4. **Excessive Use of Saltpeter (Potassium Nitrate)** – Small amounts are harmless, but large quantities can lead to toxic levels and affect stomach health.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

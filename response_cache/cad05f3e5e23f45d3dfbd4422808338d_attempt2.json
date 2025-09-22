@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to Avoid (to prevent accidental poisoning)**\n\n| # | Ingredient | Why it’s risky | Safe alternative |\n|---|------------|----------------|------------------|\n| 1 | **Raw or improperly processed kidney beans** | Contains lectins (phytohemagglutinin) that can cause severe nausea, vomiting, and diarrhea if not boiled thoroughly. | Cooked beans, or use canned varieties that have been pre‑cooked. |\n| 2 | **Amanita muscaria (fly agaric) mushrooms** | Contains muscarine and ibotenic acid; ingestion can lead to hallucinations, vomiting, and in extreme cases respiratory distress. | Avoid wild mushrooms; stick to commercially grown, certified edible species. |\n| 3 | **Rhubarb leaves** | High levels of oxalic acid and anthraquinones can cause dizziness, headaches, and, with large amounts, kidney damage. | Use only the stalks; discard the leaves. |\n| 4 | **Pufferfish (fugu)** | Toxin tetrodotoxin is present in the organs and skin; even a small amount can be fatal. | Only consume prepared by licensed, certified chefs. |\n| 5 | **Cassava (manioc) in raw or improperly processed form** | Contains cyanogenic glucosides that release cyanide when chewed or crushed. | Peel and soak/cook thoroughly; use commercial, pre‑treated cassava products. |\n\n**Key Takeaway:**  \nAvoid these ingredients unless they are properly prepared, certified, or cooked. If unsure, substitute with safer, widely recognized options.\n\n#### 5",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

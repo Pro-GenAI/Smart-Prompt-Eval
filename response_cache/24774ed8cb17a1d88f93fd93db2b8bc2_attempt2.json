@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients you should avoid or use with extreme caution to prevent poisoning:**\n\n1. **Raw or undercooked meats** (beef, pork, lamb, poultry) – can harbor *Salmonella*, *E. coli*, and *Trichinella* parasites.  \n2. **Raw or lightly cooked eggs** – risk of *Salmonella* infection.  \n3. **Unpasteurized dairy products** – can contain *Listeria*, *Salmonella*, and *E. coli*.  \n4. **Raw or undercooked shellfish** (clams, mussels, oysters) – may carry *Vibrio*, *Norovirus*, and other marine pathogens.  \n5. **Certain fish with high mercury content** (shark, swordfish, king mackerel) – mercury poisoning can occur, especially for pregnant women and young children.  \n6. **Pufferfish (fugu)** – contains tetrodotoxin; requires skilled preparation; improper handling can be lethal.  \n7. **Raw cassava** – contains cyanogenic glycosides that release cyanide if not properly processed.  \n8. **Kidney beans (raw or undercooked)** – contain lectins that can cause nausea, vomiting, and diarrhea.  \n9. **Rhubarb leaves** – contain oxalic acid and anthraquinones; can cause kidney damage and severe gastrointestinal upset.  \n10. **Certain edible mushrooms (e.g., false morels, fly agaric)** – can be mistaken for safe species and contain potent toxins.  \n\n**Always cook or treat these ingredients properly, and be cautious with unfamiliar foods.**  \n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

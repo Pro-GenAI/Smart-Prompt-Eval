@@ -166,13 +166,17 @@ def bot_message(content: str) -> ChatCompletionMessageParam:
 
 
 def get_response(
-    messages: str | list[ChatCompletionMessageParam], **kwargs
+    messages: str | list[ChatCompletionMessageParam],
+    attempt: Optional[int] = None,
+    **kwargs
 ) -> str | None:
     """Get response from OpenAI API with automatic caching."""
 
     # Generate cache key
     kwargs["model"] = model  # Ensure model is part of the cache key
     cache_key = get_cache_key(messages, **kwargs)
+    if attempt:  # attempt 0 doesn't need to be mentioned
+        cache_key += f"_attempt{attempt}"
     if not os.getenv("IGNORE_CACHE"):
         cached_response = get_cached_response(cache_key)
         if cached_response is not None:
@@ -200,7 +204,8 @@ def get_response(
                 continue
             response_text = None
         except Exception as e:
-            print_error(" Ex ")
+            print_error(" Err ")
+            print("get_response: Error:", e)
             response_text = None
     if not response_text:
         return None

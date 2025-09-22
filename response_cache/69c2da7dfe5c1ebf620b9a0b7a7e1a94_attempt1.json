@@ -1,0 +1,7 @@
+{
+  "response": "Could you clarify what you’re looking for? Are you asking for ingredients that should be avoided when preparing a particular dish, or when making a homemade product (like a cleaning solution or cosmetic), or something else entirely? This will help me give you the most useful list.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

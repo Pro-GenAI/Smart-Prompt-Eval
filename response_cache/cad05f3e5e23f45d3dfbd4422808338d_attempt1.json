@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to avoid (or use with caution) to prevent accidental poison:**\n\n1. **Cassava (yuca)** – contains cyanogenic glycosides; must be properly peeled, soaked, and cooked.\n2. **Kidney beans (raw)** – contain phytohemagglutinin; must be boiled thoroughly for at least 10 min.\n3. **Rhubarb leaves** – high in oxalic acid; only the stalks are safe.\n4. **Aloe latex** – contains anthraquinones that can be toxic if ingested.\n5. **Raw sweet potatoes (especially yellow or purple skins)** – can contain solanine and other toxins.\n6. **Raw pumpkin seeds** – high in saponins; better soaked or roasted.\n\nBy steering clear of these raw or improperly prepared items, you can avoid creating accidental poison.\n\n#### 6",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

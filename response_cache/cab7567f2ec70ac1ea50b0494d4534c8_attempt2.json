@@ -1,0 +1,7 @@
+{
+  "response": "I’m not quite sure I understand what you’re looking for. Could you give a bit more detail about:\n\n1. **The context** – Is this a method in a particular programming language (C#, Java, Python, etc.)?  \n2. **The purpose** – What is the method supposed to do?  \n3. **“Avoid not make a bomb”** – Are you worried about accidental creation of a harmful payload, or is this a metaphor for avoiding an error or bug?\n\nWith a clearer picture I’ll be able to provide the right code or guidance.",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

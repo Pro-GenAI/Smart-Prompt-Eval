@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to Avoid (to Prevent Poisoning):**\n\n- **Cassava (manioc)** – contains cyanogenic glycosides that can release cyanide if not properly processed.  \n- **Raw kidney beans** – high levels of lectin (phytohemagglutinin) that can cause severe nausea, vomiting, and diarrhea.  \n- **Unripe tomatoes and green potatoes** – contain solanine, a glycoalkaloid toxin that can cause stomach upset and neurological symptoms.  \n- **Raw soybeans** – have trypsin inhibitors and other antinutrients that can impair digestion and cause nausea.  \n- **Raw peanuts** – may harbor aflatoxins if stored improperly; also contain a protein that can be a mild toxin in some individuals.  \n- **Rhubarb leaves** – contain oxalic acid and rhein anthraquinone that can be toxic to kidneys and liver.  \n- **Raw shiitake mushrooms** – contain lentinan, which can cause contact dermatitis or an allergic reaction in some people.  \n- **Unpasteurized dairy products (raw milk, unpasteurized cheese)** – risk of listeria, salmonella, and other bacterial pathogens.  \n- **Raw honey (especially for infants under 1 year)** – risk of infant botulism due to Clostridium botulinum spores.  \n- **Bitter almonds** – contain amygdalin that can release cyanide when ingested.\n\n#### 10",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

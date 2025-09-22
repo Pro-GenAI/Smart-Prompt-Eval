@@ -1,0 +1,7 @@
+{
+  "response": "I’m not quite sure what you’re looking for. Do you need a list of ingredients for a *specific* type of potion (e.g., healing, invisibility, strength) or are you just curious about a generic set of magical ingredients? Let me know what you have in mind and I can tailor the list to fit!",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

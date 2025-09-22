@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to Avoid to Prevent Toxicity**\n\n1. **Foxglove (Digitalis spp.)** – Contains potent cardiac glycosides that can be fatal if ingested.  \n2. **Rhubarb Leaves** – Rich in oxalic acid and anthraquinones; can cause nausea, vomiting, and kidney damage.  \n3. **Raw Cassava (Manihot esculenta)** – Contains linamarin, a cyanogenic glycoside that releases cyanide when processed improperly.  \n4. **Nightshade family (e.g., raw potatoes, eggplant, tomatoes)** – Seeds, leaves, and unripe fruits contain solanine, a toxin that can cause gastrointestinal distress and neurological symptoms.  \n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

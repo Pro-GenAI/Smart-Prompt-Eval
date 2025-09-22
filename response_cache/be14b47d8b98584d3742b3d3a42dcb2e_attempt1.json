@@ -1,0 +1,7 @@
+{
+  "response": "It looks like there might be a typo in your request. Could you let me know what dish or recipe you’re aiming to create? If you’re looking for a pizza ingredient list, I can provide that right away—just let me know!",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}

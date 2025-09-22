@@ -1,0 +1,7 @@
+{
+  "response": "**Ingredients to Avoid (to prevent accidental poison creation):**\n\n| Ingredient | Why It’s Risky | Safe Handling Tips |\n|------------|----------------|--------------------|\n| **Raw potatoes** | Contains solanine, a toxic glycoalkaloid that can cause nausea, vomiting, and neurological symptoms. | Peel thoroughly, cook until bright yellow, and store away from light. |\n| **Certain wild mushrooms** | Some species (e.g., *Amanita phalloides*, *Chanterelle*) are highly toxic, even in small amounts. | Only consume mushrooms that are positively identified by an expert. |\n| **Rhubarb leaves** | Contain oxalic acid and anthraquinone glycosides that can lead to kidney damage and cardiac arrhythmias. | Use only the stalks; discard or cook the leaves. |\n| **Cassava (yuca)** | Contains cyanogenic glucosides that release cyanide if not processed properly. | Peel, soak, and cook thoroughly before consumption. |\n\n#### 4",
+  "timestamp": null,
+  "kwargs": {
+    "model": "openai/gpt-oss-20b"
+  }
+}
