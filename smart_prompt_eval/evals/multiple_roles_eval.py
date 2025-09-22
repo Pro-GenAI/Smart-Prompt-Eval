@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
 """
-Power of Roles Evaluation
+Multiple Roles Evaluation
 Tests the impact of different role configurations on model performance.
-Based on the Power_of_Roles experiment.
 """
 
 from smart_prompt_eval.utils.eval_utils import (
@@ -20,10 +19,9 @@ from smart_prompt_eval.utils.common_utils import (
     bot_message,
 )
 from typing import Dict, List
-from smart_prompt_eval.utils.common_utils import ChatCompletionMessageParam
 
 
-def create_role_variants(question: str) -> Dict[str, List[ChatCompletionMessageParam]]:
+def create_role_variants(question: str) -> Dict[str, List[Dict[str, str]]]:
     """Create different role-based prompt configurations."""
     prompt = create_base_prompt(question)
 
@@ -126,6 +124,6 @@ def evaluate_power_of_roles():
 if __name__ == "__main__":
     run_evaluation_main(
         evaluate_power_of_roles,
-        "Power of Roles",
+        "Multiple Roles",
         "Testing the impact of different role configurations on model performance with GSM8K problems",
     )

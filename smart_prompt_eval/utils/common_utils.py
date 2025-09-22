@@ -1,12 +1,12 @@
 import os
 import time
-from typing import Optional
+from typing import Dict, Optional
 
 from dotenv import load_dotenv
 import openai
-from openai.types.chat.chat_completion_message_param import ChatCompletionMessageParam
 
-from smart_prompt_eval.utils.response_cacher import get_cache_key, get_cached_response, save_cached_response
+from smart_prompt_eval.utils.response_cacher import get_cache_key, \
+    get_cached_response, save_cached_response
 
 
 
@@ -154,24 +154,24 @@ if not model:
     raise Exception("OPENAI_MODEL environment variable not set")
 
 
-def message(content: str, role: str) -> ChatCompletionMessageParam:
+def message(content: str, role: str) -> Dict[str, str]:
     return {"role": role, "content": content}  # type: ignore
 
 
-def user_message(content: str) -> ChatCompletionMessageParam:
+def user_message(content: str) -> Dict[str, str]:
     return message(content, "user")
 
 
-def system_message(content: str) -> ChatCompletionMessageParam:
+def system_message(content: str) -> Dict[str, str]:
     return message(content, "system")
 
 
-def bot_message(content: str) -> ChatCompletionMessageParam:
+def bot_message(content: str) -> Dict[str, str]:
     return message(content, "assistant")
 
 
 def get_response(
-    messages: str | list[ChatCompletionMessageParam],
+    messages: str | list[Dict[str, str]],
     attempt: Optional[int] = None,
     **kwargs
 ) -> str | None:
@@ -195,7 +195,7 @@ def get_response(
     for attempt in range(3):
         try:
             response = client.chat.completions.create(
-                messages=messages,
+                messages=messages,  # type: ignore
                 **kwargs,  # More arguments like seed, temperature, etc.
             )
             response_text = response.choices[0].message.content

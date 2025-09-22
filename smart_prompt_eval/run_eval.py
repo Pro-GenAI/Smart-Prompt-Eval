@@ -14,7 +14,8 @@ Available evaluation modules:
     - evals.harmful_prompts_eval
 """
 import sys
-import runpy
+# import runpy
+import subprocess
 from pathlib import Path
 
 def get_eval_modules():
@@ -22,8 +23,7 @@ def get_eval_modules():
     evals_dir = Path(__file__).parent / "evals"
     modules = []
     for file in evals_dir.glob("*.py"):
-        if file.name.startswith("__") or file.name == "seed_consistency_eval.py" \
-                or file.name == "seed_consistency_eval.py":
+        if file.name.startswith("__") or file.name == "seed_consistency_eval.py":
             continue
         module_name = f"evals.{file.stem}"
         modules.append(module_name)
@@ -38,7 +38,13 @@ if len(sys.argv) < 2:
         print(f"Running {module}")
         print(f"{'='*50}")
         try:
-            runpy.run_module(module, run_name="__main__", alter_sys=True)
+            # runpy.run_module(module, run_name="__main__", alter_sys=True)
+            # Run in subprocess to prevent sys.exit from stopping the batch
+            full_module = f"smart_prompt_eval.{module}"
+            result = subprocess.run([sys.executable, "-m", full_module], 
+                                  cwd=Path(__file__).parent.parent)
+            if result.returncode != 0:
+                print(f"Module {module} exited with code {result.returncode}")
         except Exception as e:
             print(f"Error running {module}: {e}")
     sys.exit(0)
@@ -53,4 +59,9 @@ try:
 except Exception:
     pass
 
-runpy.run_module(module, run_name="__main__", alter_sys=True)
+# runpy.run_module(module, run_name="__main__", alter_sys=True)
+# Run the module in subprocess to handle sys.exit gracefully
+full_module = f"smart_prompt_eval.{module}"
+result = subprocess.run([sys.executable, "-m", full_module], 
+                      cwd=Path(__file__).parent.parent)
+sys.exit(result.returncode)

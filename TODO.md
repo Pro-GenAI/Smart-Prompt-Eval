@@ -1,20 +1,15 @@
 
 
 
-Evaluate gpt-oss:
-	- power of roles
-
 Evaluate gpt-5-nano.
-	- linguistic errors
-	- multilingual
-	- power of roles
-	- harmful (use Azure OpenAI due to violation)
 
 
 
-Test using multiple python versions and mention in readme which ones are supported.
+Test using python 3.8 and mention in readme which ones are supported.
 Follow all standards for python packages.
 Ask copilot to review.
+
+
 
 Share on LinkedIn & X - both eval method and results.
 	- Mention that this is old problem found years ago but not solved.

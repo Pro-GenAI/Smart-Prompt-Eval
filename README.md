@@ -77,9 +77,9 @@ python evals/run_evaluations.py
 
 Both approaches allow `from smart_prompt_eval...` imports to work from the repository root.
 
-## Base projects with published papers
+### Base papers with code
 
 - Does Seed Matter - https://github.com/Pro-GenAI/PromptSeed
 - Linguistic Errors - https://github.com/Pro-GenAI/PromptSpell
 - Multilingual Prompting - https://github.com/Pro-GenAI/PromptLang
-- Power of Roles - https://github.com/Pro-GenAI/Power-of-Roles
+- The Power of Roles - https://github.com/Pro-GenAI/Power-of-Roles
