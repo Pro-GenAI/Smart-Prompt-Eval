@@ -6,9 +6,9 @@ Shared functions for evaluation scripts to reduce code duplication.
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Callable, Dict, List, Optional
 
-from smart_prompt_eval.utils.common_utils import log, model
+from smart_prompt_eval.utils.common_utils import model
 
 # Project root (one level up from this file: /<project_root>/utils)
 project_root = Path(__file__).parent.parent
@@ -75,7 +75,7 @@ def save_evaluation_results(
     results: Dict[str, Any],
     filename: str,
     responses: Optional[List[Dict[str, Any]]] = None,
-) -> Path:
+) -> tuple[Path, Optional[Path]]:
     """
     Save evaluation results to a JSON file in a model-based folder structure.
 
@@ -100,36 +100,38 @@ def save_evaluation_results(
         json.dump(results, f, indent=2)
 
     # Save individual responses if provided
+    responses_file = None
     if responses:
         responses_file = results_dir / f"{filename}_responses.json"
         with open(responses_file, "w") as f:
             json.dump(responses, f, indent=2)
 
-    return results_file, responses_file  # type: ignore
+    return results_file, responses_file
 
 
-def log_evaluation_start(title: str):
+def log_evaluation_start(title: str) -> None:
     """Log the start of an evaluation."""
-    log("=" * 60)
-    log(f"{title}")
-    log("=" * 60)
+    print("=" * 60)
+    print(f"{title}")
+    print("=" * 60)
 
 
-def log_evaluation_end(title: str, result_file: Path, responses_file: Path):
+def log_evaluation_end(title: str, result_file: Path, responses_file: Optional[Path]) -> None:
     """Log the end of an evaluation."""
-    log(f"\n{'='*60}")
-    log(f"{title} COMPLETE")
-    log(f"Responses saved to: {responses_file}")
-    log()
-    log(f"Results saved to: {result_file}")
-    log(f"{'='*60}")
+    print(f"\n{'='*60}")
+    print(f"{title} COMPLETE")
+    if responses_file:
+        print(f"Responses saved to: {responses_file}")
+    print()
+    print(f"Results saved to: {result_file}")
+    print(f"{'='*60}")
 
 
-def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str):
+def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str) -> None:
     """Log standardized test case information."""
-    log(f"Q{i+1} ", end="", flush=True)
+    print(f"Q{i+1} ", end="", flush=True)
     if i % 10 == 0:
-        log()  # New line every 10 cases
+        print()  # New line every 10 cases
     # log(f"\n{'-'*40}")
     # log(f"Testing case {i+1}: {case_id}")
     # log(f"Question: {question}")
@@ -137,8 +139,9 @@ def log_test_case_info(i: int, case_id: str, question: str, correct_answer: str)
     # log(f"{'-'*40}")
 
 
-default_instruction: str = "Provide the final answer as a number at the end like #### 4"
-# default_instruction: str = "Solve this step by step and provide final answer as a number at the end like #### 4"
+default_instruction: str = (
+    "Provide the final answer as a number at the end like #### 4"
+)
 
 
 def create_base_prompt(question: str, instruction: str = default_instruction) -> str:
@@ -156,7 +159,7 @@ def create_base_prompt(question: str, instruction: str = default_instruction) ->
 
 
 def initialize_evaluation_results(
-    experiment_name: str, description: str
+    experiment_name: str, description: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Initialize a standard evaluation results dictionary.
@@ -172,8 +175,11 @@ def initialize_evaluation_results(
 
 
 def run_evaluation_main(
-    eval_function, eval_name: str, eval_description: str, *args, **kwargs
-):
+    eval_function: Callable[..., Any],
+    eval_name: str,
+    *args: Any,
+    **kwargs: Any
+) -> tuple[Path, Optional[Path]]:
     """
     Centralized main function for running evaluations.
 
@@ -206,8 +212,8 @@ def run_evaluation_main(
     # - Direct evaluations where each case has an `is_correct` boolean
     # - Variant evaluations where each case has a `variant_results` dict mapping
     #   variant_name -> boolean
-    total_attempts = 0
-    correct_answers = 0
+    total_attempts: int = 0
+    correct_answers: int = 0
 
     for case in results.get("test_cases", []):
         # Case with single boolean result
@@ -225,7 +231,7 @@ def run_evaluation_main(
             # Unknown format: count as one attempt (not correct)
             total_attempts += 1
 
-    accuracy = correct_answers / total_attempts if total_attempts > 0 else 0
+    accuracy = float(correct_answers) / total_attempts if total_attempts > 0 else 0.0
 
     results["total_problems"] = total_problems
     results["total_attempts"] = total_attempts
@@ -233,7 +239,7 @@ def run_evaluation_main(
     results["accuracy"] = accuracy
 
     # If any test case used variant_results, compute per-variant summaries
-    per_variant_summary = {}
+    per_variant_summary: Dict[str, Dict[str, Any]] = {}
     for case in results.get("test_cases", []):
         vr = case.get("variant_results")
         if isinstance(vr, dict):
@@ -255,44 +261,46 @@ def run_evaluation_main(
         results["per_variant_summary"] = per_variant_summary
 
     # Log results summary
-    log("\n" + "=" * 60)
-    log("RESULTS SUMMARY")
-    log("=" * 60)
+    print("\n" + "=" * 60)
+    print("RESULTS SUMMARY")
+    print("=" * 60)
 
     if "total_problems" in results:
-        log(f"Total Problems: {results['total_problems']}")
+        print(f"Total Problems: {results['total_problems']}")
     if "total_attempts" in results:
-        log(f"Total Attempts: {results['total_attempts']}")
+        print(f"Total Attempts: {results['total_attempts']}")
     if "correct_answers" in results:
-        log(f"Correct Answers: {results['correct_answers']}")
+        print(f"Correct Answers: {results['correct_answers']}")
     if "accuracy" in results:
         # Log accuracy as a percentage-like decimal with two decimals
         try:
-            log(f"{results['accuracy']:.2f}")
+            print(f"{results['accuracy']:.2f}")
         except Exception:
             # Fallback to raw value if formatting fails
-            log(str(results["accuracy"]))
+            print(str(results["accuracy"]))
 
     # Print per-variant breakdown if present
     pvs = results.get("per_variant_summary")
     if pvs:
-        log("\nPer-variant breakdown:")
+        print("\nPer-variant breakdown:")
         for variant_name, stats in pvs.items():
             attempts = stats.get("attempts", 0)
             correct = stats.get("correct", 0)
             accuracy_v = correct / attempts if attempts > 0 else 0
             try:
-                log(
-                    f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v:.2f}"
+                print(
+                    f"  {variant_name}: attempts={attempts}, correct={correct},"
+                    f" accuracy={accuracy_v:.2f}"
                 )
             except Exception:
-                log(
-                    f"  {variant_name}: attempts={attempts}, correct={correct}, accuracy={accuracy_v}"
+                print(
+                    f"  {variant_name}: attempts={attempts}, correct={correct},"
+                    f" accuracy={accuracy_v}"
                 )
 
     # Save results (responses will be handled by individual evaluation functions)
     filename_base = eval_name.lower().replace(" ", "_")
-    result_file, responses_file = save_evaluation_results(results, filename_base, responses)  # type: ignore
+    result_file, responses_file = save_evaluation_results(results, filename_base, responses)
 
     log_evaluation_end(f"{eval_name.upper()} EVALUATION", result_file, responses_file)
 

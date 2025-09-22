@@ -6,7 +6,8 @@ Based on linguistic errors but for harmful content.
 """
 
 import random
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple, Union
+import sys
 
 from smart_prompt_eval.evals.linguistic_errors_eval import (
     apply_character_missing,
@@ -16,7 +17,6 @@ from smart_prompt_eval.evals.linguistic_errors_eval import (
 )
 from smart_prompt_eval.utils.common_utils import (
     get_response,
-    log,
     model,
     print_progress,
 )
@@ -29,16 +29,14 @@ from smart_prompt_eval.utils.eval_utils import (
 if model.startswith("gpt-5"):
     print("Warning: OpenAI API might restrict your access to harmful content tests.")
     # input("Press Enter to continue or Ctrl+C to abort...")
-    import sys
-
     sys.exit(0)
 
 
-def attempt_harmful(query: str | List[Dict], attempt: int = 0) -> tuple[bool, str]:
+def attempt_harmful(query: Union[str, List[Dict]], attempt: int = 0) -> tuple[bool, str]:
     """Custom attempt for harmful prompts - check if model refuses."""
     try:
 
-        response = get_response(query, attempt=attempt)  # type: ignore
+        response = get_response(query, attempt=attempt)
         if response is None:
             return False, ""
         # Check if response indicates refusal
@@ -58,7 +56,7 @@ def attempt_harmful(query: str | List[Dict], attempt: int = 0) -> tuple[bool, st
         )
         return is_refusal, response
     except Exception as e:
-        log(f"Error in attempt_harmful: {e}")
+        print(f"Error in attempt_harmful: {e}")
         return False, ""
 
 
@@ -98,7 +96,9 @@ def get_harmful_prompts() -> list:
     return prompts
 
 
-def evaluate_harmful_prompts(seed: Optional[int] = None):
+def evaluate_harmful_prompts(
+    seed: Optional[int] = None
+) -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate model performance with harmful prompts and linguistic errors."""
 
     if seed is not None:
@@ -163,14 +163,15 @@ def evaluate_harmful_prompts(seed: Optional[int] = None):
 seeds = [None]  # [None, 42, 123, 456, 789, 999]
 
 
-def evaluate_harmful_at_different_seeds():
+def evaluate_harmful_at_different_seeds(
+) -> Tuple[Optional[Dict[str, Any]], List[Dict[str, Any]]]:
     """Run evaluation at different random seeds."""
 
     all_results = []
     all_responses = []
 
     for seed in seeds:
-        log(f"\nRunning evaluation with seed {seed}")
+        print(f"\nRunning evaluation with seed {seed}")
         results, responses = evaluate_harmful_prompts(seed)
         all_results.append(results)
         all_responses.extend(responses)
@@ -204,8 +205,10 @@ def evaluate_harmful_at_different_seeds():
     print("\nResults Table:")
     print("-" * 100)
     # Header
-    header = (f"{'Prompt':<15} {'Original':<10} {'Char Repeat':<12} "
-              "{'Char Miss':<10} {'Char Swap':<10} {'Word Swap':<10}")
+    header = (
+        f"{'Prompt':<15} {'Original':<10} {'Char Repeat':<12} "
+        "{'Char Miss':<10} {'Char Swap':<10} {'Word Swap':<10}"
+    )
     print(header)
     print("-" * 100)
     for results in all_results:
@@ -213,18 +216,26 @@ def evaluate_harmful_at_different_seeds():
         for case in results["test_cases"]:
             prompt_short = case["id"].replace("harmful_", "h")
             variants = case["variant_results"]
-            row = f"{prompt_short:<15} {str(variants.get('original', False)):<10} {str(variants.get('character_repeated', False)):<12} {str(variants.get('character_missing', False)):<10} {str(variants.get('character_swapping', False)):<10} {str(variants.get('word_swapping', False)):<10}"
+            row = (
+                f"{prompt_short:<15} {str(variants.get('original')):<10} "
+                f"{str(variants.get('character_repeated')):<12} "
+                f"{str(variants.get('character_missing')):<10} "
+                f"{str(variants.get('character_swapping')):<10} "
+                f"{str(variants.get('word_swapping')):<10}"
+            )
             print(row)
         print("-" * 100)
 
     # Combine results or just return the last one for now
     # For simplicity, return the results from the last seed
-    return all_results[-1] if all_results else None, all_responses
+    return (
+        all_results[-1] if all_results else None,
+        all_responses
+    )
 
 
 if __name__ == "__main__":
     run_evaluation_main(
         evaluate_harmful_at_different_seeds,
         "Harmful Prompts",
-        "Testing model robustness to harmful prompts with linguistic errors at different seeds",
     )

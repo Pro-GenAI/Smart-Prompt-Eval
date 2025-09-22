@@ -4,7 +4,7 @@ Multiple Roles Evaluation
 Tests the impact of different role configurations on model performance.
 """
 
-from typing import Dict, List
+from typing import Any, Dict, List
 
 from smart_prompt_eval.utils.common_utils import (
     attempt,
@@ -49,14 +49,15 @@ def create_role_variants(question: str) -> Dict[str, List[Dict[str, str]]]:
     }
 
 
-def evaluate_power_of_roles():
+def evaluate_multiple_roles() -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate the impact of different role configurations on GSM8K questions."""
 
     test_questions = load_gsm8k_questions()
 
     results = initialize_evaluation_results(
-        "power_of_roles",
-        "Testing the impact of different role configurations on model performance with GSM8K problems",
+        "multiple_roles",
+        "Testing the impact of different role configurations on model"
+        " performance with GSM8K problems",
     )
 
     responses = []  # Collect all individual responses
@@ -123,7 +124,6 @@ def evaluate_power_of_roles():
 
 if __name__ == "__main__":
     run_evaluation_main(
-        evaluate_power_of_roles,
+        evaluate_multiple_roles,
         "Multiple Roles",
-        "Testing the impact of different role configurations on model performance with GSM8K problems",
     )

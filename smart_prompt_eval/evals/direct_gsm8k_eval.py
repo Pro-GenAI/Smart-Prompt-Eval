@@ -4,6 +4,8 @@ GSM8K Evaluation Script
 Tests model performance on grade school math problems.
 """
 
+from typing import Any, Dict, List
+
 from smart_prompt_eval.utils.common_utils import attempt
 from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
@@ -14,7 +16,7 @@ from smart_prompt_eval.utils.eval_utils import (
 )
 
 
-def evaluate_gsm8k():
+def evaluate_gsm8k() -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate model performance on GSM8K problems."""
 
     test_questions = load_gsm8k_questions()
@@ -68,5 +70,4 @@ if __name__ == "__main__":
     run_evaluation_main(
         evaluate_gsm8k,
         "GSM8K",
-        "Testing model performance on grade school math problems",
     )

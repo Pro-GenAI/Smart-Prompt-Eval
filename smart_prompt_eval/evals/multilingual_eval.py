@@ -7,9 +7,9 @@ Based on the Multilingual_Prompting experiment.
 
 import json
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
-from smart_prompt_eval.utils.common_utils import attempt, log
+from smart_prompt_eval.utils.common_utils import attempt
 from smart_prompt_eval.utils.eval_utils import (
     create_base_prompt,
     initialize_evaluation_results,
@@ -36,7 +36,7 @@ def load_translated_questions(
     )
 
     if not file_path.exists():
-        log(f"Translated file not found: {file_path}")
+        print(f"Translated file not found: {file_path}")
         return []
 
     translated_questions = []
@@ -50,13 +50,13 @@ def load_translated_questions(
                         if num_questions and len(translated_questions) >= num_questions:
                             break
                     except json.JSONDecodeError as e:
-                        log(f"Error parsing line {line_num + 1} in {file_path}: {e}")
+                        print(f"Error parsing line {line_num + 1} in {file_path}: {e}")
                         continue
     except Exception as e:
-        log(f"Error reading translated file {file_path}: {e}")
+        print(f"Error reading translated file {file_path}: {e}")
         return []
 
-    log(f"Loaded {len(translated_questions)} translated questions for {language_code}")
+    print(f"Loaded {len(translated_questions)} translated questions for {language_code}")
     return translated_questions
 
 
@@ -87,12 +87,12 @@ def load_all_translated_questions() -> Dict[str, Dict[str, str]]:
                 lang_lookup[original_id] = q["question"]
 
         translated_lookup[lang_code] = lang_lookup
-        log(f"Loaded {len(lang_lookup)} translated questions for {lang_name}")
+        print(f"Loaded {len(lang_lookup)} translated questions for {lang_name}")
 
     return translated_lookup
 
 
-def evaluate_multilingual_prompting():
+def evaluate_multilingual_prompting() -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate model performance across different languages on GSM8K questions."""
 
     test_questions = load_gsm8k_questions()
@@ -118,8 +118,8 @@ def evaluate_multilingual_prompting():
 
     for language, lang_code in lang_codes.items():
         # log(f"\n{'='*60}")
-        log("\n")
-        log(f"Processing {language} ({lang_code})")
+        print("\n")
+        print(f"Processing {language} ({lang_code})")
         # log(f"{'='*60}")
 
         # Get the lookup for this language
@@ -135,7 +135,7 @@ def evaluate_multilingual_prompting():
             # Find translated question
             translated_question = lang_lookup.get(case_id)
             if translated_question is None:
-                log(f"Translated question not found for {language} ({case_id})")
+                print(f"Translated question not found for {language} ({case_id})")
                 continue
 
             query = create_base_prompt(translated_question)
@@ -180,5 +180,4 @@ if __name__ == "__main__":
     run_evaluation_main(
         evaluate_multilingual_prompting,
         "Multilingual Prompting",
-        "Testing model performance across different languages on GSM8K problems",
     )

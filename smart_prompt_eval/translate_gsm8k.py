@@ -42,7 +42,7 @@ from typing import Dict, List, Optional
 
 from translate import Translator
 
-from smart_prompt_eval.utils.common_utils import env, log
+from smart_prompt_eval.utils.common_utils import env
 
 translators = {}
 
@@ -77,13 +77,13 @@ def translate_text(text: str, target_lang: str, max_retries: int = 5) -> Optiona
                 raise ValueError("Translation service returned warning")
             if translation.startswith("QUERY LENGTH LIMIT EXCEEDED"):
                 raise ValueError("Translation service returned length limit error")
-            return translation
+            return str(translation)
         except Exception as e:
-            log(f"Translation attempt {attempt + 1} failed: {e}")
+            print(f"Translation attempt {attempt + 1} failed: {e}")
             if attempt < max_retries - 1:
                 time.sleep(1)  # Wait before retry
             else:
-                log(f"Translation failed after {max_retries} attempts")
+                print(f"Translation failed after {max_retries} attempts")
                 return None
 
     return None
@@ -115,7 +115,7 @@ def load_gsm8k_questions(filepath: str, limit: Optional[int] = None) -> List[Dic
                     }
                 )
             except json.JSONDecodeError as e:
-                log(f"Error parsing line {i+1}: {e}")
+                print(f"Error parsing line {i+1}: {e}")
                 continue
 
     return questions
@@ -135,7 +135,7 @@ def translate_question(question: str, target_lang: str) -> Optional[str]:
     return translate_text(question, target_lang)
 
 
-def main():
+def main() -> int:
     """Main function to translate GSM8K dataset."""
     parser = argparse.ArgumentParser(
         description="Translate GSM8K dataset to multiple languages"
@@ -189,7 +189,7 @@ def main():
     # Validate input file
     input_file = Path(args.input)
     if not input_file.exists():
-        log(f"Error: Input file {input_file} does not exist")
+        print(f"Error: Input file {input_file} does not exist")
         return 1
 
     # Create output directory
@@ -197,12 +197,12 @@ def main():
     output_dir.mkdir(parents=True, exist_ok=True)
 
     # Load original questions
-    log(f"Loading questions from {input_file}")
+    print(f"Loading questions from {input_file}")
     original_questions = load_gsm8k_questions(str(input_file), args.limit)
-    log(f"Loaded {len(original_questions)} questions")
+    print(f"Loaded {len(original_questions)} questions")
 
     if not original_questions:
-        log("Error: No questions loaded from input file")
+        print("Error: No questions loaded from input file")
         return 1
 
     # Translate each question to all languages
@@ -210,7 +210,7 @@ def main():
     total_processed = 0
 
     # Pre-load existing translations for all languages to check what already exists
-    existing_translations = {}
+    existing_translations: Dict[str, set[str]] = {}
     for lang_code in args.languages:
         if lang_code not in language_config:
             continue
@@ -219,8 +219,9 @@ def main():
         existing_translations[lang_code] = set()
 
         if output_file.exists():
-            log(
-                f"Loading existing translations for {lang_name} ({lang_code}) from {output_file}"
+            print(
+                f"Loading existing translations for {lang_name} ({lang_code}) "
+                f"from {output_file}"
             )
             with open(output_file, encoding="utf-8") as f:
                 for line in f:
@@ -233,8 +234,9 @@ def main():
                             existing_translations[lang_code].add(original_id)
                         except json.JSONDecodeError:
                             continue
-            log(
-                f"Found {len(existing_translations[lang_code])} existing translations for {lang_name}"
+            print(
+                f"Found {len(existing_translations[lang_code])} existing"
+                f" translations for {lang_name}"
             )
 
     # Process each question across all languages
@@ -243,7 +245,7 @@ def main():
         original_question = question_data["question"]
         answer = question_data["answer"]
 
-        log(f"\nProcessing question {i+1}/{len(original_questions)}: {question_id}")
+        print(f"\nProcessing question {i+1}/{len(original_questions)}: {question_id}")
 
         question_successful = 0
 
@@ -259,7 +261,7 @@ def main():
                 # log(f"  {lang_name}: Already translated, skipping")
                 continue
 
-            log(f"  Translating to {lang_name}...")
+            print(f"  Translating to {lang_name}...")
 
             # Translate the question
             translated_question = translate_question(original_question, lang_code)
@@ -279,9 +281,9 @@ def main():
                     }
                     f.write(json.dumps(translated_entry, ensure_ascii=False) + "\n")
                     question_successful += 1
-                    log(f"  ✓ {lang_name}: Translated successfully")
+                    print(f"  ✓ {lang_name}: Translated successfully")
                 else:
-                    log(f"  ✗ {lang_name}: Translation failed")
+                    print(f"  ✗ {lang_name}: Translation failed")
                     # Add original question as fallback
                     translated_entry = {
                         "id": f"{question_id}_{lang_code}",
@@ -296,7 +298,7 @@ def main():
                     f.write(json.dumps(translated_entry, ensure_ascii=False) + "\n")
 
         if question_successful > 0:
-            log(f"  Completed {question_successful} translations for {question_id}")
+            print(f"  Completed {question_successful} translations for {question_id}")
 
         total_successful += question_successful
         total_processed += len(
@@ -304,16 +306,16 @@ def main():
         )
 
     # Summary
-    log("\n" + "=" * 60)
-    log("TRANSLATION SUMMARY")
-    log("=" * 60)
-    log(f"Total questions processed: {len(original_questions)}")
-    log(f"Total translation attempts: {total_processed}")
-    log(f"Successful translations: {total_successful}")
+    print("\n" + "=" * 60)
+    print("TRANSLATION SUMMARY")
+    print("=" * 60)
+    print(f"Total questions processed: {len(original_questions)}")
+    print(f"Total translation attempts: {total_processed}")
+    print(f"Successful translations: {total_successful}")
     if total_processed > 0:
         success_rate = (total_successful / total_processed) * 100
-        log(f"Success rate: {success_rate:.1f}%")
-    log(f"Output directory: {output_dir}")
+        print(f"Success rate: {success_rate:.1f}%")
+    print(f"Output directory: {output_dir}")
 
     return 0
 

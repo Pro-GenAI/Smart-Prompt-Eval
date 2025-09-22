@@ -1,9 +1,9 @@
 
 
-
 Evaluate gpt-5-nano.
 
 Ensure I followed all standards for python packages.
+	To run_evaluation_main, dont pass description.
 	Run flake8, mypy, and other commands in readme, ensure I follow standards.
 	Ask copilot again in a new conversation here.
 Readme:

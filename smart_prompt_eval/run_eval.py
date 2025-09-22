@@ -13,13 +13,12 @@ Available evaluation modules:
     - evals.harmful_prompts_eval
 """
 
-# import runpy
 import subprocess
 import sys
 from pathlib import Path
 
 
-def get_eval_modules():
+def get_eval_modules() -> list[str]:
     """Get list of evaluation modules to run."""
     evals_dir = Path(__file__).parent / "evals"
     modules = []
@@ -37,8 +36,8 @@ if len(sys.argv) < 2:
     print(f"Running all evaluation modules: {', '.join(modules)}")
     for module in modules:
         try:
-            # runpy.run_module(module, run_name="__main__", alter_sys=True)
             # Run in subprocess to prevent sys.exit from stopping the batch
+            # runpy is not used as it does not handle modules' sys.exit gracefully
             full_module = f"smart_prompt_eval.{module}"
             result = subprocess.run(
                 [sys.executable, "-m", full_module], cwd=Path(__file__).parent.parent
@@ -55,7 +54,6 @@ else:
     if "." not in module and not module.startswith("evals."):
         module = f"evals.{module}"
 
-    # runpy.run_module(module, run_name="__main__", alter_sys=True)
     # Run the module in subprocess to handle sys.exit gracefully
     full_module = f"smart_prompt_eval.{module}"
     result = subprocess.run(

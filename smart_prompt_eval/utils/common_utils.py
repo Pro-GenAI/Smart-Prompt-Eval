@@ -12,58 +12,25 @@ from smart_prompt_eval.utils.response_cacher import (
 )
 
 
-def log(text="", filename="output.txt", *args, **kwargs):
-    print(text, *args, **kwargs)
-    # with open(filename, "a") as f:
-    #     print(text, *args, **kwargs, file=f)
-
-
-def print_progress(chr="."):
+def print_progress(chr: str = ".") -> None:
     print(chr, end="", flush=True)
 
 
-def print_error(chr=" E "):
+def print_error(chr: str = " E ") -> None:
     print_progress(chr)
 
 
-def remove_spaces_after_commas(text):
+def remove_spaces_after_commas(text: str) -> str:
     # remove spaces after commas, but not before commas
     return ",".join([part.strip() for part in text.split(",")])
 
 
-# backtick = "`"
-# backticks = "```"
-# data_format = "csv"
-
-# def extract_data(response):
-#     if backticks not in response:
-#         # Replace single backtick with triple backticks
-#         if backtick in response:
-#             response = response.replace(backtick, backticks)
-#         else:
-#             raise Exception("No backticks found in the response")
-
-#     last = response.rfind(backticks)
-#     last_2 = response.rfind(backticks, 0, last) + len(backticks)
-#     response = response[last_2:last].strip()
-
-#     response = response.strip().strip(backtick).strip()
-#     if response.startswith(data_format):
-#         response = response[len(data_format) :] if data_format else response
-
-#     response = remove_spaces_after_commas(response)
-#     # strip every line
-#     response = "\n".join([line.strip() for line in response.split("\n")])
-#     return response
-
-
-def extract_answer(answer):
+def extract_answer(answer: Any) -> str:
     if not answer:
         return ""
     # Create a copy to avoid modifying the original
     answer = str(answer)
     # In GSM8K, answer exists after the last #### in the last part.
-    # The same function is used for both old-RAT and iRAT.
     answer = answer.split("####")[-1].split("\n")[0].strip()
 
     # Clean the answer to get only numbers.
@@ -72,72 +39,26 @@ def extract_answer(answer):
         answer.rstrip("%").rstrip(".00").strip()
     )  # Remove percentage and trailing zeros
     answer = answer.replace(",", "")  # Remove commas. Example: $1,000.00 -> 1000
-    # Select first word by excluding units such as 'years', 'feet', etc. Example: '1000 feet' -> '1000'
+    # Select first word by excluding units such as 'years', 'feet', etc.
+    # Example: '1000 feet' -> '1000'
     answer = answer.split(" ")[0]
-    return answer.strip()
+    return str(answer.strip())
 
 
 def attempt(
-    question, correct_answer, params: Optional[Dict[str, Any]] = None
+    question: str, correct_answer: str, params: Optional[Dict[str, Any]] = None
 ) -> Tuple[bool, str]:
-    # with open("response.log", "a") as f:
-    #     print("Q:", question, file=f)
     try:
         response = get_response(question, **(params or {}))
-        # with open("response.log", "a") as f:
-        #     print("A:", response, file=f)
         if response is None:
             print_error(" NR ")
             return False, ""
         extracted_answer = extract_answer(response)
-        # print_progress(response)  # type: ignore
         is_correct = extracted_answer == correct_answer
-        # if is_correct:
-        #     print_progress()
-        # else:
-        #     print_error()
         return is_correct, response
     except Exception:
         print_error(" SE ")
         return False, ""
-
-
-# def get_accuracy(question, correct_answer, params: Optional[dict] = None) -> bool:
-#     total_attempts = 1  # 10
-#     # correct_attempts = 0
-#     with open("response.log", "a") as f:
-#         print("Q:", question, file=f)
-#     for i in range(total_attempts):
-#         try:
-#             response = get_response(question, **(params or {}))
-#             with open("response.log", "a") as f:
-#                 print("A:", response, file=f)
-#             response = extract_answer(response)
-#             # response = extract_data(response)
-#             # break
-#         except Exception as e:
-#             print_error(" SE ")
-#             continue
-#         print_progress(response)  # type: ignore
-#         if response == correct_answer:
-#             print_progress()
-#             # correct_attempts += 1
-#             return True
-#         else:
-#             print_error()
-#     return False
-#     # accuracy = (100 * correct_attempts) / total_attempts
-#     # accuracy = f"{accuracy:.2f}%"
-#     # print()
-#     # return accuracy
-
-
-# def attempt_question(correct_answer, question, key=None, params: Optional[dict] = None):
-#     print(f"Attempting for: {key}")
-#     accuracy = get_accuracy(question, correct_answer, params)
-#     if key is None:
-#         key = str(params)
-#     log(f"{key}: {accuracy}")
 
 
 # ________________________ OpenAI client ________________________
@@ -150,7 +71,7 @@ def env(varname: str, default: Optional[str] = None) -> Optional[str]:
 
 
 if env("AZURE_OPENAI_ENDPOINT"):
-    client = openai.AzureOpenAI()
+    client: Union[openai.OpenAI, openai.AzureOpenAI] = openai.AzureOpenAI()
 else:
     client = openai.OpenAI()
 
@@ -160,7 +81,7 @@ if not model:
 
 
 def message(content: str, role: str) -> Dict[str, str]:
-    return {"role": role, "content": content}  # type: ignore
+    return {"role": role, "content": content}
 
 
 def user_message(content: str) -> Dict[str, str]:
@@ -176,7 +97,7 @@ def bot_message(content: str) -> Dict[str, str]:
 
 
 def get_response(
-    messages: Union[str, List[Dict[str, str]]], attempt: Optional[int] = None, **kwargs
+    messages: Union[str, List[Dict[str, str]]], attempt: Optional[int] = None, **kwargs: Any
 ) -> Optional[str]:
     """Get response from OpenAI API with automatic caching."""
 

@@ -7,7 +7,7 @@ name = "smart_prompt_eval"
 version = "0.0.1"
 description = "Tools for smart prompt evaluation"
 authors = [{ name = "Praneeth Vadlapati", email = "praneeth.vad@gmail.com" }]
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = {text = "MIT"}
 keywords = ["ai", "ml", "evaluation", "prompting", "nlp", "openai"]
 classifiers = [
@@ -17,8 +17,6 @@ classifiers = [
     "License :: OSI Approved :: CC-BY 4.0",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.8",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -48,7 +46,7 @@ include = ["smart_prompt_eval*"]
 
 [tool.black]
 line-length = 88
-target-version = ['py38']
+target-version = ['py310']
 include = '\.pyi?$'
 extend-exclude = '''
 /(
@@ -83,7 +81,7 @@ exclude = [
 ]
 
 [tool.mypy]
-python_version = "3.8"
+python_version = "3.10"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true

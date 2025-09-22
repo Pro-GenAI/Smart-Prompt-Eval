@@ -1,5 +1,5 @@
 {
-  "experiment": "power_of_roles",
+  "experiment": "multiple_roles",
   "description": "Testing the impact of different role configurations on model performance with GSM8K problems",
   "test_cases": [
     {

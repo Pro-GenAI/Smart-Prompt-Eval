@@ -6,7 +6,7 @@ Based on the Linguistic_Errors experiment.
 """
 
 import random
-from typing import Dict
+from typing import Any, Dict, List
 
 from smart_prompt_eval.utils.common_utils import attempt
 from smart_prompt_eval.utils.eval_utils import (
@@ -120,7 +120,7 @@ def create_error_variants(question: str) -> Dict[str, str]:
     }
 
 
-def evaluate_linguistic_errors():
+def evaluate_linguistic_errors() -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
     """Evaluate model performance with linguistic errors on GSM8K questions."""
 
     # Load GSM8K test questions
@@ -176,5 +176,4 @@ if __name__ == "__main__":
     run_evaluation_main(
         evaluate_linguistic_errors,
         "Linguistic Errors",
-        "Testing model robustness to spelling and grammatical errors on GSM8K problems",
     )
