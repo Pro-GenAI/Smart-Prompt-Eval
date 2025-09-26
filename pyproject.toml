@@ -1,0 +1,119 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart_prompt_eval"
+version = "0.0.1"
+description = "Tools for smart prompt evaluation"
+authors = [{ name = "Praneeth Vadlapati", email = "praneeth.vad@gmail.com" }]
+requires-python = ">=3.10"
+license = "CC-BY-4.0"
+license-files = ["LICENSE"]
+keywords = ["ai", "llms", "llm", "evaluation", "prompting", "nlp", "openai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    # License is provided via the LICENSE file (Creative Commons BY 4.0)
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+readme = { file = "README.md", "content-type" = "text/markdown" }
+dependencies = ["python-dotenv", "openai", "translate"]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+    "mypy",
+    "pytest",
+    "pytest-cov",
+]
+
+[project.urls]
+Homepage = "https://github.com/Pro-GenAI/Smart-Prompt-Eval"
+Repository = "https://github.com/Pro-GenAI/Smart-Prompt-Eval"
+Issues = "https://github.com/Pro-GenAI/Smart-Prompt-Eval/issues"
+
+[tool.setuptools.packages.find]
+include = ["smart_prompt_eval*"]
+
+[tool.setuptools]
+"exclude-package-data" = { "*" = ["response_cache.json", "results/*"] }
+
+[tool.black]
+line-length = 95
+target-version = ['py310']
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+  # directories
+  \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+line_length = 88
+known_first_party = ["smart_prompt_eval"]
+include_trailing_comma = true
+
+[tool.flake8]
+max-line-length = 95
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    "*.egg-info",
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+warn_unreachable = true
+strict_equality = true
+show_error_codes = true
+files = ["smart_prompt_eval", "tests"]
+
+[[tool.mypy.overrides]]
+module = [
+    "openai.*",
+    "translate.*",
+]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
